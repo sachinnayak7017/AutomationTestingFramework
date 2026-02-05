@@ -1,0 +1,19 @@
+{
+  "environment": "PROD",
+  "baseUrl": "https://www.example.com",
+  "apiBaseUrl": "https://api.example.com",
+  "credentials": {
+    "testUser": "prod_test_user",
+    "testPassword": "prod_test_password"
+  },
+  "database": {
+    "host": "prod-db.example.com",
+    "port": 3306,
+    "name": "prod_testdb"
+  },
+  "settings": {
+    "timeout": 60,
+    "retryCount": 3,
+    "enableDebugMode": false
+  }
+}

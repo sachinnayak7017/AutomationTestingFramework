@@ -1,0 +1,53 @@
+{
+  "module": "ApplyForLoanPage",
+  "objects": {
+    "ShivalikLogo_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@class,'logo') or @alt='logo']"
+    },
+    "ProgressBarActive_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'progress-bar') and contains(@class,'active_progress')]"
+    },
+    "ProgressBarInactive_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'progress-bar') and contains(@class,'inactive_progress')]"
+    },
+    "QuestionTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h4[contains(text(),'We need to ask you few questions')]"
+    },
+    "CustomerQuestion_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Have you been a Shivalik customer')]"
+    },
+    "RadioYes_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@type='radio' and @value='yes']"
+    },
+    "RadioYesLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[@for='radio-1']"
+    },
+    "RadioNo_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@type='radio' and @value='no']"
+    },
+    "RadioNoLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[@for='radio-2']"
+    },
+    "SpecialOffersText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Existing customers get special offers')]"
+    },
+    "NextButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[@name='custOrNot' and contains(text(),'NEXT')]"
+    },
+    "FormContainer_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//form[@id='regForm']"
+    }
+  }
+}

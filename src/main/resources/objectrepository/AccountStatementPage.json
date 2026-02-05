@@ -1,0 +1,93 @@
+{
+  "module": "AccountStatementPage",
+  "objects": {
+    "PageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(@class,'textContent') and contains(text(),'Account Statement')]"
+    },
+    "BackArrow_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='arrow' and contains(@src,'leftArrow')]"
+    },
+    "GenerateStatementButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(text(),'GENERATE') and contains(text(),'STATEMENT')]"
+    },
+    "AccountStatementTab_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[@role='tab' and contains(text(),'Account Statement')]"
+    },
+    "AnnualStatementTab_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[@role='tab' and contains(text(),'Annual statement')]"
+    },
+    "SelectAccountLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Select') and contains(text(),'account')]"
+    },
+    "SelectAccountDropdown_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Select') and contains(text(),'account')]/following-sibling::div//div[@role='combobox']"
+    },
+    "DurationLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Duration')]"
+    },
+    "DurationDropdown_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Duration')]/following-sibling::div//div[@role='combobox']"
+    },
+    "TransactionsTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'topHeadings') and contains(text(),'Transactions')]"
+    },
+    "NoTransactionsText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'No transactions yet')]"
+    },
+    "EmptyBanner_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@class,'emptyBanner')]"
+    },
+    "TransactionContainer_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'transactionContainer')]"
+    },
+    "ShivalikLogo_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='logo']"
+    },
+    "HomeNavIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[@class='textnav' and text()='Home']/parent::div"
+    },
+    "BillsNavIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[@class='textnav' and text()='Bills']/parent::div"
+    },
+    "OffersNavIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[@class='textnav' and text()='Offers']/parent::div"
+    },
+    "ProfileButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'flex-profile')]//button"
+    },
+    "NotificationIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'notification')]"
+    },
+    "CustomerCareText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'24X7 Customer Care')]"
+    },
+    "CustomerCarePhone_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//a[contains(@href,'tel:')]"
+    },
+    "CustomerCareEmail_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//a[contains(@href,'mailto:')]"
+    }
+  }
+}

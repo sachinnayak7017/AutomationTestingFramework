@@ -1,0 +1,289 @@
+{
+  "module": "OpenDepositPage",
+  "objects": {
+    "OpenFixedDepositsPageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'xlLargeHeading') and contains(text(),'Open fixed deposits')]"
+    },
+    "BackArrow_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='Back arrow' and contains(@src,'leftArrow')]"
+    },
+    "FixedDepositCard_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h4[contains(text(),'Fixed deposit')]/ancestor::div[contains(@class,'rounded-xl')]"
+    },
+    "FixedDepositTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h4[contains(text(),'Fixed deposit')]"
+    },
+    "FixedDepositDesc_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'An investment made in one go with a lump sum')]"
+    },
+    "FixedDepositIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'FD icon')]"
+    },
+    "RecurringFlexiCard_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h4[contains(text(),'Recurring flexi')]/ancestor::div[contains(@class,'rounded-xl')]"
+    },
+    "RecurringFlexiTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h4[contains(text(),'Recurring flexi')]"
+    },
+    "RecurringFlexiDesc_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Savings are made every month through recurring deposits')]"
+    },
+    "RecurringFlexiIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'recurring flexi icon')]"
+    },
+    "TaxSavingFDCard_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h4[contains(text(),'Tax saving fixed deposit')]/ancestor::div[contains(@class,'rounded-xl')]"
+    },
+    "TaxSavingFDTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h4[contains(text(),'Tax saving fixed deposit')]"
+    },
+    "TaxSavingFDDesc_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Fixed deposit with a minimum term of 5 years')]"
+    },
+    "TaxSavingFDIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'tax saver icon')]"
+    },
+    "InvestmentAmountLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Enter investment amount')]"
+    },
+    "InvestmentAmountInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Enter investment amount')]/following-sibling::div//input"
+    },
+    "InvestmentAmountSlider_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h2[contains(text(),'Investment Amount')]/following-sibling::span[contains(@class,'MuiSlider-root')]"
+    },
+    "DurationSlider_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h2[contains(text(),'Duration')]/following::span[contains(@class,'MuiSlider-root')][1]"
+    },
+    "RateOfInterestSlider_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h2[contains(text(),'Rate of interest')]/following::span[contains(@class,'MuiSlider-root')][1]"
+    },
+    "DepositAmountValue_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Deposit Amount')]/following-sibling::p"
+    },
+    "InterestAmountValue_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Interest Amount')]/following-sibling::p"
+    },
+    "MonthlyAmountValue_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Monthly Amount')]/following-sibling::p"
+    },
+    "TenureYearDropdown_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Choose your own tenure')]/following-sibling::div//div[@role='combobox'][1]"
+    },
+    "TenureMonthDropdown_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Choose your own tenure')]/following-sibling::div//div[@role='combobox'][2]"
+    },
+    "TenureDayDropdown_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Choose your own tenure')]/following-sibling::div//div[@role='combobox'][3]"
+    },
+    "FDCalculatorTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'Fix deposit calculator')]"
+    },
+    "ViewInterestRatesLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//a[contains(text(),'View Interest rates')]"
+    },
+    "TotalValueText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//text[contains(text(),'Total value')]"
+    },
+    "PrincipalAmountLegend_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(text(),'Principal amount')]"
+    },
+    "InterestAmountLegend_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(text(),'Interest amount')]"
+    },
+    "SeniorCitizenNotice_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Senior Citizens are eligible')]"
+    },
+    "OpenFDButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[.//p[contains(text(),'OPEN FD')]]"
+    },
+    "RecommendedDepositsTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h3[contains(text(),'Recommended deposits for you')]"
+    },
+    "SearchDepositsInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@placeholder='Search']"
+    },
+    "TaxSaverFDRecommendation_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h5[contains(text(),'Tax-Saver Fixed Deposit')]"
+    },
+    "HighInterestFDRecommendation_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h5[contains(text(),'High-Interest Fixed Deposits')]"
+    },
+    "RecurringFlexiRecommendation_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h5[contains(text(),'Recurring Flexi Deposit')]"
+    },
+    "OpenFixedDepositPageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'xlLargeHeading') and contains(text(),'Open fixed deposit')]"
+    },
+    "CancelButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(text(),'CANCEL')]"
+    },
+    "ContinueButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[.//p[contains(text(),'CONTINUE')]]"
+    },
+    "TransferFromLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[contains(text(),'Transfer from')]"
+    },
+    "TransferFromDropdown_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[contains(text(),'Transfer from')]/following-sibling::div//div[@role='combobox']"
+    },
+    "AvailableBalanceText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'Total available balance')]"
+    },
+    "MOPText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'MOP:')]"
+    },
+    "DepositPreferencesTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h3[contains(text(),'Deposit preferences')]"
+    },
+    "DepositAmountLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[contains(text(),'Deposit amount')]"
+    },
+    "DepositAmountInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[contains(text(),'Deposit amount')]/following-sibling::div//input"
+    },
+    "InterestPaymentInstructionsLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[contains(text(),'Interest payment instructions')] | //p[contains(text(),'Interest payment instructions')]"
+    },
+    "InterestPaymentInstructionsDropdown_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[contains(text(),'Interest payment instructions')]/following-sibling::div//div[@role='combobox'] | //p[contains(text(),'Interest payment instructions')]/following-sibling::div//div[@role='combobox']"
+    },
+    "MaturityInstructionsLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[contains(text(),'Maturity instructions')] | //p[contains(text(),'Maturity instructions')]"
+    },
+    "MaturityInstructionsDropdown_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='maturityInstructions']/parent::div/preceding-sibling::div[@role='combobox']"
+    },
+    "DurationLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Duration')]"
+    },
+    "DurationInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Duration')]/following-sibling::div//input"
+    },
+    "RateOfInterestLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Rate of interest')]"
+    },
+    "RateOfInterestInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Rate of interest')]/following-sibling::div//input"
+    },
+    "NomineeDetailsTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h3[contains(text(),'Nominee details')]"
+    },
+    "AddNomineeLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Add nominee details')]"
+    },
+    "AddNomineeSwitch_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Add nominee details')]/following-sibling::span//input[@type='checkbox']"
+    },
+    "OpenRecurringFlexiPageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'xlLargeHeading') and contains(text(),'Open Recurring flexi deposits')]"
+    },
+    "RecurringDepositAmountInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='depositAmount']"
+    },
+    "RecurringDepositAmountHelperText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Enter a min amount of')]"
+    },
+    "PaymentTypeLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Payment type')]"
+    },
+    "PaymentTypeDropdown_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='paymentType']/parent::div/preceding-sibling::div[@role='combobox']"
+    },
+    "RecurringDurationDropdown_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='totalMonths']/parent::div/preceding-sibling::div[@role='combobox']"
+    },
+    "RecurringMaturityDate_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Duration')]/following-sibling::div//following-sibling::p"
+    },
+    "OpenTaxSavingPageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'xlLargeHeading') and contains(text(),'Open Tax saving fixed deposit')]"
+    },
+    "TaxSavingDurationText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Duration of Tax saving FD')]"
+    },
+    "TaxSavingDurationValue_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Duration of Tax saving FD')]/following-sibling::p"
+    },
+    "ShivalikLogo_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='logo']"
+    },
+    "HomeNavLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[@class='textnav' and text()='Home']"
+    },
+    "ProfileButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'flex-profile')]//button"
+    }
+  }
+}

@@ -1,0 +1,88 @@
+<body>
+
+<div class="container">
+    
+    <div><center>
+    <a href="index.php">
+    <img src="logo.png" class="logo">
+    </a>
+    </center></div>
+
+<form id="regForm" method="post" action=""> 
+
+	<div class=" row">
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"> 
+			<div class="progress ">
+				<div class="progress-bar  active_progress" role="progressbar" style="width: 33.33%;" aria-valuenow="33.33" aria-valuemin="0" aria-valuemax="100"></div>
+			</div> 
+		</div>
+		
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"> 
+			<div class="progress">
+				<div class="progress-bar inactive_progress" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+			</div> 
+		</div>
+		
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"> 
+			<div class="progress">
+				<div class="progress-bar  inactive_progress" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+			</div> 
+		</div>
+	</div>
+	<div class=" col-md-12">&nbsp;<br><br>	</div>	
+	
+  <!-- One "tab" for each step in the form: -->
+  <div class="row">
+	<div class="col-md-1"> &nbsp; </div>
+	<div class="col-md-10">
+	    
+	     <h4 class=" text-center color-dark">  We need to ask you few questions… </h4>
+	
+          <br>
+	    
+	    
+		<p> Have you been a Shivalik customer for the last 6 months? <br><br> </p>
+		
+
+			<div class="radio">
+				<input type="radio" name="customer" id="radio-1" value="yes" checked="">
+				<label for="radio-1">
+					Yes
+				</label>
+			</div>
+			
+			
+			<div class="radio">
+				<input type="radio" name="customer" id="radio-2" value="no">
+				<label for="radio-2">
+					No
+				</label>
+			</div>
+			
+			<br>
+			
+			
+		
+		<p class="semibold text-center"> ( Existing customers get special offers! ) <br><br> </p>
+			
+		<div>
+			<button type="submit" name="custOrNot" class="btnVerify btn-block btn btn-custom" id="custOrNot">NEXT</button>
+		</div>
+
+
+			
+	</div>
+		
+  </div>
+ 
+  <br>
+</form>
+ </div>
+ 
+ 
+
+
+
+
+
+</body>

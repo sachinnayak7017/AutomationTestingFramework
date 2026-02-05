@@ -1,0 +1,65 @@
+{
+  "module": "ViewChequeStatusPage",
+  "objects": {
+    "PageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h3[contains(@class,'d-btn') and contains(text(),'View cheque status')]"
+    },
+    "BackButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(@class,'back-btn')]"
+    },
+    "CancelButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(@class,'blue-cir-trans-btn') and contains(text(),'CANCEL')]"
+    },
+    "ContinueButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(@class,'fill-blue-btn') and contains(text(),'Continue')]"
+    },
+    "SelectAccountLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Select account')]"
+    },
+    "SelectAccountDropdown_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Select account')]/following-sibling::div//div[@role='combobox']"
+    },
+    "ChequeNumberLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[contains(@class,'input-title') and contains(text(),'Cheque number')]"
+    },
+    "ChequeNumberInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[contains(text(),'Cheque number')]/following-sibling::input"
+    },
+    "ChequeNumberNote_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'in-note')]"
+    },
+    "EmptyBanner_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'emptyBen')]"
+    },
+    "ChequeFormWrap_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'cheque-form-wrap')]"
+    },
+    "ChequeForm_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'cheque-form')]"
+    },
+    "ShivalikLogo_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='logo']"
+    },
+    "HomeNavLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[@class='textnav' and text()='Home']"
+    },
+    "ProfileButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'flex-profile')]//button"
+    }
+  }
+}

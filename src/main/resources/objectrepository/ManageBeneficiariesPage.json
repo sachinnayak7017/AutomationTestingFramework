@@ -1,0 +1,121 @@
+{
+  "module": "ManageBeneficiariesPage",
+  "objects": {
+    "PageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(@class,'textContent') and contains(text(),'Manage beneficiaries')]"
+    },
+    "BackArrow_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='arrow' and contains(@src,'leftArrow')]"
+    },
+    "SearchBeneficiaryInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@placeholder='Search beneficiary']"
+    },
+    "SearchButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(@class,'IconButton')]//img[contains(@src,'search')]"
+    },
+    "AddButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(text(),'ADD')]"
+    },
+    "AllTab_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[@role='tab' and contains(text(),'All')]"
+    },
+    "ShivalikTab_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[@role='tab' and contains(text(),'Shivalik')]"
+    },
+    "OtherBankTab_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[@role='tab' and contains(text(),'Other bank')]"
+    },
+    "CoolingPeriodIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'coolingPeriod')]"
+    },
+    "CoolingPeriodText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Under cooling period')]"
+    },
+    "CoolingPeriodMessage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'It will take 1 hour')]"
+    },
+    "NoBeneficiariesCoolingText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'No beneficiaries under cooling period')]"
+    },
+    "FavoriteIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'heart')]"
+    },
+    "FavoriteText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Favorite')]"
+    },
+    "NoFavoriteBeneficiariesText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'No favorite beneficiaries added yet')]"
+    },
+    "FilterIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'filterIcon')]"
+    },
+    "AZSortText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'A-Z')]"
+    },
+    "NoBeneficiariesText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'No beneficiaries added yet')]"
+    },
+    "NickNameColumnHeader_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(text(),'Nick name')]"
+    },
+    "CustomerNameColumnHeader_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(text(),'Customer name')]"
+    },
+    "IsFavoriteColumnHeader_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(text(),'Is favorite')]"
+    },
+    "BeneficiaryList_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//ul[contains(@class,'transactionList')]"
+    },
+    "EmptyWrapperBox_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'emptyWrapperBox')]"
+    },
+    "ShivalikLogo_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='logo']"
+    },
+    "HomeNavLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[@class='textnav' and text()='Home']"
+    },
+    "BillsNavLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[@class='textnav' and text()='Bills']"
+    },
+    "OffersNavLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[@class='textnav' and text()='Offers']"
+    },
+    "ProfileButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'flex-profile')]//button"
+    },
+    "NotificationIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'notification')]"
+    }
+  }
+}

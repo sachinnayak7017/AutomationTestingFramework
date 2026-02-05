@@ -1,0 +1,89 @@
+{
+  "module": "StopChequePage",
+  "objects": {
+    "PageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'font-bold') and contains(text(),'Stop cheque')]"
+    },
+    "BackArrow_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='' and contains(@src,'leftArrow')]"
+    },
+    "CancelButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(@class,'simpleBtn')]//p[contains(text(),'CANCEL')]"
+    },
+    "ContinueButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[@type='submit']//p[contains(text(),'CONTINUE')]"
+    },
+    "SelectAccountLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Select account')]"
+    },
+    "SelectAccountDropdown_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'accoutChequeStop')]//div[@role='combobox']"
+    },
+    "StopPaymentForLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Stop payment for')]"
+    },
+    "SingleChequeRadio_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@type='radio' and @value='Single cheque']"
+    },
+    "SingleChequeLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'Single cheque')]"
+    },
+    "MultipleChequeRadio_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@type='radio' and @value='Multiple cheque']"
+    },
+    "MultipleChequeLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'Multiple cheque')]"
+    },
+    "ChequeNumberLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Cheque number')]"
+    },
+    "ChequeNumberInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='chequeNumber']"
+    },
+    "ReasonLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Reason')]"
+    },
+    "ReasonDropdown_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='reason']/parent::div/preceding-sibling::div[@role='combobox']"
+    },
+    "NoticeIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'notice')]"
+    },
+    "NoticeText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Once the cheque is stopped')]"
+    },
+    "HeroImage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='hero']"
+    },
+    "ShivalikLogo_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='logo']"
+    },
+    "HomeNavLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[@class='textnav' and text()='Home']"
+    },
+    "ProfileButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'flex-profile')]//button"
+    }
+  }
+}

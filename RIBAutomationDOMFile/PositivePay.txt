@@ -1,0 +1,2584 @@
+<body>
+		<input type="hidden" name="csrf-token" value="TGbR1ZYZcP16faBJO8CnTsZ1iT2JcJF2ebm3doN6">
+<header class="header inner-header">
+<div class="container header-wrapper">
+<!-- Nav -->
+ <nav class="navbar">
+    <!-- Logo -->
+    <div class="logo-home ">
+    	       <a class="" href="https://shivalik.bank.in">
+          <img src="https://shivalik.bank.in/assets/upload/logo/20230105061739.png" class="img-fluid " alt="shivalik small finance bank">
+       </a>
+    </div>
+    <!-- End Logo -->
+    <!-- Navigation -->
+    <div id="navBar" class="navbar-menu">
+       <ul class="menu menu-bar">
+          <li>
+             <a href="https://shivalik.bank.in/about-us">About Us</a>
+          </li>
+		  <li class="mega_open">
+		                     <a class="menu-link menu-bar-link" aria-haspopup="true" href="javascript:void(0);">Products and Services</a>
+		                     <div class="open_menu_mega">
+			                     
+			                     <ul class="mega-menu mega-menu--multiLevel">
+
+			                     					                    																						                    <li class=" zerolevelmenu">
+				                       <a class="menu-link mega-menu-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mega-img.jpg" href="https://shivalik.bank.in/service/accounts" aria-haspopup="true">Accounts</a>
+
+
+				                       				                       				                 			<ul class="menu menu-list ">
+				                           
+				                   				                    				                           
+
+
+
+
+				                           <li>
+				                           	
+				                           	<a href="https://shivalik.bank.in/service/accounts/savings-account" class="menu-link menu-list-link">Savings Account </a>
+				                           	
+
+
+
+				                           </li>
+
+				                           
+
+				                           
+				                   				                    				                           
+
+
+
+
+				                           <li>
+				                           	
+				                           	<a href="https://shivalik.bank.in/service/accounts/current-account" class="menu-link menu-list-link">Current Account </a>
+				                           	
+
+
+
+				                           </li>
+
+				                           
+
+				                           
+				                   				                    				                           
+
+
+
+
+				                           <li>
+				                           	
+				                           	<a href="https://shivalik.bank.in/service/accounts/safe-deposit-lockers" class="menu-link menu-list-link">Safe Deposit Lockers </a>
+				                           	
+
+
+
+				                           </li>
+
+				                           
+
+				                           				                        </ul>
+				                        
+
+										</li>
+													                    				                    																						                    <li class=" zerolevelmenu">
+				                       <a class="menu-link mega-menu-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mega-img.jpg" href="https://shivalik.bank.in/service/deposits" aria-haspopup="true">Deposits</a>
+
+
+				                       				                       				                 			<ul class="menu menu-list ">
+				                           
+				                   				                    				                           
+
+
+
+
+				                           <li>
+				                           	
+				                           	<a href="https://shivalik.bank.in/service/deposits/fixed-deposits" class="menu-link menu-list-link">Fixed Deposits </a>
+				                           	
+
+
+
+				                           </li>
+
+				                           
+
+				                           
+				                   				                    				                           
+
+
+
+
+				                           <li>
+				                           	
+				                           	<a href="https://shivalik.bank.in/service/deposits/tax-saver-fixed-deposit" class="menu-link menu-list-link">Tax Saver Fixed Deposit </a>
+				                           	
+
+
+
+				                           </li>
+
+				                           
+
+				                           
+				                   				                    				                           
+
+
+
+
+				                           <li>
+				                           	
+				                           	<a href="https://shivalik.bank.in/service/deposits/non-callable-fixed-deposit" class="menu-link menu-list-link">Non-Callable Fixed Deposit </a>
+				                           	
+
+
+
+				                           </li>
+
+				                           
+
+				                           
+				                   				                    				                           
+
+
+
+
+				                           <li>
+				                           	
+				                           	<a href="https://shivalik.bank.in/service/deposits/recurring-deposits" class="menu-link menu-list-link">Recurring Deposits </a>
+				                           	
+
+
+
+				                           </li>
+
+				                           
+
+				                           				                        </ul>
+				                        
+
+										</li>
+													                    				                    																						                    <li class="thirdlevel zerolevelmenu">
+				                       <a class="menu-link mega-menu-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/loans" aria-haspopup="true">Loans</a>
+
+
+				                       				                       				                        <ul class="menu menu-list none_child">
+				                           				                           <li class="zerolevelmenu">
+				                              <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/loans/business-loan">Business Loan</a>
+				                           </li>
+				                           				                           <li class="zerolevelmenu">
+				                              <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/loans/retail-trade-loan">Retail Trade Loan</a>
+				                           </li>
+				                           				                           <li class="zerolevelmenu">
+				                              <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/loans/loan-against-property">Loan Against Property</a>
+				                           </li>
+				                           				                           <li class="zerolevelmenu">
+				                              <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/loans/gold-loan">Gold Loan</a>
+				                           </li>
+				                           				                           <li class="zerolevelmenu">
+				                              <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/loans/working-capital-loan">Working Capital Loan</a>
+				                           </li>
+				                           				                           <li class="zerolevelmenu">
+				                              <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/loans/home-loan">Housing Loan</a>
+				                           </li>
+				                           				                           <li class="zerolevelmenu">
+				                              <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/loans/loan-against-warehouse-receipts">Loan Against Warehouse Receipts</a>
+				                           </li>
+				                           				                           <li class="zerolevelmenu">
+				                              <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/loans/agriculture-term-loan">Agriculture Term Loan</a>
+				                           </li>
+				                           				                        </ul>
+
+				                        <ul class="menu menu-list none_child">
+				                          				                           <li class="zerolevelmenu">
+				                              <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/loans/farmer-finance-crop-loans">Farmer Finance &amp; Crop Loans</a>
+				                           </li>
+				                          						                           <li class="zerolevelmenu">
+				                              <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/loans/micro-loans">Micro Loans</a>
+				                           </li>
+				                          						                           <li class="zerolevelmenu">
+				                              <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/loans/car-auto-loans">Car / Auto Loans</a>
+				                           </li>
+				                          						                           <li class="zerolevelmenu">
+				                              <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/loans/two-wheeler-loan">Two Wheeler Loan</a>
+				                           </li>
+				                          						                           <li class="zerolevelmenu">
+				                              <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/loans/commercial-vehicle-loans">Commercial Vehicle Loans</a>
+				                           </li>
+				                          						                           <li class="zerolevelmenu">
+				                              <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/loans/roof-top-solar-loan">Roof Top Solar Loan</a>
+				                           </li>
+				                          						                        </ul>
+				                        
+
+										</li>
+													                    				                    																						                    <li class=" zerolevelmenu">
+				                       <a class="menu-link mega-menu-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mega-img.jpg" href="https://shivalik.bank.in/service/debit-cards" aria-haspopup="true">Debit Cards</a>
+
+
+				                       				                       				                 			<ul class="menu menu-list ">
+				                           
+				                   				                    				                           
+
+
+
+
+				                           <li>
+				                           	
+				                           	<a href="https://shivalik.bank.in/service/debit-cards/#rupay-classic-debit-card" class="menu-link menu-list-link">RuPay Classic Debit Card </a>
+				                           	
+
+
+
+				                           </li>
+
+				                           
+
+				                           
+				                   				                    				                           
+
+
+
+
+				                           <li>
+				                           	
+				                           	<a href="https://shivalik.bank.in/service/debit-cards/#rupay-platinum-debit-card" class="menu-link menu-list-link">RuPay Platinum Debit Card </a>
+				                           	
+
+
+
+				                           </li>
+
+				                           
+
+				                           				                        </ul>
+				                        
+
+										</li>
+													                    				                    																						                    <li class=" zerolevelmenu">
+				                       <a class="menu-link mega-menu-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mega-img.jpg" href="https://shivalik.bank.in/service/insurance" aria-haspopup="true">Insurance</a>
+
+
+				                       				                       				                 			<ul class="menu menu-list ">
+				                           
+				                   				                    				                           				                           											
+				                           <li class="subthirdlevel zerolevelmenu">
+				                        <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/insurance/life-insurance" aria-haspopup="true">Life Insurance  </a>
+
+				                              <ul class="menu menu-list">
+						                          
+
+						                           <li class="zerolevelmenu">
+						                   <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/insurance/life-insurance/term-plan">Term Plan </a>
+						                           </li>
+						                           
+
+						                           <li class="zerolevelmenu">
+						                   <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/insurance/life-insurance/child-plan">Child Plan </a>
+						                           </li>
+						                           
+
+						                           <li class="zerolevelmenu">
+						                   <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/insurance/life-insurance/savings-and-investment-plan">Savings and Investment Plan </a>
+						                           </li>
+						                           
+
+						                           <li class="zerolevelmenu">
+						                   <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/insurance/life-insurance/whole-life-plan">Whole Life Plan </a>
+						                           </li>
+						                           						                        </ul>
+
+				                           </li>
+				                           
+
+				                           
+				                   				                    				                           				                           											
+				                           <li class="subthirdlevel zerolevelmenu">
+				                        <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/insurance/general-insurance" aria-haspopup="true">General Insurance  </a>
+
+				                              <ul class="menu menu-list">
+						                          
+
+						                           <li class="zerolevelmenu">
+						                   <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/insurance/general-insurance/motor-insurance">Motor Insurance </a>
+						                           </li>
+						                           
+
+						                           <li class="zerolevelmenu">
+						                   <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/insurance/general-insurance/home-insurance">Home Insurance </a>
+						                           </li>
+						                           						                        </ul>
+
+				                           </li>
+				                           
+
+				                           
+				                   				                    				                           				                           											
+				                           <li class="subthirdlevel zerolevelmenu">
+				                        <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/insurance/health-insurance" aria-haspopup="true">Health Insurance  </a>
+
+				                              <ul class="menu menu-list">
+						                          
+
+						                           <li class="zerolevelmenu">
+						                   <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/insurance/health-insurance/accidental-insurance">Accidental Insurance </a>
+						                           </li>
+						                           
+
+						                           <li class="zerolevelmenu">
+						                   <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/insurance/health-insurance/health-insurance">Health Insurance </a>
+						                           </li>
+						                           						                        </ul>
+
+				                           </li>
+				                           
+
+				                           
+				                   				                    				                           
+
+
+
+
+				                           <li>
+				                           	
+				                           	<a href="https://shivalik.bank.in/service/insurance/pmjjby" class="menu-link menu-list-link">PMJJBY </a>
+				                           	
+
+
+
+				                           </li>
+
+				                           
+
+				                           
+				                   				                    				                           
+
+
+
+
+				                           <li>
+				                           	
+				                           	<a href="https://shivalik.bank.in/service/insurance/pmsby" class="menu-link menu-list-link">PMSBY </a>
+				                           	
+
+
+
+				                           </li>
+
+				                           
+
+				                           				                        </ul>
+				                        
+
+										</li>
+													                    				                    																						                    <li class=" zerolevelmenu">
+				                       <a class="menu-link mega-menu-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mega-img.jpg" href="javascript:void(0)" aria-haspopup="true">Digital Banking</a>
+
+
+				                       				                       				                 			<ul class="menu menu-list ">
+				                           
+				                   				                    				                           
+
+
+
+
+				                           <li>
+				                           	
+				                           	<a href="https://shivalik.bank.in/service/digital-banking/internet-banking" class="menu-link menu-list-link">Retail Internet Banking </a>
+				                           	
+
+
+
+				                           </li>
+
+				                           
+
+				                           
+				                   				                    				                           
+
+
+
+
+				                           <li>
+				                           	
+				                           	<a href="https://shivalik.bank.in/service/digital-banking/corporate-internet-banking" class="menu-link menu-list-link">Corporate Internet Banking </a>
+				                           	
+
+
+
+				                           </li>
+
+				                           
+
+				                           
+				                   				                    				                           				                           											
+				                           <li class="subthirdlevel zerolevelmenu">
+				                        <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="javascript:void(0)" aria-haspopup="true">Mobile Banking  </a>
+
+				                              <ul class="menu menu-list">
+						                          
+
+						                           <li class="zerolevelmenu">
+						                   <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/digital-banking/mobile-banking/shivalik-mobile-banking-app">Shivalik Mobile Banking App </a>
+						                           </li>
+						                           
+
+						                           <li class="zerolevelmenu">
+						                   <a class="menu-link menu-list-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg" href="https://shivalik.bank.in/service/digital-banking/mobile-banking/sms-banking">SMS Banking </a>
+						                           </li>
+						                           						                        </ul>
+
+				                           </li>
+				                           
+
+				                           
+				                   				                    				                           
+
+
+
+
+				                           <li>
+				                           	
+				                           	<a href="https://shivalik.bank.in/service/digital-banking/merchant-business-solution" class="menu-link menu-list-link">Merchant Business Solution </a>
+				                           	
+
+
+
+				                           </li>
+
+				                           
+
+				                           				                        </ul>
+				                        
+
+										</li>
+													                    				                    																						                    <li class=" zerolevelmenu">
+				                       <a class="menu-link mega-menu-link zerolevelmenulink" rel_img="https://shivalik.bank.in/assets/upload/products/mega-img.jpg" href="javascript:void(0)" aria-haspopup="true">Payments</a>
+
+
+				                       				                       				                 			<ul class="menu menu-list ">
+				                           
+				                   				                    				                           
+
+
+
+
+				                           <li>
+				                           	
+				                           	<a href="https://shivalik.bank.in/service/payments/fund-transfer" class="menu-link menu-list-link">Fund Transfer </a>
+				                           	
+
+
+
+				                           </li>
+
+				                           
+
+				                           
+				                   				                    				                           
+
+
+
+
+				                           <li>
+				                           	
+				                           	<a href="https://shivalik.bank.in/service/payments/upi" class="menu-link menu-list-link">UPI </a>
+				                           	
+
+
+
+				                           </li>
+
+				                           
+
+				                           
+				                   				                    				                           
+
+
+
+
+				                           <li>
+				                           	
+				                           	<a href="https://shivalik.bank.in/service/tax-payment" class="menu-link menu-list-link">Tax Payment </a>
+
+				                           	
+
+
+
+				                           </li>
+
+				                           
+
+				                           
+				                   				                    				                           
+
+
+
+
+				                           <li>
+				                           	
+				                           	<a href="https://shivalik.bank.in/service/payments/loan-repayments" class="menu-link menu-list-link">Loan Repayments </a>
+				                           	
+
+
+
+				                           </li>
+
+				                           
+
+				                           				                        </ul>
+				                        
+
+										</li>
+													                    				                    																						                    				                    				                    <li class="zerolevelmenu 3_in_1">
+				                    	<a class="menu-link mega-menu-link zerolevelmenulink" href="https://shivalik.bank.in/service/digital-banking/demat-trading-account" aria-haspopup="true">Demat &amp; Trading Account</a>
+				                    </li>
+				                  </ul>
+
+
+				                  <div class="mega_img">
+				                  	<figure>
+				                  		<img src="https://shivalik.bank.in/public/frontendassets/images/mega_img.jpg" alt="mega_img" class="img-fluid menu_img">
+				                  	</figure>
+				                  </div>
+
+
+			                 </div>
+		                  </li>
+          <li>
+             <a href="https://developerportal.shivalikbank.com/auth/login" target="_blank">Developers</a>
+          </li>
+          
+          
+            <li class="login_btn">
+    <a href="javascript:void(0);" class="dropdown-toggle">Login</a>
+    <div class="dropdown-menu linkcl">
+        <a href="https://netbanking.shivalikbank.com" class="dropcls">Retail Internet Banking</a>
+        <a href="https://smeib.shivalikbank.com/#/login" class="dropcls">Corporate Internet Banking</a>
+    </div>
+</li>
+
+          
+           <li class=" toolfree_btn noafter">
+			                     <a href="https://shivalik.bank.in/feedback">  Lodge A Complaint</a>
+			                  </li>
+          
+          <li>
+             <a class="header-search" href="javascript:void(0);">
+             	<img src="https://shivalik.bank.in/public/frontendassets/images/search_icon_head.svg" alt="search_icon_head">
+             </a>
+          </li>
+          <li>
+          	<div class="hamberger">
+			<div class="slide-toggle">
+			<span class="bar"></span>
+			   <span class="bar"></span>
+			   <span class="bar"></span>
+			<!-- <img src="https://shivalik.bank.in/public/frontendassets/images/hamberger.svg" alt="icon" class="img-fluid"> -->
+			</div>
+			<div class="side-menu">
+		<span class="close-icon">
+		<img src="https://shivalik.bank.in/public/frontendassets/images/close-icon.svg" alt="icon">
+		</span>
+			
+	   <ul>
+	   		<li><a href="https://shivalik.bank.in/about-us">About Us</a></li>
+			<li>
+				
+				<a href="javascript:void(0);">Products and Services</a>
+				<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span>
+				<ul>
+					 			                     					                    					
+					
+
+					<li><a href="https://shivalik.bank.in/service/accounts">Accounts</a>
+						<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span>
+						
+						<ul>
+							 				           								<li><a href="https://shivalik.bank.in/service/accounts/savings-account">Savings Account</a></li>
+															<li><a href="https://shivalik.bank.in/service/accounts/current-account">Current Account</a></li>
+															<li><a href="https://shivalik.bank.in/service/accounts/safe-deposit-lockers">Safe Deposit Lockers</a></li>
+														</ul>
+					</li>
+					 				                    					
+					
+
+					<li><a href="https://shivalik.bank.in/service/deposits">Deposits</a>
+						<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span>
+						
+						<ul>
+							 				           								<li><a href="https://shivalik.bank.in/service/deposits/fixed-deposits">Fixed Deposits</a></li>
+															<li><a href="https://shivalik.bank.in/service/deposits/tax-saver-fixed-deposit">Tax Saver Fixed Deposit</a></li>
+															<li><a href="https://shivalik.bank.in/service/deposits/non-callable-fixed-deposit">Non-Callable Fixed Deposit</a></li>
+															<li><a href="https://shivalik.bank.in/service/deposits/recurring-deposits">Recurring Deposits</a></li>
+														</ul>
+					</li>
+					 				                    					
+					
+
+					<li><a href="https://shivalik.bank.in/service/loans">Loans</a>
+						<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span>
+						
+						<ul>
+							 				           								<li><a href="https://shivalik.bank.in/service/loans/business-loan">Business Loan</a></li>
+															<li><a href="https://shivalik.bank.in/service/loans/retail-trade-loan">Retail Trade Loan</a></li>
+															<li><a href="https://shivalik.bank.in/service/loans/loan-against-property">Loan Against Property</a></li>
+															<li><a href="https://shivalik.bank.in/service/loans/gold-loan">Gold Loan</a></li>
+															<li><a href="https://shivalik.bank.in/service/loans/working-capital-loan">Working Capital Loan</a></li>
+															<li><a href="https://shivalik.bank.in/service/loans/home-loan">Housing Loan</a></li>
+															<li><a href="https://shivalik.bank.in/service/loans/loan-against-warehouse-receipts">Loan Against Warehouse Receipts</a></li>
+															<li><a href="https://shivalik.bank.in/service/loans/agriculture-term-loan">Agriculture Term Loan</a></li>
+															<li><a href="https://shivalik.bank.in/service/loans/farmer-finance-crop-loans">Farmer Finance &amp; Crop Loans</a></li>
+															<li><a href="https://shivalik.bank.in/service/loans/micro-loans">Micro Loans</a></li>
+															<li><a href="https://shivalik.bank.in/service/loans/car-auto-loans">Car / Auto Loans</a></li>
+															<li><a href="https://shivalik.bank.in/service/loans/two-wheeler-loan">Two Wheeler Loan</a></li>
+															<li><a href="https://shivalik.bank.in/service/loans/commercial-vehicle-loans">Commercial Vehicle Loans</a></li>
+															<li><a href="https://shivalik.bank.in/service/loans/roof-top-solar-loan">Roof Top Solar Loan</a></li>
+														</ul>
+					</li>
+					 				                    					
+					
+
+					<li><a href="https://shivalik.bank.in/service/debit-cards">Debit Cards</a>
+						<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span>
+						
+						<ul>
+							 				           								<li><a href="https://shivalik.bank.in/service/debit-cards/#rupay-classic-debit-card">RuPay Classic Debit Card</a></li>
+															<li><a href="https://shivalik.bank.in/service/debit-cards/#rupay-platinum-debit-card">RuPay Platinum Debit Card</a></li>
+														</ul>
+					</li>
+					 				                    					
+					
+
+					<li><a href="https://shivalik.bank.in/service/insurance">Insurance</a>
+						<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span>
+						
+						<ul>
+							 				           								<li><a href="https://shivalik.bank.in/service/insurance/life-insurance">Life Insurance</a></li>
+															<li><a href="https://shivalik.bank.in/service/insurance/general-insurance">General Insurance</a></li>
+															<li><a href="https://shivalik.bank.in/service/insurance/health-insurance">Health Insurance</a></li>
+															<li><a href="https://shivalik.bank.in/service/insurance/pmjjby">PMJJBY</a></li>
+															<li><a href="https://shivalik.bank.in/service/insurance/pmsby">PMSBY</a></li>
+														</ul>
+					</li>
+					 				                    					
+					
+
+					<li><a href="javascript:void(0)">Digital Banking</a>
+						<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span>
+						
+						<ul>
+							 				           								<li><a href="https://shivalik.bank.in/service/digital-banking/internet-banking">Retail Internet Banking</a></li>
+															<li><a href="https://shivalik.bank.in/service/digital-banking/corporate-internet-banking">Corporate Internet Banking</a></li>
+															<li><a href="https://shivalik.bank.in/service/digital-banking/mobile-banking">Mobile Banking</a></li>
+															<li><a href="https://shivalik.bank.in/service/digital-banking/merchant-business-solution">Merchant Business Solution</a></li>
+														</ul>
+					</li>
+					 				                    					
+					
+
+					<li><a href="javascript:void(0)">Payments</a>
+						<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span>
+						
+						<ul>
+							 				           								<li><a href="https://shivalik.bank.in/service/payments/fund-transfer">Fund Transfer</a></li>
+															<li><a href="https://shivalik.bank.in/service/payments/upi">UPI</a></li>
+															<li><a href="https://shivalik.bank.in/service/payments/tax-payment">Tax Payment</a></li>
+															<li><a href="https://shivalik.bank.in/service/payments/loan-repayments">Loan Repayments</a></li>
+														</ul>
+					</li>
+					 				                    					
+					
+
+					<li><a href="https://shivalik.bank.in/service/tax-payment">Tax Payment</a>
+						<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span>
+						
+						<ul>
+							 				           							</ul>
+					</li>
+					 				                    
+					<li><a href="https://shivalik.bank.in/service/digital-banking/demat-trading-account">Demat &amp; Trading Account</a>
+				</li></ul>
+			</li>
+
+			<li class="noafter">
+			                     <a href="https://developerportal.shivalikbank.com/auth/login" target="_blank">Developers</a>
+			                  </li>
+
+			  <li class="login_btn noafter">
+			                     <a href="https://shivalikinternetbanking.com/corp/AuthenticationController?FORMSGROUP_ID__=AuthenticationFG&amp;__START_TRAN_FLAG__=Y&amp;__FG_BUTTONS__=LOAD&amp;ACTION.LOAD=Y&amp;AuthenticationFG.LOGIN_FLAG=1&amp;BANK_ID=721" target="_blank">Net Banking Login</a>
+			                  </li>
+			                   			                  <li class=" toolfree_btn noafter">
+			                     <a href="tel:1800-202-5333"> <img src="https://shivalik.bank.in/public/frontendassets/images/phone_icon.svg" alt="phone_icon"> 1800-202-5333</a>
+			                  </li>
+			                  	   </ul>
+	   </div>
+
+	   <div class="opacity-bg"></div>
+
+    </div>
+    <!-- End Navigation -->
+ </li></ul></div></nav>
+ <!-- End Nav -->
+</div>
+<div class="search-section">
+	<a href="javascript:void(0);" class="search-close">×</a>
+  <div class="search-box">
+    <div class="search-input">
+
+    	<form id="searchForm" action="https://shivalik.bank.in/search">
+						<input type="search" id="form1" name="q" value="" class="input-textarea form-coltrol" placeholder="Search">
+								<!-- <button type="submit"> -->
+									<span><img src="https://shivalik.bank.in/public/frontendassets/images/search_icon_head.svg" alt="search_icon_head"></span>
+								<!-- </button> -->
+							</form>
+
+
+
+       <input type="search" placeholder="Search..." class="input-textarea form-coltrol d-none">
+      <span class="d-none"><img src="https://shivalik.bank.in/public/frontendassets/images/search_icon_head.svg" alt="search_icon_head"></span>
+    </div>
+  </div>
+</div>
+</header>
+
+	    
+
+        
+<section class="banner_inner wow fadeIn animated animated animated" data-wow-delay=".4s" style="visibility: visible;-webkit-animation-delay: .4s; -moz-animation-delay: .4s; animation-delay: .4s;">
+    <figure>
+        <img src="https://shivalik.bank.in/assets/upload/uploads/positivepaysystem.jpg" alt="Lodge A Complaint" class="img-fluid w-100">
+    </figure>
+</section>
+
+<section class="feedback-form pdb-20">
+    <div class="container">
+        <div class="form-inn">
+            <h2>Positive Pay System</h2>
+
+            <!-- Status messages -->
+            <div id="otp-status"></div>
+
+            <!-- Loader start -->
+            <div id="loader" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999;">
+                <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">
+                    <img src="https://shivalik.bank.in/assets/upload/loader.gif" alt="Loading...">
+                </div>
+            </div>
+            <!-- Loader start -->
+
+            
+            <!-- Step 1: Account Number Form -->
+            <form id="account-number-form">
+                <input type="hidden" name="_token" value="TGbR1ZYZcP16faBJO8CnTsZ1iT2JcJF2ebm3doN6" autocomplete="off">                <div class="form_BX">
+                    <div class="form-group">
+                        <label for="account_number">Enter Account Number *</label>
+                        <input type="text" class="form-control" id="account_number" name="account_number" required="">
+                        <span id="account_number_error" class="text-danger" style="display: none;">Please enter a valid
+                            account number.</span>
+                    </div>
+                    
+                    
+                    
+                            <div class="g-recaptcha" data-sitekey="6LfL4fgrAAAAAN4NiU317LtZwCbpAPPavD4oewPO"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-xganhji30k1o" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfL4fgrAAAAAN4NiU317LtZwCbpAPPavD4oewPO&amp;co=aHR0cHM6Ly9zaGl2YWxpay5iYW5rLmluOjQ0Mw..&amp;hl=en&amp;v=N67nZn4AqZkNcbeMu4prBgzg&amp;size=normal&amp;anchor-ms=20000&amp;execute-ms=30000&amp;cb=2qjqkh11e1h4"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+
+                    
+                </div>
+                
+              
+                <button type="submit" class="blue_btn" id="send-otp-btn">Send OTP</button>
+            </form>
+
+            <!-- Step 2: Verify OTP Form -->
+            <form id="verify-otp-form" style="display: none;">
+                <input type="hidden" name="_token" value="TGbR1ZYZcP16faBJO8CnTsZ1iT2JcJF2ebm3doN6" autocomplete="off">                <div class="form_BX">
+                    <div class="form-group">
+                        <label for="otp_value">Verify OTP</label>
+                        <input type="text" class="form-control" id="otp_value" name="otp_value" required="">
+                        <span id="otp_value_error" class="text-danger" style="display: none;">Please enter the
+                            OTP.</span>
+                    </div>
+                </div>
+                <button type="submit" class="blue_btn">Verify OTP</button>
+            </form>
+
+            <!-- Step 3: Instrument Details Form -->
+            <form id="instrument-details-form" style="display: none;">
+                <input type="hidden" name="_token" value="TGbR1ZYZcP16faBJO8CnTsZ1iT2JcJF2ebm3doN6" autocomplete="off">                <div class="form_BX">
+                    <div class="form-group">
+                        <label for="cheque_no">Cheque No *</label>
+                        <input type="text" class="form-control" id="cheque_no" name="cheque_no" required="">
+                        <span id="cheque_no_error" class="text-danger" style="display: none;">Please enter a cheque
+                            number.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cheque_date">Cheque Date (DD-MM-YYYY) *</label>
+                        <input type="date" class="form-control" id="cheque_date" name="cheque_date" required="">
+                        <span id="cheque_date_error" class="text-danger" style="display: none;">Please select a valid
+                            cheque date.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pay_to_name">Pay To Name *</label>
+                        <input type="text" class="form-control" id="pay_to_name" name="pay_to_name" required="">
+                        <span id="pay_to_name_error" class="text-danger" style="display: none;">Please enter the payee
+                            name.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="from_account_number">From Account Number *</label>
+                        <input type="text" class="form-control readonly" id="from_account_number" name="from_account_number" readonly="">
+                    </div>
+
+                   <!-- Step 3: Instrument Details Form -->
+                <div class="form-group">
+                    <label for="amount">Amount *</label>
+                    <input type="text" class="form-control" id="amount" name="amount" required=""> 
+                    <!-- ✅ Changed from `type="number"` to `type="text"` -->
+                    <span id="amount_error" class="text-danger" style="display: none;">Please enter a valid amount.</span>
+                </div>
+
+                </div>
+                <button type="button" class="blue_btn" id="submit-instrument-details-btn">Submit Instrument
+                    Details</button>
+            </form>
+
+            <!-- Step 4: Second OTP Verification Form -->
+            <form id="second-otp-form" style="display: none;">
+                <input type="hidden" name="_token" value="TGbR1ZYZcP16faBJO8CnTsZ1iT2JcJF2ebm3doN6" autocomplete="off">                <div class="form_BX">
+                    <div class="form-group">
+                        <label for="second_otp">Enter Confirmation OTP *</label>
+                        <input type="text" class="form-control" id="second_otp" name="second_otp" required="">
+                        <span id="second_otp_error" class="text-danger" style="display: none;">Please enter the
+                            confirmation OTP.</span>
+                    </div>
+                </div>
+                <button type="submit" class="blue_btn">Verify and Submit</button>
+            </form><br>
+            <h3>Note:</h3>
+            <ul class="common_list">
+                <li>
+                    <img src="https://shivalik.bank.in/public/frontendassets/images/list-icon.svg" alt="icon" class="img-fluid" loading="lazy">
+                    <p>It is mandatory to provide PPS confirmation for cheques amounting to Rs.2,00,000/- and above.</p>
+    
+                </li>
+                
+                 <li>
+                    <img src="https://shivalik.bank.in/public/frontendassets/images/list-icon.svg" alt="icon" class="img-fluid" loading="lazy">
+                    <p>Inadequate or inaccurate details may result in the return of a cheque.
+</p>
+    
+                </li>
+                <li>
+                    <img src="https://shivalik.bank.in/public/frontendassets/images/list-icon.svg" alt="icon" class="img-fluid" loading="lazy">
+                    <p>To enable the Positive Pay system, the specific cheque details should be submitted to the bank 1 day prior to cheque presentation till 6 PM.</p>
+    
+                </li>
+                <li>
+                    <img src="https://shivalik.bank.in/public/frontendassets/images/list-icon.svg" alt="icon" class="img-fluid" loading="lazy">
+                    <p>Only cheques that are compliant with the above instructions will be accepted under dispute resolution mechanism at the CTS grids.</p>
+    
+                </li>
+    
+    
+               
+            </ul>
+        </div>
+
+      
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+    
+    
+     let savedAccountNumber = ""; // Global variable to store account number
+  // Show loader on AJAX start
+  $(document).ajaxStart(function () {
+            $("#loader").show();
+        });
+
+        // Hide loader on AJAX stop
+        $(document).ajaxStop(function () {
+            $("#loader").hide();
+        });
+        // Step 1: Send OTP
+        $("#account-number-form").on("submit", function (e) {
+            e.preventDefault();
+            const accountNumber = $("#account_number").val().trim();
+
+            if (accountNumber === "") {
+                $("#account_number_error").show();
+                return;
+            }
+
+            $("#account_number_error").hide();
+
+            $.ajax({
+                url: "https://shivalik.bank.in/generate-otp",
+                method: "POST",
+                data: {
+                    _token: "TGbR1ZYZcP16faBJO8CnTsZ1iT2JcJF2ebm3doN6",
+                    account_number: accountNumber,
+                },
+                success: function (response) {
+                    if (response.success) {
+                        $("#otp-status").html('<div class="alert alert-success">' + response.message + '</div>');
+
+                        // Store Account Number
+                        savedAccountNumber = accountNumber;
+
+                        // Show Verify OTP Form
+                        $("#verify-otp-form").show();
+
+                        // Show Account Number Above OTP Field
+                        $("#account-number-display").html(`
+                            <label><b>Account Number:</b></label>
+                            <input type="text" class="form-control" id="saved_account_number" value="${accountNumber}" readonly>
+                        `).show();
+
+                        // Make Original Account Number Field Readonly
+                        $("#account_number").prop("readonly", true);
+
+                        // Hide "Send OTP" Button
+                        $("#send-otp-btn").hide();
+                    } else {
+                        $("#otp-status").html('<div class="alert alert-danger">' + response.message + '</div>');
+                    }
+                },
+                error: function () {
+                    $("#otp-status").html('<div class="alert alert-danger">An error occurred while sending OTP.</div>');
+                },
+            });
+        });
+
+        // Step 2: Verify OTP
+        $("#verify-otp-form").on("submit", function (e) {
+            e.preventDefault();
+            const otpValue = $("#otp_value").val().trim();
+
+            if (otpValue === "") {
+                $("#otp_value_error").show();
+                return;
+            }
+
+            $("#otp_value_error").hide();
+
+            $.ajax({
+                url: "https://shivalik.bank.in/verify-otp",
+                method: "POST",
+                data: {
+                    _token: "TGbR1ZYZcP16faBJO8CnTsZ1iT2JcJF2ebm3doN6",
+                    otp_value: otpValue,
+                },
+                success: function (response) {
+                    if (response.success) {
+                        $("#otp-status").html('<div class="alert alert-success">' + response.message + '</div>');
+
+                        // Hide OTP Verification Form & Account Number Section
+                        $("#verify-otp-form, #account-number-form, #account-number-display").hide();
+
+                        // Show Instrument Details Form
+                        $("#instrument-details-form").show();
+
+                        // ✅ Ensure "From Account Number *" field is set with savedAccountNumber
+                        setTimeout(function () {
+                            $("#from_account_number").val(savedAccountNumber).prop("readonly", true);
+                        }, 500); // Adding a slight delay to ensure it loads
+                    } else {
+                        $("#otp-status").html('<div class="alert alert-danger">' + response.message + '</div>');
+                    }
+                },
+                error: function () {
+                    $("#otp-status").html('<div class="alert alert-danger">An error occurred while verifying OTP.</div>');
+                },
+            });
+        });
+        
+        
+        $(document).ready(function () {
+    $("#amount").on("blur", function () {
+        validateAmount(); // Run validation when user leaves the field
+    });
+
+
+
+        // Step 3: Submit Instrument Details
+
+    $("#submit-instrument-details-btn").on("click", function (e) {
+        e.preventDefault();
+        let valid = true;
+
+        const chequeNo = $("#cheque_no").val().trim();
+        const chequeDate = $("#cheque_date").val().trim();
+        let payToName = $("#pay_to_name").val().trim().replace(/\s+/g, " ");
+        $("#pay_to_name").val(payToName);
+        let amount = $("#amount").val().trim();
+
+        // ✅ Validate Cheque No.
+        if (chequeNo.length !== 6 || isNaN(chequeNo) || chequeNo === "000000") {
+            $("#cheque_no_error").show().text("Cheque No. must be 6 digits and not 000000.");
+            valid = false;
+        } else {
+            $("#cheque_no_error").hide();
+        }
+
+        // ✅ Cheque Date Validation
+        if (!chequeDate) {
+            $("#cheque_date_error").show().text("Cheque Date is required.");
+            valid = false;
+        } else {
+            $("#cheque_date_error").hide();
+        }
+
+        // ✅ Validate Pay To Name (with special characters)
+        const namePattern = /^[a-zA-Z0-9 _',.]+$/;
+        if (payToName.length < 5 || payToName.length > 50 || !namePattern.test(payToName)) {
+            $("#pay_to_name_error").show().text(
+                "Pay To Name must be 5-50 characters and may include letters, numbers, spaces, underscore (_), apostrophe ('), comma (,), and full stop (.)."
+            );
+            valid = false;
+        } else {
+            $("#pay_to_name_error").hide();
+        }
+
+        // ✅ Validate Amount
+        if (!validateAmount()) {
+            valid = false;
+        }
+
+        if (!valid) return; // Stop execution if any validation fails
+
+        const formattedDate = chequeDate.split("-").reverse().join("-");
+        const instrumentDetails = {
+            cheque_no: chequeNo,
+            cheque_date: formattedDate,
+            pay_to_name: payToName,
+            from_account_number: $("#from_account_number").val(),
+            amount: $("#amount").val(),
+        };
+
+        document.cookie = `instrumentDetails=${JSON.stringify(instrumentDetails)};path=/`;
+
+        $("#cheque_no, #cheque_date, #pay_to_name, #amount").prop("readonly", true);
+        $("#submit-instrument-details-btn").hide();
+        $("#second-otp-form").show();
+
+        $.ajax({
+            url: "https://shivalik.bank.in/generate-otp",
+            method: "POST",
+            data: {
+                _token: "TGbR1ZYZcP16faBJO8CnTsZ1iT2JcJF2ebm3doN6",
+                account_number: instrumentDetails.from_account_number,
+            },
+            success: function (response) {
+                if (response.success) {
+                    $("#otp-status").html('<div class="alert alert-success">' + response.message + '</div>');
+                } else {
+                    $("#otp-status").html('<div class="alert alert-danger">' + response.message + '</div>');
+                }
+            },
+            error: function () {
+                $("#otp-status").html('<div class="alert alert-danger">An error occurred while sending OTP.</div>');
+            },
+        });
+    });
+});
+
+// ✅ Function to Validate Amount (Triggers on blur & form submission)
+function validateAmount() {
+    let amount = $("#amount").val().trim();
+    if (amount === "") {
+        $("#amount_error").show().text("Amount field cannot be empty.");
+        return false;
+    }
+
+    if (!/^\d{1,16}(\.\d{1,2})?$/.test(amount)) {
+        $("#amount_error").show().text("Amount must be a number up to 16 digits before decimal and 2 after decimal (e.g. 9999999999999999.99). ");
+        return false;
+    }
+    
+    let [integerPart, decimalPart] = amount.split(".");
+    decimalPart = decimalPart || "00"; // Ensure decimal part exists
+
+    if (integerPart.length === 16) {
+        amount = integerPart + "." + decimalPart.padEnd(2, "0"); // Ensure exactly 16 digits + .00
+        $("#amount").val(amount);
+        $("#amount_error").hide();
+    } else if (parseInt(integerPart, 10) >= 50000) {
+        amount = integerPart + "." + decimalPart.padEnd(2, "0"); // Ensure min ₹50,000 with .00
+        $("#amount").val(amount);
+        $("#amount_error").hide();
+    } else {
+        $("#amount_error").show().text("Amount must be at least ₹50,000 or exactly 16 digits.");
+        return false;
+    }
+
+    return true;
+}
+
+        // Step 4: Verify the second OTP and Submit Data
+        $("#second-otp-form").on("submit", function (e) {
+            e.preventDefault();
+            const secondOtp = $("#second_otp").val().trim();
+
+            if (secondOtp === "") {
+                $("#second_otp_error").show();
+                return;
+            }
+
+            $("#second_otp_error").hide();
+
+            $.ajax({
+                url: "https://shivalik.bank.in/verify-otp",
+                method: "POST",
+                data: {
+                    _token: "TGbR1ZYZcP16faBJO8CnTsZ1iT2JcJF2ebm3doN6",
+                    otp_value: secondOtp,
+                },
+                success: function (response) {
+                    if (response.success) {
+                        $("#second-otp-form").hide();
+                        $("#instrument-details-form").hide();
+                        $("#otp-status").html('<div class="alert alert-success">' + response.message + '</div>');
+
+                        // Retrieve data from cookies
+                        const cookies = document.cookie.split("; ").reduce((acc, cookie) => {
+                            const [key, value] = cookie.split("=");
+                            acc[key] = value;
+                            return acc;
+                        }, {});
+
+                        const instrumentDetails = JSON.parse(cookies.instrumentDetails || "{}");
+
+                        if (Object.keys(instrumentDetails).length > 0) {
+                            $.ajax({
+                                url: "https://shivalik.bank.in/submit-instrument-details",
+                                method: "POST",
+                                data: {
+                                    _token: "TGbR1ZYZcP16faBJO8CnTsZ1iT2JcJF2ebm3doN6",
+                                    ...instrumentDetails,
+                                },
+                                success: function (response) {
+                                    if (response.status === "200") {
+                                        $("#otp-status").html(`<div class="alert alert-success">${response.message}. Reference No: ${response.reference_no}</div>`);
+                                    } else {
+                                        $("#otp-status").html('<div class="alert alert-danger">' + response.message + '</div>');
+                                    }
+                                },
+                                error: function () {
+                                    $("#otp-status").html('<div class="alert alert-danger">An error occurred while submitting details.</div>');
+                                },
+                            });
+                        } else {
+                            $("#otp-status").html('<div class="alert alert-danger">Instrument details are missing or invalid.</div>');
+                        }
+                    } else {
+                        $("#otp-status").html('<div class="alert alert-danger">' + response.message + '</div>');
+                    }
+                },
+                error: function () {
+                    $("#otp-status").html('<div class="alert alert-danger">An error occurred while verifying OTP.</div>');
+                },
+            });
+        });
+    });
+</script>
+
+
+
+<script>
+$(document).ready(function () {
+    let recaptchaVerified = false; // Track if reCAPTCHA was verified
+
+    function isRecaptchaVerified() {
+        return grecaptcha.getResponse().length !== 0;
+    }
+
+    $("#account-number-form").on("submit", function (e) {
+        if (!recaptchaVerified) {
+            if (!isRecaptchaVerified()) {
+                alert("Please complete the reCAPTCHA verification.");
+                e.preventDefault(); // Prevent form submission
+                return;
+            }
+
+            // Mark as verified
+            recaptchaVerified = true;
+        }
+
+        // Hide reCAPTCHA after successful verification
+        $(".g-recaptcha").hide();
+    });
+
+    // Reset reCAPTCHA after submission (to prevent re-use)
+    function resetRecaptcha() {
+        grecaptcha.reset();
+        recaptchaVerified = false; // Allow re-verification
+        $(".g-recaptcha").show();
+    }
+
+    // Attach resetRecaptcha to any error handling or necessary actions
+    window.onRecaptchaSuccess = function () {
+        recaptchaVerified = true;
+        $(".g-recaptcha").hide();
+    };
+});
+
+</script>
+
+
+
+
+
+        <style>
+
+ul.f-menu {
+    margin-top: 17px;
+}
+
+
+ul.f-menu li {
+    color: #1a4976;
+    font-size: 1.8rem;
+}
+
+
+@media (max-width: 1399px) {
+    footer a, .copyright p, .ftr_left ul.menu-ul-ftr li a {
+        /* font-size: 9px; */
+        display: inline-block;
+        color: #004e78;
+    }
+}
+
+</style>
+<footer class="pdt-12 pdb-12 wow fadeIn animated" data-wow-delay=".4s" style="visibility: visible;-webkit-animation-delay: .4s; -moz-animation-delay: .4s; animation-delay: .4s;">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 ftr_left">
+						<div class="f-menu">
+							<a href="https://shivalik.bank.in/about-us"><span>About Us</span></a>
+							<ul class="menu-ul-ftr">
+								<!-- <a href="https://shivalik.bank.in/about-us#vision">Vision</a>
+								<a href="https://shivalik.bank.in/about-us#board_of_directors">Board Of Directors</a>
+								<a href="https://shivalik.bank.in/annual-reports">Annual Reports</a>
+								<a href="https://shivalik.bank.in/about-us#corporate_presentation">Corporate Presentation </a>
+								<a href="https://shivalik.bank.in/investor-relations">Investor Relations</a>
+								<a href="https://shivalik.darwinbox.in/ms/candidate/careers" target="_blank">Careers</a> -->
+
+								<!-- <a href="https://shivalik.bank.in/about-us">Who We Are</a> -->
+								<li><a href="https://shivalik.bank.in/about-us#vision">Vision</a></li>
+								<li><a href="https://shivalik.bank.in/about-us#board_of_directors">Board of Directors</a></li>
+								<li><a href="https://shivalik.bank.in/about-us#management_team">Management Team</a></li>
+								<li><a href="https://shivalik.bank.in/about-us#our_brand">Our Brand</a></li>
+								<li><a href="https://shivalik.bank.in/about-us#awards">Awards</a></li>
+								<li><a href="https://shivalik.bank.in/about-us#our_partners">Our Partners</a></li>
+								<li><a href="https://shivalik.bank.in/investor-relations">Investor Relations</a></li>
+								<!--<li><a href="javascript:void(0);">Customer Testimonials</a></li>-->
+								<li><a href="https://shivalik.darwinbox.in/ms/candidate/careers">Careers</a></li>
+
+							</ul>
+						</div>
+						<!--about-end-->
+						<div class="f-menu">
+							<a href="javascript:void(0);"><span>Deposits</span></a>
+							<ul class="menu-ul-ftr">
+								<li><a href="https://shivalik.bank.in/service/accounts/savings-account">Savings Account</a>		</li>
+								<li><a href="https://shivalik.bank.in/service/accounts/current-account">Current Account</a></li>
+								<li><a href="https://shivalik.bank.in/service/deposits/fixed-deposits">Fixed Deposits</a></li>
+								<li><a href="https://shivalik.bank.in/service/digital-banking/demat-trading-account">Demat &amp; Trading Account</a></li>
+								<li><a href="https://shivalik.bank.in/service/accounts/safe-deposit-lockers">Lockers</a></li>
+
+							</ul>
+						</div>
+						<!--Deposits-end-->
+						<div class="f-menu">
+							<a href="javascript:void(0);"><span>Loans</span></a>
+							<ul class="menu-ul-ftr">
+								<li><a href="https://shivalik.bank.in/service/loans/business-loan">Business Loan</a>										</li>
+								<li><a href="https://shivalik.bank.in/service/loans/retail-trade-loan">Retail Trade Loan</a></li>
+								<li><a href="https://shivalik.bank.in/service/loans/loan-against-property	">Loan Against Property</a></li>
+								<li><a href="https://shivalik.bank.in/service/loans/gold-loan">Gold Loan</a></li>
+								<li><a href="https://shivalik.bank.in/service/loans/working-capital-loan">Working Capital Loan</a></li>
+								<li><a href="https://shivalik.bank.in/service/loans/home-loan">Housing Loan</a></li>
+								<li><a href="https://shivalik.bank.in/service/loans/loan-against-warehouse-receipts">Loan Against Warehouse Receipts</a></li>
+								<li><a href="https://shivalik.bank.in/service/loans/car-auto-loans">Car / Auto Loan</a></li>
+								<!-- <a href="https://shivalik.bank.in/service/loans">Loan Eleigibility Calculator</a> -->
+								<li><a href="https://shivalik.bank.in/loan_eligibility" target="_blank">Loan Eligibility Calculator</a></li>
+								<li><a href="javascript:void(0);">NACH/E-Mandate</a></li>
+								<li><a href="https://shivalik.bank.in/service/payments/loan-repayments">Loan Repayment Options</a></li>
+							</ul>
+						</div>
+						<!--Loans-end-->
+						<div class="f-menu">
+							<a href="javascript:void(0);"><span>Digital</span></a>
+							<ul class="menu-ul-ftr">
+								<li><a href="https://shivalik.bank.in/service/digital-banking/internet-banking">Internet Banking</a></li>
+								
+								<li><a href="https://shivalik.bank.in/service/digital-banking/mobile-banking/shivalik-mobile-banking-app">Shivalik Mobile Banking App </a></li>
+								<li><a href="https://shivalik.bank.in/service/digital-banking/mobile-banking/sms-banking">SMS Banking </a></li>
+								
+								<li><a href="https://shivalik.bank.in/service/payments/upi">UPI</a>
+								</li><li><a href="https://shivalik.bank.in/service/payments/fund-transfer">Fund Transfer</a>									</li>
+								<li><a href="https://shivalik.bank.in/service/digital-banking/merchant-business-solution">Merchant Business Solution</a></li>
+								<li><a href="https://shivalik.bank.in/service/tax-payment">Tax Payment</a></li>
+								<li><a href="javascript:void(0);">Bill Payments</a></li> 
+								<a href="https://shivalikbank.com/positive-pay-system">Positive Pay System </a>
+
+							</ul></div>
+
+						<!--Digital-end-->
+						<div class="f-menu">
+							<a href="javascript:void(0);"><span>Cards</span></a>
+							<ul class="menu-ul-ftr">
+							<li><a href="https://shivalik.bank.in/service/debit-cards">Debit Cards</a></li>
+							<li><a href="https://shivalik.bank.in/debit-card-blocking">Debit Card Blocking</a></li>
+							
+							<li><a href="https://matm.shivalikbank.com/GreenPinWeb/" target="_blank">Debit Card PIN Generation</a></li>
+							</ul>
+						</div>
+						<!--Cards-end-->
+						<div class="f-menu">
+							<a href="javascript:void(0);"><span>Interest Rates &amp; Charges</span></a>
+							<ul class="menu-ul-ftr">
+								<li><a href="https://shivalik.bank.in/interest-rate#savings-account">Savings Account</a></li>
+								<li><a href="https://shivalik.bank.in/interest-rate#fd-rd">Fixed Deposits</a></li>
+								<li><a href="https://shivalik.bank.in/interest-rate#apr">Annual Percentage Rate</a></li>
+								<li><a href="https://shivalik.bank.in/interest-rate#eblr">EBLR</a></li>
+								<li><a href="https://shivalik.bank.in/interest-rate#mlr">MLR</a></li>
+								<li><a href="https://shivalik.bank.in/resources/service-charges">Service Charges</a></li>
+
+							</ul>
+						</div>
+						<!--Interest Rates & Charges-end-->
+						<div class="f-menu">
+							<a class="paddingbottom" href="javascript:void(0);"><span>Insurance</span></a>
+							<ul class="menu-ul-ftr">
+							<li><a href="https://shivalik.bank.in/service/insurance/life-insurance">Life Insurance		</a></li>
+							<li><a href="https://shivalik.bank.in/service/insurance/health-insurance">Health Insurance</a></li>
+							<li><a href="https://shivalik.bank.in/service/insurance/general-insurance">General Insurance</a></li>
+							<li><a href="https://shivalik.bank.in/service/insurance/pmjjby">PMJJBY</a></li>
+							<li><a href="https://shivalik.bank.in/service/insurance/pmsby">PMSBY</a></li>
+							</ul>
+						</div>
+						<!--Insurance-end-->
+						<div class="f-menu">
+							<a class="paddingbottom" href="javascript:void(0);"><span>Customer's Corner</span></a>
+							<ul class="menu-ul-ftr">
+							<!-- <a href="https://shivalik.bank.in/service/insurance/life-insurance">Life Insurance		</a> -->
+							<li><a href="https://shivalik.bank.in/contact-us">Contact Us</a></li>
+							<li><a href="https://shivalik.bank.in/contact/branch">Find Your Nearest Branch</a></li>
+							<li><a href="https://shivalik.bank.in/grievance-redressal">Grievance Redressal</a></li>
+							<!-- <li><a href="https://shivalik.bank.in/assets/upload/uploads/Shivalik_GrievanceRedressalMechanism(ENGLISH).pdf" target="_blank">Grievance Redressal</a></li>
+							<li><a href="https://shivalik.bank.in/assets/upload/grievance/Grievance_Redressal_Mechanism_Business_Correspondents_English.pdf" target="_blank">Grievance Redressal - Business Correspondents</a></li> -->
+							<li><a href="https://shivalik.bank.in/regulatory-section/notice-board/banking-ombudsman">Banking Ombudsman</a></li>
+
+							<li><a href="https://shivalik.bank.in/report-un-authorised-transaction">Report an Un-authorised Transaction</a></li>
+							<!-- <a href="https://shivalik.bank.in/tender-notices">Comprehensive Notice Board</a> -->
+													
+							<li><a href="https://paisaboltahai.rbi.org.in/" target="_blank">Know Your Bank Notes</a></li>
+							<li><a href="https://rbikehtahai.rbi.org.in/" target="_blank">RBI Kehta Hai</a></li>
+							<li><a href="https://shivalik.bank.in/rbi-financial-literacy-week-2025">RBI Financial Literacy Week 2025</a></li>
+							<li><a href="https://shivalik.bank.in/unclaimed-deposits">Unclaimed Deposits</a></li>
+							<li><a href="https://shivalik.bank.in/regulatory-section/notice-board/secured-assets-possessed-under-the-sarfaesi-act-2002">Secured assets possessed under the SARFAESI Act, 2002</a></li>
+
+							<li><a href="https://shivalik.bank.in/download-forms">Download Forms</a></li>
+							<li><a href="https://shivalik.bank.in/feedback">Lodge A Complaint	</a></li>
+							<!-- <li><a href="https://shivalik.bank.in/mandatory-notices-displayed-at-branches">Mandatory Notices Displayed at Branches</a></li> -->
+							<li><a href="https://shivalik.bank.in/stay-informed">Stay Informed</a></li>
+                            
+							</ul>
+						</div>
+						<!--Customer's Corner-end-->
+						<div class="f-menu">
+							<a class="paddingbottom" href="javascript:void(0);"><span>Media Centre</span></a>
+							<ul class="menu-ul-ftr">
+							<li><a href="https://shivalik.bank.in/press-releases">Press Releases</a></li>
+							<li><a href="https://shivalik.bank.in/media-centre">Media Contact</a></li>
+							<li><a href="https://shivalik.bank.in/media-kit">Media Kit</a></li>
+							
+
+							</ul>
+						</div>
+						<!--Media Centre-end-->
+						<div class="f-menu">
+							<a class="paddingbottom" href="javascript:void(0);"><span>Others</span></a>
+							<ul class="menu-ul-ftr">
+								<li><a href="https://shivalik.bank.in/regulatory-section/policies">Policies</a>							</li>
+								<li><a href="https://shivalik.bank.in/regulatory-section/terms-and-conditions">Terms &amp; Conditions</a></li>
+								<li><a href="https://shivalik.bank.in/regulatory-section">Regulatory Section</a></li>
+								<li><a href="https://shivalik.bank.in/auction-of-bank-properties">Auction of Bank Properties</a></li>
+								<li><a href="https://shivalik.bank.in/download-brochures">Brochures</a></li>
+								<li><a href="https://shivalik.bank.in/regulatory-section/privacy-policy">Privacy Policy</a></li>
+								<li><a href="https://shivalik.bank.in/regulatory-section/disclaimer">Disclaimer</a></li>
+								<li><a href="https://shivalik.bank.in/rtgs-customer-facilitation">RTGS Customer Facilitation</a></li>
+								<!-- <a href="https://shivalik.bank.in/remittances">Remittances</a> -->
+								<li><a href="https://shivalik.bank.in/sitemap">Sitemap</a></li>
+								<li><a href="https://shivalik.bank.in/msme-lending">MSME Lending</a></li>
+
+
+
+							</ul>
+						</div>
+						<!--Others-end-->
+
+
+					</div>
+					<div class="col-lg-12 ftr_right">
+
+						<div class="copyrigth_wrap">
+						<div class="row">
+							<div class="col-lg-8">
+
+    <div class="copyright">
+        <img src="https://shivalik.bank.in/public/frontendassets/images/original_logo.png" alt="logo">
+        <p>Copyright © 2026 Shivalik Small Finance Bank. All Rights Reserved. Site updated on 03/02/26.</p>
+    </div>
+
+
+							</div>
+							<div class="col-lg-4">
+							
+							<div class="follow-us">
+                           <ul>
+
+    <li>
+        <a href="https://twitter.com/Shivalik_Bank" target="_blank">
+            <img src="https://shivalik.bank.in/public/frontendassets/images/twitter.png" alt="twitter">
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.youtube.com/channel/UCgr4OeB75LMSw0OsX39_Ghg" target="_blank">
+            <img src="https://shivalik.bank.in/public/frontendassets/images/youtube.png" alt="youtube">
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.facebook.com/shivalikbank/" target="_blank">
+            <img src="https://shivalik.bank.in/public/frontendassets/images/facebook.png" alt="facebook">
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.instagram.com/shivalik.bank/" target="_blank">
+            <img src="https://shivalik.bank.in/public/frontendassets/images/instagram.png" alt="instagram">
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.linkedin.com/company/shivalikbank" target="_blank">
+            <img src="https://shivalik.bank.in/public/frontendassets/images/linkdin.png" alt="linkedin">
+        </a>
+    </li>
+                           </ul>
+                        </div>
+					
+							<!--follow-us end-->
+							</div>
+						</div>
+						
+						
+						<div class="col-lg-12 ftr_left">
+							<ul class="f-menu">
+								<li>Always use the customer care numbers displayed on Bank's official website.</li>
+								<li>Do not use any other numbers since this may put you at risk of fraud.</li>
+								<li>Please be aware of prank and deceptive calls.</li>
+								<li>Bank will never ask for sensitive information like Card Number, OTP, Password, CVV etc.</li>
+							</ul>
+						<ul class="f-menu">
+								<li>Shivalik Small Finance Bank Ltd.</li>
+								<li>Registered Office: 501, Salcon Aurum, Jasola District Centre, New Delhi - 110025.</li>
+								<li>Corporate Identity Number (CIN): U65900DL2020PLC366027</li>
+								<li>Telephone Number: 1800-202-5333</li>
+								<li>Email: customercare@shivalikbank.com</li>
+								
+								
+								
+							<p style="font-size: 1.8rem;color: #004e78;">In case of non-resolution of grievances, please <a href="https://shivalikbank.com/grievance-redressal" target="_blank" style="
+    text-decoration: underline;">  click here</a></p>
+											
+							</ul>
+							
+							
+							
+							
+							
+							</div>
+						
+						</div>
+						
+						
+						
+						
+						
+					</div>
+				</div>
+			</div>
+		</footer>
+<!--mobile-footer start-->
+<section class="mobile_footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+			<div class="accordion" id="mobile-ftr">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="footer1">
+						<button class="accordion-button footer-accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#footerOne" aria-expanded="true" aria-controls="footerOne">
+						About Us
+						</button>
+						</h2>
+						<div id="footerOne" class="accordion-collapse collapse" aria-labelledby="footer1" data-bs-parent="#mobile-ftr">
+						<div class="accordion-body">
+						<div class="mob_fmenu">
+								
+								<a href="https://shivalik.bank.in/about-us#vision">Vision</a>
+								<a href="https://shivalik.bank.in/about-us#board_of_directors">Board of Directors</a>
+								<a href="https://shivalik.bank.in/about-us#management_team">Management Team</a>
+								<a href="https://shivalik.bank.in/about-us#our_brand">Our Brand</a>
+								<a href="https://shivalik.bank.in/about-us#awards">Awards</a>
+								<a href="https://shivalik.bank.in/about-us#our_partners">Our Partners</a>
+								<a href="https://shivalik.bank.in/investor-relations">Investor Relations</a>
+								<!--<a href="javascript:void(0);">Customer Testimonials</a>-->
+								<a href="https://shivalik.darwinbox.in/ms/candidate/careers">Careers</a>
+
+						</div>
+						<!--about-end-->
+						</div>
+						</div>
+					</div>
+					<!--About Us-end-->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="footer2">
+						<button class="accordion-button footer-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#footerTwo" aria-expanded="false" aria-controls="footerTwo">
+						Deposits
+						</button>
+						</h2>
+						<div id="footerTwo" class="accordion-collapse collapse" aria-labelledby="footer2" data-bs-parent="#mobile-ftr">
+						<div class="accordion-body">
+							<div class="mob_fmenu">
+								<a href="https://shivalik.bank.in/service/accounts/savings-account">Savings Account</a>
+								<a href="https://shivalik.bank.in/service/accounts/current-account">Current Account</a>
+								<a href="https://shivalik.bank.in/service/deposits/fixed-deposits">Fixed Deposits</a>
+								<a href="https://shivalik.bank.in/service/digital-banking/demat-trading-account">Demat &amp; Trading Account</a>
+								<a href="https://shivalik.bank.in/service/accounts/safe-deposit-lockers">Lockers</a>
+							</div>
+						</div>
+						</div>
+					</div>
+					<!--Deposits-end-->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="footer3">
+						<button class="accordion-button footer-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#footerThree" aria-expanded="false" aria-controls="footerThree">
+						Loans
+						</button>
+						</h2>
+						<div id="footerThree" class="accordion-collapse collapse" aria-labelledby="footer3" data-bs-parent="#mobile-ftr">
+						<div class="accordion-body">
+						<div class="mob_fmenu">
+								<a href="https://shivalik.bank.in/service/loans/business-loan">Business Loan</a>
+								<a href="https://shivalik.bank.in/service/loans/retail-trade-loan">Retail Trade Loan</a>
+								<a href="https://shivalik.bank.in/service/loans/loan-against-property">Loan Against Property</a>
+								<a href="https://shivalik.bank.in/service/loans/gold-loan">Gold Loan</a>
+								<a href="https://shivalik.bank.in/service/loans/working-capital-loan">Working Capital Loan</a>
+								<a href="https://shivalik.bank.in/service/loans/home-loan">Housing Loan</a>
+								<a href="https://shivalik.bank.in/service/loans/loan-against-warehouse-receipts">Loan Against Warehouse Receipts</a>
+								<a href="https://shivalik.bank.in/service/loans/car-auto-loans">Car / Auto Loan</a>
+								<a href="https://shivalik.bank.in/loan_eligibility" target="_blank">Loan Eligibility Calculator</a>
+								<!-- <a href="https://shivalik.bank.in/digital-servicesnach.php" target="_blank">NACH/E-Mandate</a> -->
+								<a href="javascript:void(0)">NACH/E-Mandate</a>
+								<a href="https://shivalik.bank.in/service/payments/loan-repayments">Loan Repayment Options</a>
+							</div>
+						</div>
+						</div>
+					</div>
+					<!--Loans-end-->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="footer4">
+						<button class="accordion-button footer-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#footerFour" aria-expanded="false" aria-controls="footerFour">
+						Digital
+						</button>
+						</h2>
+						<div id="footerFour" class="accordion-collapse collapse" aria-labelledby="footer4" data-bs-parent="#mobile-ftr">
+						<div class="accordion-body">
+							<div class="mob_fmenu">
+							<a href="https://shivalik.bank.in/service/digital-banking/internet-banking">Internet Banking</a>
+								<a href="https://shivalik.bank.in/service/digital-banking/mobile-banking/shivalik-mobile-banking-app">Shivalik Mobile Banking App </a>
+								<a href="https://shivalik.bank.in/service/digital-banking/mobile-banking/sms-banking">SMS Banking </a>
+								
+								<a href="https://shivalik.bank.in/service/payments/upi">UPI</a>
+								<a href="https://shivalik.bank.in/service/payments/fund-transfer">Fund Transfer</a>
+								<a href="https://shivalik.bank.in/service/digital-banking/merchant-business-solution">Merchant Business Solution</a>
+								<a href="https://shivalik.bank.in/service/tax-payment">Tax Payment</a>
+								<a href="javascript:void(0);">Bill Payments</a>
+								<a href="https://shivalikbank.com/positive-pay-system">Positive Pay System </a>
+							</div>
+						</div>
+						</div>
+					</div>
+					<!--Digital-end-->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="footer5">
+						<button class="accordion-button footer-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#footerFive" aria-expanded="false" aria-controls="footerFive">
+						Cards
+						</button>
+						</h2>
+						<div id="footerFive" class="accordion-collapse collapse" aria-labelledby="footer5" data-bs-parent="#mobile-ftr">
+						<div class="accordion-body">
+							<div class="mob_fmenu">
+								<a href="https://shivalik.bank.in/service/debit-cards">Debit Cards</a>
+								<a href="https://shivalik.bank.in/debit-card-blocking">Debit Card Blocking</a>
+								<a href="https://matm.shivalikbank.com/GreenPinWeb/" target="_blank">Debit Card PIN Generation</a>
+							</div>
+						</div>
+						</div>
+					</div>
+					<!--Cards-end-->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="footer6">
+						<button class="accordion-button footer-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#footerSix" aria-expanded="false" aria-controls="footerSix">
+						Interest Rates &amp; Charges
+						</button>
+						</h2>
+						<div id="footerSix" class="accordion-collapse collapse" aria-labelledby="footer6" data-bs-parent="#mobile-ftr">
+						<div class="accordion-body">
+							<div class="mob_fmenu">
+								<a href="https://shivalik.bank.in/interest-rate#savings-account">Savings Account</a>
+								<a href="https://shivalik.bank.in/interest-rate#fd-rd">Fixed Deposits</a>
+								<a href="https://shivalik.bank.in/interest-rate#apr">Annual Percentage Rate</a>
+								<a href="https://shivalik.bank.in/interest-rate#eblr">EBLR</a>
+								<a href="https://shivalik.bank.in/interest-rate#mlr">MLR</a>
+								<a href="https://shivalik.bank.in/resources/service-charges">Service Charges</a>
+							</div>
+						</div>
+						</div>
+					</div>
+					<!--Interest Rates & Charges-end-->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="footer7">
+						<button class="accordion-button footer-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#footerSeven" aria-expanded="false" aria-controls="footerSeven">
+						Insurance
+						</button>
+						</h2>
+						<div id="footerSeven" class="accordion-collapse collapse" aria-labelledby="footer7" data-bs-parent="#mobile-ftr">
+						<div class="accordion-body">
+							<div class="mob_fmenu">
+							<a href="https://shivalik.bank.in/service/insurance/life-insurance">Life Insurance		</a>
+							<a href="https://shivalik.bank.in/service/insurance/health-insurance">Health Insurance</a>
+							<a href="https://shivalik.bank.in/service/insurance/general-insurance">General Insurance</a>
+							<a href="https://shivalik.bank.in/service/insurance/pmjjby">PMJJBY</a>
+							<a href="https://shivalik.bank.in/service/insurance/pmsby">PMSBY</a>
+							</div>
+						</div>
+						</div>
+					</div>
+					<!--Insurance-end-->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="footer8">
+						<button class="accordion-button footer-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#footerEight" aria-expanded="false" aria-controls="footerEight">
+						Customer's Corner
+						</button>
+						</h2>
+						<div id="footerEight" class="accordion-collapse collapse" aria-labelledby="footer8" data-bs-parent="#mobile-ftr">
+						<div class="accordion-body">
+							<div class="mob_fmenu">
+							<a href="https://shivalik.bank.in/contact-us">Contact Us</a>
+							<a href="https://shivalik.bank.in/contact/branch">Find Your Nearest Branch</a>
+							<a href="https://shivalik.bank.in/grievance-redressal">Grievance Redressal</a>
+							<!-- <a href="https://shivalik.bank.in/pdf/Grievance-Redressal-MechanismEnglish.pdf" target="_blank">Grievance Redressal</a>
+							<a href="https://shivalik.bank.in/assets/upload/grievance/Grievance_Redressal_Mechanism_Business_Correspondents_English.pdf" target="_blank">Grievance Redressal - Business Correspondents</a> -->
+							<a href="https://shivalik.bank.in/regulatory-section/notice-board/banking-ombudsman">Banking Ombudsman</a>
+							<a href="https://shivalik.bank.in/report-un-authorised-transaction">Report an Un-authorised Transaction</a>
+							<a href="javascript:void(0);">Comprehensive Notice Board</a>
+							<a href="https://paisaboltahai.rbi.org.in/" target="_blank">Know Your Bank Notes</a>
+							<a href="https://rbikehtahai.rbi.org.in/" target="_blank">RBI Kehta Hai</a>
+							<a href="https://shivalik.bank.in/rbi-financial-literacy-week-2025">RBI Financial Literacy Week 2025</a>
+							<a href="https://shivalik.bank.in/unclaimed-deposits">Unclaimed Deposits</a>
+							<a href="https://shivalik.bank.in/regulatory-section/notice-board/secured-assets-possessed-under-the-sarfaesi-act-2002">Secured assets possessed under the SARFAESI Act, 2002</a>
+							<a href="https://shivalik.bank.in/download-forms">Download Forms</a>
+							<a href="https://shivalik.bank.in/feedback">Lodge A Complaint</a>
+							
+					<!-- <a href="https://shivalik.bank.in/mandatory-notices-displayed-at-branches">Mandatory Notices Displayed at Branches</a> -->
+							</div>
+						</div>
+						</div>
+					</div>
+					<!--Customer's Corner-end-->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="footer9">
+						<button class="accordion-button footer-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#footerNine" aria-expanded="false" aria-controls="footerNine">
+						Media Centre
+						</button>
+						</h2>
+						<div id="footerNine" class="accordion-collapse collapse" aria-labelledby="footer9" data-bs-parent="#mobile-ftr">
+						<div class="accordion-body">
+							<div class="mob_fmenu">
+							<a href="https://shivalik.bank.in/press-releases">Press Releases</a>
+							<a href="https://shivalik.bank.in/media-centre">Media Contact</a>
+							<a href="https://shivalik.bank.in/media-kit">Media Kit</a>
+							
+							</div>
+						</div>
+						</div>
+					</div>
+					<!--Media Centre-end-->
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="footer10">
+						<button class="accordion-button footer-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#footerTen" aria-expanded="false" aria-controls="footerTen">
+						Others
+						</button>
+						</h2>
+						<div id="footerTen" class="accordion-collapse collapse" aria-labelledby="footer10" data-bs-parent="#mobile-ftr">
+						<div class="accordion-body">
+							<div class="mob_fmenu">
+							<a href="https://shivalik.bank.in/regulatory-section/policies">Policies</a>
+								<a href="https://shivalik.bank.in/regulatory-section/terms-and-conditions">Terms &amp; Conditions</a>
+								<a href="https://shivalik.bank.in/regulatory-section">Regulatory Section</a>
+								<a href="https://shivalik.bank.in/auction-of-bank-properties">Auction of Bank Properties</a>
+								<a href="https://shivalik.bank.in/download-brochures">Brochures</a>
+								<a href="https://shivalik.bank.in/regulatory-section/privacy-policy">Privacy Policy</a>
+								<a href="https://shivalik.bank.in/regulatory-section/disclaimer">Disclaimer</a>
+								<a href="https://shivalik.bank.in/rtgs-customer-facilitation">RTGS Customer Facilitation</a>
+								<a href="https://shivalik.bank.in/sitemap">Sitemap</a>
+								<a href="https://shivalik.bank.in/msme-lending">MSME Lending</a>
+							</div>
+						</div>
+						</div>
+					</div>
+					<!--Others-end-->
+				</div>
+			</div>
+			<div class="col-lg-12 ftr_right">
+
+
+						<div class="copyrigth_wrap">
+						<div class="row">
+							<div class="col-lg-8">
+                        <div class="copyright">
+                        	<img src="https://shivalik.bank.in/public/frontendassets/images/original_logo.png" alt="logo">
+							<p>Copyright © 2026 Shivalik Small Finance Bank. All Rights Reserved. Site updated on 03/02/26 .</p>
+
+                        </div>
+                         							</div>
+							<div class="col-lg-4">
+							<div class="follow-us">
+                           <ul>
+
+    <li>
+        <a href="https://twitter.com/Shivalik_Bank" target="_blank">
+            <img src="https://shivalik.bank.in/public/frontendassets/images/twitter.png" alt="twitter">
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.youtube.com/channel/UCgr4OeB75LMSw0OsX39_Ghg" target="_blank">
+            <img src="https://shivalik.bank.in/public/frontendassets/images/youtube.png" alt="youtube">
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.facebook.com/shivalikbank/" target="_blank">
+            <img src="https://shivalik.bank.in/public/frontendassets/images/facebook.png" alt="facebook">
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.instagram.com/shivalik.bank/" target="_blank">
+            <img src="https://shivalik.bank.in/public/frontendassets/images/instagram.png" alt="instagram">
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.linkedin.com/company/shivalikbank" target="_blank">
+            <img src="https://shivalik.bank.in/public/frontendassets/images/linkdin.png" alt="linkedin">
+        </a>
+    </li>
+                           </ul>
+                        </div>
+						<!--follow-us end-->
+							</div>
+						</div>
+						</div>
+
+
+					</div>
+		</div>
+	</div>
+</section>
+<!--mobile-footer end-->
+<section class="mobile-bottom-menu">
+		<ul>
+			
+			<li>
+				<a href="javascript:void(0)" class="togglee m_contact">
+					<figure>
+					<img src="https://shivalik.bank.in/public/frontendassets/images/f-call.png" alt="icon" class="img-fluid">
+					</figure>
+					<p>Contact</p>
+				</a>
+			</li>
+
+		
+			<!-- <a href="javascript:void(0)" class="notificat togglee"> -->
+			
+			<li>
+				<a href="javascript:void(0)" class="m-enquiry togglee">
+					<figure>
+					<img src="https://shivalik.bank.in/public/frontendassets/images/f-login.png" alt="icon" class="img-fluid">
+					</figure>
+					<p>Login</p>
+				</a>
+			</li> 
+
+			<li>
+				<a href="javascript:void(0)" class="m-insurance togglee">
+					<figure>
+						<img src="https://shivalik.bank.in/public/frontendassets/images/f-menu.png" alt="icon" class="img-fluid">
+					</figure>
+					<p>Menu</p>
+				</a>
+			</li>
+		</ul>
+		<div class="enquiry-mobile">
+			<div class="product_mob">
+				<h5>Login <span class="close_product"><img src="https://shivalik.bank.in/public/frontendassets/images/close_icon.png" alt="icon" class="img-fluid"></span></h5>
+				<ul>
+				<li>
+					<ul>
+						<li><a href="https://netbanking.shivalikbank.com">Retail Internet Banking</a></li>
+						<li><a href="https://smeib.shivalikbank.com/#/login">Corporate Internet Banking</a></li>
+
+						</ul>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+		<!--product-end-->
+
+		<div class="mob_contact">
+			<h5>CONTACT <span class="close_contact"><img src="https://shivalik.bank.in/public/frontendassets/images/close_icon.png" alt="icon" class="img-fluid"></span></h5>
+			<div class="link-mob-cont">
+					<div class="box-mob">
+						<img src="https://shivalik.bank.in/public/frontendassets/images/phone_icon.svg" alt="phone_mob">
+						<a class="toolfree-no" href="tel:18002025333">1800-202-5333</a>
+					</div>
+					<div class="box-mob">
+						<img src="https://shivalik.bank.in/public/frontendassets/images/emails_icon1.svg" alt="phone_mob">
+						<a class="mail-id" href="mailto:customercare@shivalikbank.com">customercare@shivalikbank.com</a>
+					</div>
+				</div>
+			</div>
+		<!--contact-end-->
+
+		<div class="call-mobile">
+			<div class="contact-mobile">
+
+			</div>
+		</div>
+		<!----Net Banking Login-css-end---end-->
+
+		<div class="insurance-mobile">
+			<div class="mob-menu-btm">
+				<h5><img src="https://shivalik.bank.in/assets/upload/logo/20230105061739.png" alt="shivalik small finance bank" class="img-fluid"> <span class="close_mobilemenu"><img src="https://shivalik.bank.in/public/frontendassets/images/close_icon.png" alt="icon" class="img-fluid"></span></h5>
+				<div class="product_mob">
+					<ul>
+						<li>
+							<ul>
+								<li>
+									<a href="javascript:void(0)">About Us  <span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span></a>
+									<ul>
+										
+										<li><a class="mobabout_removehas" href="https://shivalik.bank.in/about-us#vision">Vision</a></li>
+										<li><a class="mobabout_removehas" href="https://shivalik.bank.in/about-us#board_of_directors">Board of Directors</a></li>
+										<li><a class="mobabout_removehas" href="https://shivalik.bank.in/about-us#management_team">Management Team</a></li>
+										<li><a class="mobabout_removehas" href="https://shivalik.bank.in/about-us#our_brand">Our Brand</a></li>
+										<li><a class="mobabout_removehas" href="https://shivalik.bank.in/about-us#awards">Awards</a></li>
+										<li><a class="mobabout_removehas" href="https://shivalik.bank.in/about-us#our_partners">Our Partners</a></li>
+										<li><a href="https://shivalik.bank.in/investor-relations">Investor Relations</a></li>
+										<!--<li><a href="javascript:void(0);">Customer Testimonials</a></li>-->
+										<li><a href="https://shivalik.darwinbox.in/ms/candidate/careers">Careers</a></li>
+									</ul>
+								</li><!--Interest Rates & Charges-end-->
+
+
+
+								<li>
+
+						<a href="javascript:void(0)">Products and Services  <span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span></a>
+						<ul>
+																													
+
+													<li><a href="javascript:void(0);">Accounts
+								<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span></a>
+
+								<ul>
+									
+									
+																<li>
+																		<a href="https://shivalik.bank.in/service/accounts/savings-account">Savings Account </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/accounts/current-account">Current Account </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/accounts/safe-deposit-lockers">Safe Deposit Lockers </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+
+								</ul>
+							</li>
+																									
+
+													<li><a href="javascript:void(0);">Deposits
+								<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span></a>
+
+								<ul>
+									
+									
+																<li>
+																		<a href="https://shivalik.bank.in/service/deposits/fixed-deposits">Fixed Deposits </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/deposits/tax-saver-fixed-deposit">Tax Saver Fixed Deposit </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/deposits/non-callable-fixed-deposit">Non-Callable Fixed Deposit </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/deposits/recurring-deposits">Recurring Deposits </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+
+								</ul>
+							</li>
+																									
+
+													<li><a href="javascript:void(0);">Loans
+								<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span></a>
+
+								<ul>
+									
+									
+																<li>
+																		<a href="https://shivalik.bank.in/service/loans/business-loan">Business Loan </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/loans/retail-trade-loan">Retail Trade Loan </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/loans/loan-against-property">Loan Against Property </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/loans/gold-loan">Gold Loan </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/loans/working-capital-loan">Working Capital Loan </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/loans/home-loan">Housing Loan </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/loans/loan-against-warehouse-receipts">Loan Against Warehouse Receipts </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/loans/agriculture-term-loan">Agriculture Term Loan </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/loans/farmer-finance-crop-loans">Farmer Finance &amp; Crop Loans </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/loans/micro-loans">Micro Loans </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/loans/car-auto-loans">Car / Auto Loans </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/loans/two-wheeler-loan">Two Wheeler Loan </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/loans/commercial-vehicle-loans">Commercial Vehicle Loans </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/loans/roof-top-solar-loan">Roof Top Solar Loan </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+
+								</ul>
+							</li>
+																									
+
+													<li><a href="javascript:void(0);">Debit Cards
+								<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span></a>
+
+								<ul>
+									
+									
+																<li>
+																		<a href="https://shivalik.bank.in/service/debit-cards/#rupay-classic-debit-card">RuPay Classic Debit Card </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/debit-cards/#rupay-platinum-debit-card">RuPay Platinum Debit Card </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+
+								</ul>
+							</li>
+																									
+
+													<li><a href="javascript:void(0);">Insurance
+								<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span></a>
+
+								<ul>
+									
+									
+																<li>
+																		<a href="https://shivalik.bank.in/service/insurance/life-insurance">Life Insurance  <span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span> </a>
+
+
+
+										<ul>
+											 
+											<li><a href="https://shivalik.bank.in/service/insurance/life-insurance/term-plan">Term Plan</a></li>
+											
+											<li><a href="https://shivalik.bank.in/service/insurance/life-insurance/child-plan">Child Plan</a></li>
+											
+											<li><a href="https://shivalik.bank.in/service/insurance/life-insurance/savings-and-investment-plan">Savings and Investment Plan</a></li>
+											
+											<li><a href="https://shivalik.bank.in/service/insurance/life-insurance/whole-life-plan">Whole Life Plan</a></li>
+																					</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/insurance/general-insurance">General Insurance  <span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span> </a>
+
+
+
+										<ul>
+											 
+											<li><a href="https://shivalik.bank.in/service/insurance/general-insurance/motor-insurance">Motor Insurance</a></li>
+											
+											<li><a href="https://shivalik.bank.in/service/insurance/general-insurance/home-insurance">Home Insurance</a></li>
+																					</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/insurance/health-insurance">Health Insurance  <span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span> </a>
+
+
+
+										<ul>
+											 
+											<li><a href="https://shivalik.bank.in/service/insurance/health-insurance/accidental-insurance">Accidental Insurance</a></li>
+											
+											<li><a href="https://shivalik.bank.in/service/insurance/health-insurance/health-insurance">Health Insurance</a></li>
+																					</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/insurance/pmjjby">PMJJBY </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/insurance/pmsby">PMSBY </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+
+								</ul>
+							</li>
+																									
+
+													<li><a href="javascript:void(0);">Digital Banking
+								<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span></a>
+
+								<ul>
+									
+									
+																<li>
+																		<a href="https://shivalik.bank.in/service/digital-banking/internet-banking">Retail Internet Banking </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/digital-banking/corporate-internet-banking">Corporate Internet Banking </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="javascript:void(0)">Mobile Banking  <span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span> </a>
+
+
+
+										<ul>
+											 
+											<li><a href="https://shivalik.bank.in/service/digital-banking/mobile-banking/shivalik-mobile-banking-app">Shivalik Mobile Banking App</a></li>
+											
+											<li><a href="https://shivalik.bank.in/service/digital-banking/mobile-banking/sms-banking">SMS Banking</a></li>
+																					</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/digital-banking/merchant-business-solution">Merchant Business Solution </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+
+								</ul>
+							</li>
+																									
+
+													<li><a href="javascript:void(0);">Payments
+								<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span></a>
+
+								<ul>
+									
+									
+																<li>
+																		<a href="https://shivalik.bank.in/service/payments/fund-transfer">Fund Transfer </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/payments/upi">UPI </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/tax-payment">Tax Payment </a>
+																		</li>
+
+
+										
+																<li>
+																		<a href="https://shivalik.bank.in/service/payments/loan-repayments">Loan Repayments </a>
+
+
+
+										<ul>
+											 										</ul>
+																		</li>
+
+
+										
+
+								</ul>
+							</li>
+																									
+
+																								
+
+							<li><a href="https://shivalik.bank.in/service/digital-banking/demat-trading-account">Demat &amp; Trading Account</a></li>
+
+
+						</ul>
+					</li>
+
+					<li>
+             <a href="https://developerportal.shivalikbank.com/auth/login" target="_blank">Developers</a>
+          </li>
+
+
+
+								<li>
+									<a href="javascript:void(0)">Interest Rates &amp; Charges</a>
+									<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span>
+									<ul>
+										<li><a href="https://shivalik.bank.in/interest-rate#savings-account">Savings Account</a></li>
+										<li><a href="https://shivalik.bank.in/interest-rate#fd-rd">Fixed Deposits</a></li>
+										<li><a href="https://shivalik.bank.in/interest-rate#apr">Annual Percentage Rate</a></li>
+										<li><a href="https://shivalik.bank.in/interest-rate#eblr">EBLR</a></li>
+										<li><a href="https://shivalik.bank.in/interest-rate#mlr">MLR</a></li>
+										<li><a href="https://shivalik.bank.in/resources/service-charges">Service Charges</a></li>
+									</ul>
+								</li><!--Interest Rates & Charges-end-->
+								<li>
+									<a href="javascript:void(0)">Customer's Corner</a>
+									<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span>
+									<ul>
+										<li><a href="https://shivalik.bank.in/contact-us">Contact Us</a>								</li>
+										<li><a href="https://shivalik.bank.in/contact/branch">Find Your Nearest Branch</a></li>
+										<li><a href="https://shivalik.bank.in/grievance-redressal">Grievance Redressal</a></li>
+										<!-- <li><a href="https://shivalik.bank.in/pdf/Grievance-Redressal-MechanismEnglish.pdf" target="_blank">Grievance Redressal</a></li>
+										<li><a href="https://shivalik.bank.in/assets/upload/grievance/Grievance_Redressal_Mechanism_Business_Correspondents_English.pdf" target="_blank">Grievance Redressal - Business Correspondents</a></li> -->
+										<li><a href="https://shivalik.bank.in/regulatory-section/notice-board/banking-ombudsman">Banking Ombudsman</a></li>
+										<li><a href="https://shivalik.bank.in/report-un-authorised-transaction">Report an Un-authorised Transaction</a></li>
+										<li><a href="javascript:void(0);">Comprehensive Notice Board</a></li>
+										<li><a href="https://paisaboltahai.rbi.org.in/" target="_blank">Know Your Bank Notes</a></li>
+										<li><a href="https://rbikehtahai.rbi.org.in/" target="_blank">RBI Kehta Hai</a></li>
+										<li><a href="https://shivalik.bank.in/unclaimed-deposits">Unclaimed Deposits</a></li>
+										<li><a href="https://shivalik.bank.in/regulatory-section/notice-board/secured-assets-possessed-under-the-sarfaesi-act-2002">Secured assets possessed under the SARFAESI Act, 2002</a></li>
+										<li><a href="https://shivalik.bank.in/download-forms">Download Forms</a></li>
+								<li><a href="https://shivalik.bank.in/feedback">Lodge A Complaint</a></li>
+								
+								<!-- <li><a href="https://shivalik.bank.in/mandatory-notices-displayed-at-branches">Mandatory Notices Displayed at Branches</a></li> -->
+									</ul>
+								</li><!--Customer's Corner-end-->
+								<li>
+									<a href="javascript:void(0)">Media Centre</a>
+									<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span>
+									<ul>
+										<li><a href="https://shivalik.bank.in/press-releases">Press Releases</a></li>
+										<li><a href="https://shivalik.bank.in/media-centre">Media Contact</a></li>
+										<li><a href="https://shivalik.bank.in/media-kit">Media Kit</a></li>
+										<li><a href="https://shivalik.bank.in/announcements">Announcements</a></li>
+									</ul>
+								</li><!--Media Centre-end-->
+								<li>
+									<a href="javascript:void(0)">Others</a>
+									<span class="mobdrop_menu"><img src="https://shivalik.bank.in/public/frontendassets/images/arrow-m-blk.svg" alt="icon" class="img-fluid"></span>
+									<ul>
+										<li><a href="https://shivalik.bank.in/regulatory-section/policies">Policies</a>							</li>
+										<li><a href="https://shivalik.bank.in/regulatory-section/terms-and-conditions">Terms &amp; Conditions</a></li>
+										<li><a href="https://shivalik.bank.in/regulatory-section">Regulatory Section</a></li>
+										<li><a href="https://shivalik.bank.in/auction-of-bank-properties">Auction of Bank Properties</a></li>
+										<li><a href="https://shivalik.bank.in/download-brochures">Brochures</a></li>
+										<li><a href="https://shivalik.bank.in/regulatory-section/privacy-policy">Privacy Policy</a></li>
+										<li><a href="https://shivalik.bank.in/regulatory-section/disclaimer">Disclaimer</a></li>
+										<li><a href="https://shivalik.bank.in/rtgs-customer-facilitation">RTGS Customer Facilitation</a></li>
+										<li><a href="https://shivalik.bank.in/sitemap">Sitemap</a></li>
+									</ul>
+								</li><!--Others-end-->
+							</ul><!--Second-ul-end-->
+						</li>
+					</ul><!--first-ul-end-->
+				</div>
+			</div>
+		</div>
+		<!--menu-end-->
+	</section>
+<!--Stickey-mobile-footer-end-->
+		<script>
+			$(document).ready(function(){
+				var menu_img = $('.menu_img').attr('src');
+				$(document).on('mouseover','.thirdlevel',function(){
+					$('.mega-menu.mega-menu--multiLevel,.mega_img').addClass('hidethird');
+					$('.menu_img').attr('src',"https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg");
+				});
+
+				$(document).on('mouseout','.thirdlevel',function(){
+					$('.mega-menu.mega-menu--multiLevel,.mega_img').removeClass('hidethird');
+					$('.menu_img').attr('src',menu_img);
+				});
+
+				$(document).on('mouseover','.subthirdlevel',function(){
+					$('.mega-menu.mega-menu--multiLevel,.mega_img').addClass('hidethird');
+					$('.menu_img').attr('src',"https://shivalik.bank.in/assets/upload/products/mobile-banking-360x422px.jpg");
+				});
+
+				$(document).on('mouseout','.subthirdlevel',function(){
+					$('.mega-menu.mega-menu--multiLevel,.mega_img').removeClass('hidethird');
+					$('.menu_img').attr('src',menu_img);
+				});
+
+
+
+				$(document).on('mouseover','.zerolevelmenulink',function(){
+					//console.log($(this).attr('rel_img'));
+					$('.menu_img').attr('src',($(this).attr('rel_img')!='')?$(this).attr('rel_img'):menu_img);
+					//return false;
+				});
+
+				$(document).on('mouseout','.zerolevelmenulink',function(){
+					$('.menu_img').attr('src',menu_img);
+				});
+
+				$(document).on('mouseover','.3_in_1',function(){
+					$('.zerolevelmenu:first-child>ul').addClass('d-none');
+				});
+
+				$(document).on('mouseout','.zerolevelmenu:last-child',function(){
+					$('.zerolevelmenu:first-child>ul').removeClass('d-none');
+				});
+
+			});
+	// Get all <tr> elements within the <tbody> of the table
+	var tbody = document.querySelector('#auction-of-bank-properties tbody');
+	var rows = tbody.querySelectorAll('tr');
+	// Convert the first <td> of each <tr> to counting numbers
+	for (var i = 0; i < rows.length; i++) {
+	var firstCell = rows[i].querySelector('td[data-label="Sr. No."] p');
+	firstCell.textContent = i + 1; // Start counting from 1
+	}
+
+
+
+// Get all <tr> elements within the <tbody> of the table
+	var tbody = document.querySelector('#notice-auction tbody');
+	var rows = tbody.querySelectorAll('tr');
+	// Convert the first <td> of each <tr> to counting numbers
+	for (var i = 0; i < rows.length; i++) {
+	var firstCell = rows[i].querySelector('td[data-label="Sr. No."] p');
+	firstCell.textContent = i + 1; // Start counting from 1
+	}
+
+
+
+
+			</script>
+			
+			
+			
+			
+			<!-- Add this script before closing body tag -->
+<script>
+// When hovering over the dropdown parent (link) or dropdown menu, show it
+document.querySelector('.login_btn').addEventListener('mouseenter', function() {
+    this.querySelector('.dropdown-menu').style.display = 'block';
+});
+
+// When the mouse leaves the dropdown parent (link) or dropdown menu, hide it
+document.querySelector('.login_btn').addEventListener('mouseleave', function() {
+    this.querySelector('.dropdown-menu').style.display = 'none';
+});
+</script>
+
+        
+	    
+	    <script src="https://shivalik.bank.in/public/frontendassets/js/bootstrap.bundle.min.js"></script>
+	     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js" integrity="sha512-YYiD5ZhmJ0GCdJvx6Xe6HzHqHvMpJEPomXwPbsgcpMFPW+mQEeVBU6l9n+2Y+naq+CLbujk91vHyN18q6/RSYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	    <script src="https://shivalik.bank.in/public/frontendassets/js/slick.min.js"></script>
+	    <script src="https://shivalik.bank.in/public/frontendassets/js/wow.min.js"></script>
+	    <script src="https://shivalik.bank.in/public/frontendassets/js/main.js"></script>
+	     
+	
+
+<div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility linear 0.3s, opacity 0.3s linear; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge expires in two minutes" name="c-xganhji30k1o" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/bframe?hl=en&amp;v=N67nZn4AqZkNcbeMu4prBgzg&amp;k=6LfL4fgrAAAAAN4NiU317LtZwCbpAPPavD4oewPO&amp;bft=0dAFcWeA7QlvpvjnxrxUs8Fz7cQn5LOq_ReaC8boqegENgVniJfPeCd1q-e7ih_vblifoWqCuT6OQEQ_VoN6nqALXx43t0Vsh0PQ" style="width: 100%; height: 100%;"></iframe></div></div></body>

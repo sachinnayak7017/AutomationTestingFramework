@@ -1,0 +1,73 @@
+{
+  "module": "RequestChequePage",
+  "objects": {
+    "PageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'xlLargeHeading') and contains(text(),'Request cheque book')]"
+    },
+    "BackArrow_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='Back arrow' and contains(@src,'leftArrow')]"
+    },
+    "CancelButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(text(),'CANCEL')]"
+    },
+    "ContinueButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(text(),'CONTINUE')]"
+    },
+    "SelectAccountLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Select an account')]"
+    },
+    "SelectAccountDropdown_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Select an account')]/following-sibling::div//div[@role='combobox']"
+    },
+    "SelectLeafLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[contains(text(),'Select number of leaf')]"
+    },
+    "SelectLeafDropdown_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[contains(text(),'Select number of leaf')]/following-sibling::div//div[@role='combobox']"
+    },
+    "ShowLeafChargesLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Show leaf charges')]"
+    },
+    "AccountHolderNameLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Account holder name')]"
+    },
+    "AccountHolderNameValue_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Account holder name')]/following-sibling::p"
+    },
+    "MailingAddressLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Mailing Address')]"
+    },
+    "MailingAddressValue_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Mailing Address')]/following-sibling::p"
+    },
+    "HeroImage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='hero']"
+    },
+    "ShivalikLogo_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='logo']"
+    },
+    "HomeNavLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[@class='textnav' and text()='Home']"
+    },
+    "ProfileButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'flex-profile')]//button"
+    }
+  }
+}

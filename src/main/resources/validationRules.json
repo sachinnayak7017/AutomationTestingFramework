@@ -1,0 +1,172 @@
+{
+  "email": {
+    "type": "regex",
+    "pattern": "^[\\w.-]+@[\\w.-]+\\.\\w{2,}$",
+    "message": "Invalid email format. Must be like example@domain.com",
+    "required": true
+  },
+  "password": {
+    "type": "regex",
+    "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$",
+    "message": "Password must have at least 8 characters, 1 uppercase, 1 lowercase, 1 digit, and 1 special character",
+    "required": true
+  },
+  "simplePassword": {
+    "type": "regex",
+    "pattern": "^(?=.*[A-Z])(?=.*\\d).{8,}$",
+    "message": "Password must have at least 8 characters, 1 uppercase, and 1 digit",
+    "required": true
+  },
+  "phone": {
+    "type": "regex",
+    "pattern": "^\\d{10}$",
+    "message": "Phone number must be 10 digits",
+    "required": false
+  },
+  "phoneWithCountryCode": {
+    "type": "regex",
+    "pattern": "^\\+?\\d{1,3}[-.\\s]?\\d{10}$",
+    "message": "Phone number must be valid with optional country code",
+    "required": false
+  },
+  "zipCode": {
+    "type": "regex",
+    "pattern": "^\\d{5}(-\\d{4})?$",
+    "message": "ZIP code must be 5 digits or 5+4 format (12345 or 12345-6789)",
+    "required": false
+  },
+  "indianPinCode": {
+    "type": "regex",
+    "pattern": "^[1-9][0-9]{5}$",
+    "message": "Indian PIN code must be 6 digits starting with non-zero",
+    "required": false
+  },
+  "age": {
+    "type": "range",
+    "min": 1,
+    "max": 100,
+    "message": "Age must be between 18 and 100",
+    "required": true
+  },
+  "percentage": {
+    "type": "range",
+    "min": 0,
+    "max": 100,
+    "message": "Percentage must be between 0 and 100",
+    "required": false
+  },
+  "rating": {
+    "type": "range",
+    "min": 1,
+    "max": 5,
+    "message": "Rating must be between 1 and 5",
+    "required": false
+  },
+  "username": {
+    "type": "regex",
+    "pattern": "^[a-zA-Z][a-zA-Z0-9_]{4,19}$",
+    "message": "Username must start with letter, be 5-20 characters, and contain only letters, numbers, and underscores",
+    "required": true
+  },
+  "firstName": {
+    "type": "regex",
+    "pattern": "^[A-Za-z]{2,30}$",
+    "message": "First name must be 2-30 letters only",
+    "required": true
+  },
+  "lastName": {
+    "type": "regex",
+    "pattern": "^[A-Za-z]{2,30}$",
+    "message": "Last name must be 2-30 letters only",
+    "required": true
+  },
+  "fullName": {
+    "type": "regex",
+    "pattern": "^[A-Za-z]+(\\s[A-Za-z]+)+$",
+    "message": "Full name must contain at least first and last name with letters only",
+    "required": false
+  },
+  "url": {
+    "type": "regex",
+    "pattern": "^(https?://)?([\\w.-]+)\\.([a-z]{2,})([/\\w.-]*)*/?$",
+    "message": "Invalid URL format",
+    "required": false
+  },
+  "date_MMDDYYYY": {
+    "type": "regex",
+    "pattern": "^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/\\d{4}$",
+    "message": "Date must be in MM/DD/YYYY format",
+    "required": false
+  },
+  "date_DDMMYYYY": {
+    "type": "regex",
+    "pattern": "^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\\d{4}$",
+    "message": "Date must be in DD/MM/YYYY format",
+    "required": false
+  },
+  "date_YYYYMMDD": {
+    "type": "regex",
+    "pattern": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$",
+    "message": "Date must be in YYYY-MM-DD format",
+    "required": false
+  },
+  "creditCard": {
+    "type": "regex",
+    "pattern": "^\\d{4}[- ]?\\d{4}[- ]?\\d{4}[- ]?\\d{4}$",
+    "message": "Credit card must be 16 digits (with or without spaces/dashes)",
+    "required": false
+  },
+  "cvv": {
+    "type": "regex",
+    "pattern": "^\\d{3,4}$",
+    "message": "CVV must be 3 or 4 digits",
+    "required": false
+  },
+  "ssn": {
+    "type": "regex",
+    "pattern": "^\\d{3}-\\d{2}-\\d{4}$",
+    "message": "SSN must be in XXX-XX-XXXX format",
+    "required": false
+  },
+  "ipAddress": {
+    "type": "regex",
+    "pattern": "^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$",
+    "message": "Invalid IP address format",
+    "required": false
+  },
+  "currency": {
+    "type": "regex",
+    "pattern": "^\\$?\\d{1,3}(,\\d{3})*(\\.\\d{2})?$",
+    "message": "Currency must be in valid format (e.g., $1,234.56)",
+    "required": false
+  },
+  "alphanumeric": {
+    "type": "alphanumeric",
+    "message": "Must contain only letters and numbers",
+    "required": false
+  },
+  "numeric": {
+    "type": "numeric",
+    "message": "Must contain only numbers",
+    "required": false
+  },
+  "alpha": {
+    "type": "alpha",
+    "message": "Must contain only letters",
+    "required": false
+  },
+  "shortDescription": {
+    "type": "length",
+    "minLength": 10,
+    "maxLength": 100,
+    "message": "Description must be between 10 and 100 characters",
+    "required": false
+  },
+  "longDescription": {
+    "type": "length",
+    "minLength": 50,
+    "maxLength": 500,
+    "message": "Description must be between 50 and 500 characters",
+    "required": false
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "environment": "QA",
+  "baseUrl": "https://qa.example.com",
+  "apiBaseUrl": "https://api.qa.example.com",
+  "credentials": {
+    "adminUser": "qa_admin",
+    "adminPassword": "qa_admin_password",
+    "testUser": "qa_test_user",
+    "testPassword": "qa_test_password"
+  },
+  "database": {
+    "host": "qa-db.example.com",
+    "port": 3306,
+    "name": "qa_testdb"
+  },
+  "settings": {
+    "timeout": 30,
+    "retryCount": 2,
+    "enableDebugMode": true
+  }
+}

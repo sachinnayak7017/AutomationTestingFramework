@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</Property>
+        <Property name="LOG_DIR">target/logs</Property>
+    </Properties>
+
+    <Appenders>
+        <!-- Console Appender -->
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+        </Console>
+
+        <!-- Main Log File Appender -->
+        <RollingFile name="MainLogAppender"
+                     fileName="${LOG_DIR}/automation.log"
+                     filePattern="${LOG_DIR}/automation-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="30"/>
+        </RollingFile>
+
+        <!-- Error Log File Appender -->
+        <RollingFile name="ErrorLogAppender"
+                     fileName="${LOG_DIR}/errors.log"
+                     filePattern="${LOG_DIR}/errors-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="30"/>
+        </RollingFile>
+
+        <!-- Test Execution Log Appender -->
+        <RollingFile name="TestLogAppender"
+                     fileName="${LOG_DIR}/test-execution.log"
+                     filePattern="${LOG_DIR}/test-execution-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="30"/>
+        </RollingFile>
+
+        <!-- API Log Appender -->
+        <RollingFile name="APILogAppender"
+                     fileName="${LOG_DIR}/api.log"
+                     filePattern="${LOG_DIR}/api-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+
+        <!-- Database Log Appender -->
+        <RollingFile name="DBLogAppender"
+                     fileName="${LOG_DIR}/database.log"
+                     filePattern="${LOG_DIR}/database-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- Root Logger -->
+        <Root level="INFO">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="MainLogAppender"/>
+            <AppenderRef ref="ErrorLogAppender"/>
+        </Root>
+
+        <!-- Framework Loggers -->
+        <Logger name="org.example" level="DEBUG" additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="MainLogAppender"/>
+            <AppenderRef ref="ErrorLogAppender"/>
+        </Logger>
+
+        <!-- Test Execution Logger -->
+        <Logger name="org.example.core" level="DEBUG" additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="TestLogAppender"/>
+            <AppenderRef ref="ErrorLogAppender"/>
+        </Logger>
+
+        <!-- API Logger -->
+        <Logger name="org.example.api" level="DEBUG" additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="APILogAppender"/>
+            <AppenderRef ref="ErrorLogAppender"/>
+        </Logger>
+
+        <!-- Database Logger -->
+        <Logger name="org.example.utils.database" level="DEBUG" additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="DBLogAppender"/>
+            <AppenderRef ref="ErrorLogAppender"/>
+        </Logger>
+
+        <!-- Selenium Logger - reduce verbosity -->
+        <Logger name="org.openqa.selenium" level="WARN" additivity="false">
+            <AppenderRef ref="MainLogAppender"/>
+        </Logger>
+
+        <!-- RestAssured Logger -->
+        <Logger name="io.restassured" level="WARN" additivity="false">
+            <AppenderRef ref="APILogAppender"/>
+        </Logger>
+
+        <!-- MongoDB Logger -->
+        <Logger name="org.mongodb" level="WARN" additivity="false">
+            <AppenderRef ref="DBLogAppender"/>
+        </Logger>
+
+        <!-- Apache HTTP Client Logger -->
+        <Logger name="org.apache.http" level="WARN" additivity="false">
+            <AppenderRef ref="MainLogAppender"/>
+        </Logger>
+    </Loggers>
+</Configuration>

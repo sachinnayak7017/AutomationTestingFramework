@@ -1,0 +1,245 @@
+{
+  "module": "FundTransferPage",
+  "objects": {
+    "PageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'xlLargeHeading') and contains(text(),'Fund Transfer')]"
+    },
+    "BackArrow_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='Back arrow' and contains(@src,'leftArrow')]"
+    },
+    "TransferToBeneficiaryCard_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Transfer to beneficiary')]/ancestor::div[contains(@class,'rounded-xl')]"
+    },
+    "TransferToBeneficiaryTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Transfer to beneficiary')]"
+    },
+    "TransferToBeneficiaryDesc_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Transfer money to your added beneficiaries')]"
+    },
+    "QuickTransferCard_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Quick transfer')]/ancestor::div[contains(@class,'rounded-xl')]"
+    },
+    "QuickTransferTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Quick transfer')]"
+    },
+    "QuickTransferDesc_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Send money to any account, without adding beneficiary')]"
+    },
+    "SelfAccountCard_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Self account')]/ancestor::div[contains(@class,'rounded-xl')]"
+    },
+    "SelfAccountTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Self account')]"
+    },
+    "SelfAccountDesc_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Transfer money to your own shivalik accounts')]"
+    },
+    "RecentTransactionsTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Recent Transactions')]"
+    },
+    "TransactionAccountDropdown_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'transactionHeading')]//div[@role='combobox']"
+    },
+    "TransactionList_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//ul[contains(@class,'transactionList')]"
+    },
+    "ServicesTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h2[contains(text(),'Services')]"
+    },
+    "ScheduleTransactionsService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Schedule transactions')]/parent::div[contains(@class,'serviceItem')]"
+    },
+    "AccountStatementService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Account statement')]/parent::div[contains(@class,'serviceItem')]"
+    },
+    "FavoriteTransactionsService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Favorite transactions')]/parent::div[contains(@class,'serviceItem')]"
+    },
+    "MiniStatementService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Mini statement')]/parent::div[contains(@class,'serviceItem')]"
+    },
+    "EmailStatementService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Email statement')]/parent::div[contains(@class,'serviceItem')]"
+    },
+    "ManageBeneficiaryService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Manage Beneficiary')]/parent::div[contains(@class,'serviceItem')]"
+    },
+    "RaiseDisputeService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Raise Dispute')]/parent::div[contains(@class,'serviceItem')]"
+    },
+    "ModifyTransactionLimitService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Modify transaction limit')]/parent::div[contains(@class,'serviceItem')]"
+    },
+    "TransferToBeneficiaryPageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'xlLargeHeading') and contains(text(),'Transfer to beneficiary')]"
+    },
+    "CancelButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(text(),'CANCEL')]"
+    },
+    "ContinueButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[.//p[contains(text(),'CONTINUE')]]"
+    },
+    "TransferTypeLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Transfer type')]"
+    },
+    "ShivalikBankRadio_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@type='radio' and @value='withinBank']"
+    },
+    "ShivalikBankLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'Shivalik Bank')]"
+    },
+    "OtherBankRadio_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@type='radio' and @value='otherBank']"
+    },
+    "OtherBankLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'Other Bank')]"
+    },
+    "SelectBeneficiaryLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Select beneficiary')]"
+    },
+    "SelectBeneficiaryInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@placeholder='Select Benficiary']"
+    },
+    "EnterAmountLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[contains(text(),'Enter amount to transfer')]"
+    },
+    "EnterAmountInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@placeholder='Enter amount to transfer']"
+    },
+    "TransferFromLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[contains(text(),'Transfer from')]"
+    },
+    "TransferFromDropdown_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[contains(text(),'Transfer from')]/following-sibling::div//div[@role='combobox']"
+    },
+    "AvailableBalanceText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Total available balance')]"
+    },
+    "PaymentDateLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Payment date')]"
+    },
+    "PaymentDateInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@placeholder='DD/MM/YYYY']"
+    },
+    "CalendarIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='calendar']"
+    },
+    "RemarksLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[contains(text(),'Remarks')]"
+    },
+    "RemarksInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@placeholder='Enter Remarks']"
+    },
+    "QuickTransferPageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'xlLargeHeading') and contains(text(),'Choose method for Quick Transfer')]"
+    },
+    "ByMobileNumberCard_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h2[contains(text(),'By Mobile Number')]/parent::div/parent::div"
+    },
+    "ByMobileNumberTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h2[contains(text(),'By Mobile Number')]"
+    },
+    "ByMobileNumberDesc_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),\"Transfer using the recipient's mobile number\")]"
+    },
+    "ByMobileNumberIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'mobilePay')]"
+    },
+    "ByAccountDetailsCard_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h2[contains(text(),'By Account Details')]/parent::div/parent::div"
+    },
+    "ByAccountDetailsTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h2[contains(text(),'By Account Details')]"
+    },
+    "ByAccountDetailsDesc_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Secure transfer via account number')]"
+    },
+    "ByAccountDetailsIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'bankPay')]"
+    },
+    "SelfAccountPageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'xlLargeHeading') and contains(text(),'Self account')]"
+    },
+    "TransferToLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Transfer to')]"
+    },
+    "TransferToInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='transferTo']"
+    },
+    "ChangeAccountButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(text(),'Change Account')]"
+    },
+    "SelfTransferAmountInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='amount']"
+    },
+    "ShivalikLogo_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='logo']"
+    },
+    "HomeNavLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[@class='textnav' and text()='Home']"
+    },
+    "ProfileButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'flex-profile')]//button"
+    }
+  }
+}

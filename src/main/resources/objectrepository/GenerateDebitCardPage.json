@@ -1,0 +1,65 @@
+{
+  "module": "GenerateDebitCardPage",
+  "objects": {
+    "ShivalikBankLogo_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@class,'shivalik_bank_logo')]"
+    },
+    "PageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//td[contains(@class,'TD_DbtCrdPinGen_Txt')]"
+    },
+    "DebitCardText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(@class,'dc_pinGen_span_blue') and contains(text(),'DEBIT CARD')]"
+    },
+    "PinText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(@class,'dc_pinGen_span_green') and contains(text(),'PIN')]"
+    },
+    "GenerationText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(@class,'dc_pinGen_span_blue') and contains(text(),'GENERATION')]"
+    },
+    "MobileNumberInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@id='MobileNum']"
+    },
+    "CustomerIdInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@id='CustID']"
+    },
+    "CustomerIdInfoIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//i[@id='custIdInfoIcon']"
+    },
+    "CustomerIdTooltip_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[@class='tooltiptext']"
+    },
+    "CaptchaImage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@id='CaptchaImage']"
+    },
+    "CaptchaRefreshLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//a[contains(text(),'Refresh')]"
+    },
+    "CaptchaInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@id='CaptchaInputText']"
+    },
+    "NextButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@id='CustInfo_SubBtn']"
+    },
+    "FormContainer_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//form[@id='CustomerInfoFORM']"
+    },
+    "CSRFToken_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='csrf-token']"
+    }
+  }
+}

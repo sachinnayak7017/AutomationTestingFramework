@@ -1,0 +1,129 @@
+<body>
+    
+
+
+
+<link rel="stylesheet" href="/GreenPinWeb/Content/font-awesome/css/font-awesome.css">
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    #DIV_Captcha {
+        margin-left: 20px;
+    }
+</style>
+
+
+<div class="containerDiv">
+
+    <div class="formDiv">
+
+<form action="/GreenPinWeb/" enctype="multipart/form-data" id="CustomerInfoFORM" method="post"><input name="__RequestVerificationToken" type="hidden" value="v1vwofppkpTZq11Oy2NNBTMv7flU51YT3DBPAnO_XKq9-AUuU8YVLZGz2ARoOR3-ocOKghFbSnm6Y5e35nxHBHY4heLU3WGGexgySK7agPM1">    <table class="GreenPin_FormTable">
+        <tbody><tr>
+            <td colspan="2">
+                <center><img class="shivalik_bank_logo" src="/GreenPinWeb/Content/Images/Shivalik/bank_logo_short.png"></center>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="TD_DbtCrdPinGen_Txt">
+                <span class="dc_pinGen_span_blue">DEBIT CARD </span> <span class="dc_pinGen_span_green"> PIN </span> <span class="dc_pinGen_span_blue"> GENERATION</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="TD_TxtInputHolder" colspan="2">
+                <input autocomplete="off" class="GreenPinTxtInputs" id="MobileNum" maxlength="10" name="MobileNum" onkeypress="return isNumber(event);" placeholder="Enter Your Registered Mobile Number" type="text" value="">
+            </td>
+        </tr>
+        <tr>
+            <td class="TD_TxtInputHolder" colspan="2">
+                <input autocomplete="off" class="GreenPinTxtInputs" id="CustID" maxlength="" name="CustID" onkeypress="return isNumber(event);" placeholder="Enter Your Customer ID" type="text" value="">
+                <div class="tooltip">
+                    <i id="custIdInfoIcon" class="fa fa-info-circle" aria-hidden="true"></i>
+                    
+                    <span class="tooltiptext">
+                        <ul>
+                            <li>SMS &lt;MYCUST Y&gt; from your registered mobile number and send it to 9211401010</li>
+                            
+                            <li>Your Customer ID is on the first page of your Passbook and Cheque Book</li>
+                        </ul>
+                    </span>
+                </div>
+
+            </td>
+        </tr>
+
+        
+        <tr>
+                <td>
+                    
+
+                    <div id="DIV_Captcha">
+                        
+<script type="text/javascript">
+$(function () {$('#1e7a1848891c4659b1ed1386ec887d86').show();})
+function ______d91d5eb0a40a49f2a07a4a27c43bc2df________() { $('#1e7a1848891c4659b1ed1386ec887d86').hide(); $.post("/GreenPinWeb/DefaultCaptcha/Refresh", { t: $('#CaptchaDeText').val(), __m__: "0" }, function(){$('#1e7a1848891c4659b1ed1386ec887d86').show();}); return false; }</script> 
+<br>
+<img id="CaptchaImage" src="/GreenPinWeb/DefaultCaptcha/Generate?t=784658617f8e483694f4334936676f8c"><input id="CaptchaDeText" name="CaptchaDeText" type="hidden" value="784658617f8e483694f4334936676f8c"> <br><a href="#CaptchaImage" id="1e7a1848891c4659b1ed1386ec887d86" onclick="______d91d5eb0a40a49f2a07a4a27c43bc2df________()" style="">Refresh</a><br>The answer is<br><input autocomplete="off" autocorrect="off" id="CaptchaInputText" name="CaptchaInputText" type="text" value=""><br>
+                    </div>
+                  
+
+                
+            </td>
+            <td>
+                <input class="GreenPinBtnInputs btnGreen" id="CustInfo_SubBtn" type="submit" value="Next">
+            </td>
+</tr>
+    </tbody></table>
+<input type="hidden" name="CSRF-TOKEN" value="COl10A9JaMoPdRNVq5a187uRtbIBl5yh8GxBJtBvgjk5S61TLt0EIhXMgg5RIumdsFREFHfpKp5lmYH24VCzrw.."></form>    </div>
+
+    <div class="smallBackground">
+        
+    </div>
+
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        if ('' != "") {
+            alert('');
+        }
+
+        $("#CustInfo_SubBtn").click(function () {
+            
+            //try {
+            //    var gcResp = grecaptcha.getResponse();
+            //    var gcRespLength = gcResp.length;
+            //}
+            //catch (err) {
+            //    var gcRespLength = 0;
+            //}
+            
+            if ($("#MobileNum").val() == null || $("#MobileNum").val() == "") {
+                event.preventDefault();
+                alert("Please enter your 10-digit mobile number");
+                $("#MobileNum").focus();
+            }
+            else if ($("#CustID").val() == null || $("#CustID").val() == "") {
+                event.preventDefault();
+                alert("Please enter your Shivalik customer ID");
+                $("#CustID").focus();
+            }
+            //else if (gcRespLength == 0) {
+            //    event.preventDefault();
+            //    alert("Please validate the captcha to proceed further");
+            //}
+        });
+
+    });
+
+</script>
+
+    
+    
+
+
+</body>

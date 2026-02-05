@@ -1,0 +1,426 @@
+{
+  "module": "PreLogin",
+  "description": "Object Repository for PreLogin Page - Shivalik Bank RIB",
+  "objects": {
+    "ShivalikLogo_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[@class='navbar-logo']//img[@alt='logo']",
+      "description": "Shivalik Bank Logo at header"
+    },
+    "BurgerMenuIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[@class='burger-menu-icon']//img",
+      "description": "Burger menu icon for mobile view"
+    },
+    "ContactUsButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[@class='navLinks ']//button[contains(text(),'Contact Us')]",
+      "description": "Contact Us button at header"
+    },
+    "ApplyNowButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[@class='navLinks ']//button[contains(text(),'Apply Now')]",
+      "description": "Apply Now button at header"
+    },
+    "BranchLocatorButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[@class='navLinks ']//button[contains(text(),'Branch Locator')]",
+      "description": "Branch Locator button at header"
+    },
+    "LanguageButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[@class='navLinks ']//button[contains(text(),'Language')]",
+      "description": "Language button at header"
+    },
+    "RegisterNavButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[@class='navLinks ']//button[@class='LoginBtn']",
+      "description": "Register button at header"
+    },
+    "GoToHomeButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[@class='backButtonSoon' and contains(text(),'Go back to home')]",
+      "description": "Go back to home button on language page"
+    },
+    "SliderBanner_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'slick-slider')]",
+      "description": "Slider banner section"
+    },
+    "QuickServicesTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Quick Services')]",
+      "description": "Quick Services section title"
+    },
+    "RechargeAndBillsService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[@class='serviceItem']//p[contains(text(),'Recharge')]/ancestor::div[@class='serviceItem']",
+      "description": "Recharge & Bills quick service"
+    },
+    "RechargeAndBillsIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Recharge')]/preceding-sibling::div[@class='svgContainer ']",
+      "description": "Recharge & Bills icon"
+    },
+    "RechargeAndBillsText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[@class='cardSubText' and contains(text(),'Recharge')]",
+      "description": "Recharge & Bills text"
+    },
+    "OpenDepositAccountService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[@class='serviceItem']//p[contains(text(),'Open Deposit Account')]/ancestor::div[@class='serviceItem']",
+      "description": "Open Deposit Account quick service"
+    },
+    "OpenFixedDepositIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Open Deposit Account')]/preceding-sibling::div[@class='svgContainer ']",
+      "description": "Open Deposit Account icon"
+    },
+    "OpenFixedDepositText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[@class='cardSubText' and contains(text(),'Open Deposit Account')]",
+      "description": "Open Deposit Account text"
+    },
+    "FinancialCalculatorService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[@class='serviceItem']//p[contains(text(),'Financial Calculator')]/ancestor::div[@class='serviceItem']",
+      "description": "Financial Calculator quick service"
+    },
+    "FinancialCalculatorIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Financial Calculator')]/preceding-sibling::div[@class='svgContainer ']",
+      "description": "Financial Calculator icon"
+    },
+    "FinancialCalculatorText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[@class='cardSubText' and contains(text(),'Financial Calculator')]",
+      "description": "Financial Calculator text"
+    },
+    "DepositsRateService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[@class='serviceItem']//p[contains(text(),'Deposits Rate')]/ancestor::div[@class='serviceItem']",
+      "description": "Deposits Rate quick service"
+    },
+    "DepositsRateIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Deposits Rate')]/preceding-sibling::div[@class='svgContainer ']",
+      "description": "Deposits Rate icon"
+    },
+    "DepositsRateText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[@class='cardSubText' and contains(text(),'Deposits Rate')]",
+      "description": "Deposits Rate text"
+    },
+    "OffersService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[@class='serviceItem']//p[contains(text(),'Offers')]/ancestor::div[@class='serviceItem']",
+      "description": "Offers quick service"
+    },
+    "OffersIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[text()='Offers']/preceding-sibling::div[@class='svgContainer ']",
+      "description": "Offers icon"
+    },
+    "OffersText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[@class='cardSubText' and text()='Offers']",
+      "description": "Offers text"
+    },
+    "FAQService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[@class='serviceItem']//p[contains(text(),'FAQ')]/ancestor::div[@class='serviceItem']",
+      "description": "FAQ quick service"
+    },
+    "FAQIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[text()='FAQ']/preceding-sibling::div[@class='svgContainer ']",
+      "description": "FAQ icon"
+    },
+    "FAQText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[@class='cardSubText' and text()='FAQ']",
+      "description": "FAQ text"
+    },
+    "LoginFormTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'login-container')]//div[contains(text(),'Login to Internet Banking')]",
+      "description": "Login form title"
+    },
+    "LoginContainer_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'login-container')]",
+      "description": "Login form container"
+    },
+    "UserIdLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[contains(text(),'User ID')]",
+      "description": "User ID field label"
+    },
+    "UserIdInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@placeholder='Enter your user ID']",
+      "description": "User ID input field"
+    },
+    "RememberUserIdCheckbox_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[@class='checkBoxWrap MuiBox-root css-0']//div[contains(@class,'border')]",
+      "description": "Remember user ID checkbox"
+    },
+    "RememberUserIdText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'Remember user ID')]",
+      "description": "Remember user ID text"
+    },
+    "ProceedButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(text(),'Proceed')]",
+      "description": "Proceed button"
+    },
+    "ProceedButtonDisabled_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[@disabled and contains(text(),'Proceed')]",
+      "description": "Proceed button disabled state"
+    },
+    "RegisterLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(@class,'text-customBlue') and contains(text(),'Register')]",
+      "description": "Register link in login form"
+    },
+    "NewUserText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'New User?')]",
+      "description": "New User? text"
+    },
+    "ForgotUserIdLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'Forgot User ID') or contains(text(),'Forgot user ID')]",
+      "description": "Forgot User ID link"
+    },
+    "PasswordLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//label[contains(text(),'Password') or contains(text(),'Enter Password')]",
+      "description": "Password field label"
+    },
+    "PasswordInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@type='password' or @placeholder='Enter your password' or @placeholder='Enter Password']",
+      "description": "Password input field"
+    },
+    "PasswordEyeButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(@class,'MuiIconButton-root')]//*[@data-testid='VisibilityOffIcon' or @data-testid='VisibilityIcon'] | //div[contains(@class,'MuiInputAdornment-root')]//button[1]",
+      "description": "Password eye toggle button"
+    },
+    "KeyboardIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(@class,'MuiIconButton-root')]//*[@data-testid='KeyboardIcon'] | //button[contains(@class,'MuiIconButton-root')]/*[local-name()='svg' and contains(@data-testid,'Keyboard')]",
+      "description": "Keyboard icon for onscreen keyboard"
+    },
+    "OnscreenKeyboard_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'react-simple-keyboard') or contains(@class,'simple-keyboard')]",
+      "description": "Onscreen keyboard container"
+    },
+    "ForgotPasswordLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'text-customBlue')]//span[contains(text(),'Forgot Password')] | //span[contains(text(),'Forgot Password') or contains(text(),'Forgot password')]",
+      "description": "Forgot Password link"
+    },
+    "ForgotPasswordForm_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'forgot')]//form | //form[contains(@class,'forgot')] | //div[contains(text(),'Forgot Password') or contains(text(),'Reset Password')]/parent::div//form | //div[contains(@class,'form-main')]",
+      "description": "Forgot Password form container"
+    },
+    "AccessImageCheckbox_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'Confirm your secure access') or contains(text(),'secure access image')]/preceding-sibling::div[contains(@class,'border')] | //span[contains(text(),'Confirm your secure')]/parent::div//div[contains(@class,'rounded-full')]",
+      "description": "Confirm secure access image and Message checkbox"
+    },
+    "AccessImageText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'Confirm your secure access') or contains(text(),'secure access image')]",
+      "description": "Confirm secure access image and Message text"
+    },
+    "SecureAccessImageContainer_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'flex items-center bg-')]//img[contains(@src,'SecureImages')]",
+      "description": "Secure access image display"
+    },
+    "SecureMessageDisplay_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'flex items-center bg-')]//p[contains(@class,'font-bold')]",
+      "description": "Secure message display (predefined captcha)"
+    },
+    "CaptchaInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@placeholder='Enter Captcha' or @placeholder='Enter captcha' or contains(@placeholder,'Captcha')]",
+      "description": "Captcha input field"
+    },
+    "CaptchaImage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@alt,'captcha') or contains(@src,'captcha') or contains(@class,'captcha')]",
+      "description": "Captcha image"
+    },
+    "CaptchaRefreshButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(@class,'refresh') or @aria-label='refresh captcha']//img | //img[contains(@alt,'refresh')]",
+      "description": "Captcha refresh button"
+    },
+    "TCCheckbox_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'Terms') or contains(text(),'T&C') or contains(text(),'terms')]/preceding-sibling::div[contains(@class,'border') or contains(@class,'rounded')] | //span[contains(text(),'Terms')]/parent::div//div[contains(@class,'w-4') or contains(@class,'h-4')]",
+      "description": "Terms and Conditions checkbox"
+    },
+    "TCCheckboxChecked_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'Terms') or contains(text(),'T&C')]/preceding-sibling::div//svg[contains(@class,'scale-100')] | //span[contains(text(),'Terms')]/parent::div//svg[contains(@class,'transition-transform')]",
+      "description": "Terms and Conditions checkbox checked state (SVG checkmark)"
+    },
+    "TCText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'Terms') or contains(text(),'T&C') or contains(text(),'terms and conditions')]",
+      "description": "Terms and Conditions text"
+    },
+    "LoginButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[.//p[text()='LOGIN']] | //button[contains(@class,'bg-customBlue')]//p[text()='LOGIN']/parent::button",
+      "description": "Login button"
+    },
+    "ErrorMessage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(@class,'text-customRed')] | //div[contains(@class,'error') or contains(@class,'Error') or contains(@class,'alert')] | //p[contains(@class,'error')] | //span[contains(@class,'error')]",
+      "description": "Error message display"
+    },
+    "PasswordErrorMessage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(@class,'text-customRed') and contains(text(),'Password')]",
+      "description": "Password field error message"
+    },
+    "LoginButtonDisabled_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[@disabled and .//p[text()='LOGIN']] | //div[contains(@class,'cursor-not-allowed')]//button[@disabled]//p[text()='LOGIN']/ancestor::button",
+      "description": "Login button disabled state"
+    },
+    "SuccessMessage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'success') or contains(@class,'Success')]",
+      "description": "Success message display"
+    },
+    "FooterTermsLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//a[contains(text(),'Terms & Conditions') or contains(@href,'terms')]",
+      "description": "Terms & Conditions footer link"
+    },
+    "FooterPrivacyLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//a[contains(text(),'Privacy Policy') or contains(@href,'privacy')]",
+      "description": "Privacy Policy footer link"
+    },
+    "FooterDisclaimerLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//a[contains(text(),'Disclaimer') or contains(@href,'disclaimer')]",
+      "description": "Disclaimer footer link"
+    },
+    "FooterRegulatoryLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//a[contains(text(),'Regulatory Policies')]",
+      "description": "Regulatory Policies footer link"
+    },
+    "FooterOmbudsmanLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//a[contains(text(),'Banking Ombudsman')]",
+      "description": "Banking Ombudsman footer link"
+    },
+    "FooterRBILink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//a[contains(text(),'RBI Financial Literacy')]",
+      "description": "RBI Financial Literacy footer link"
+    },
+    "FooterENACHLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//a[contains(text(),'e-NACH')]",
+      "description": "e-NACH footer link"
+    },
+    "DICGCLogo_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='dcGcLogo' or contains(@src,'dcGcLogo')]",
+      "description": "DICGC logo in footer"
+    },
+    "QRCode_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='qrcode' or contains(@src,'scanner')]",
+      "description": "QR Code in footer"
+    },
+    "VersionText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//footer//p[contains(text(),'V ')]",
+      "description": "Version text in footer"
+    },
+    "ContactUsPageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Contact Us')]",
+      "description": "Contact Us page title"
+    },
+    "ContactUsBackArrow_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='' and contains(@src,'leftArrow')]",
+      "description": "Back arrow on Contact Us page"
+    },
+    "FinancialCalculatorPageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Financial calculator')]",
+      "description": "Financial Calculator page title"
+    },
+    "LoanOption_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[@role='tab' and contains(text(),'Loan')]",
+      "description": "Loan tab in Financial Calculator"
+    },
+    "DepositOption_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[@role='tab' and contains(text(),'Deposit')]",
+      "description": "Deposit tab in Financial Calculator"
+    },
+    "FixedDepositButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(text(),'Fixed Deposit')] | //label[contains(text(),'Fixed Deposit')]",
+      "description": "Fixed Deposit button/radio in calculator"
+    },
+    "RecurringDepositButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(text(),'Recurring Deposit')] | //label[contains(text(),'Recurring Deposit')]",
+      "description": "Recurring Deposit button/radio in calculator"
+    },
+    "FAQPageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Frequently Asked Questions')]",
+      "description": "FAQ page title"
+    },
+    "FAQSearchInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@placeholder='Search by Topic']",
+      "description": "FAQ search input field"
+    },
+    "ComingSoonTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h1[contains(text(),\"Coming Soon\")]",
+      "description": "Coming Soon page title"
+    },
+    "RegisterFormTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(text(),'Registration') or contains(text(),'Register')] | //p[contains(text(),'Registration') or contains(text(),'Register')]",
+      "description": "Register Form page title"
+    },
+    "CancelButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(text(),'CANCEL') or contains(text(),'Cancel')]",
+      "description": "Cancel button on login form"
+    },
+    "NewUserRegisterLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'New User')]//span[contains(text(),'Register')]",
+      "description": "New User Register link in login form"
+    }
+  }
+}

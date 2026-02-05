@@ -1,0 +1,225 @@
+{
+  "module": "DashboardPage",
+  "objects": {
+    "ShivalikLogo_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='logo']"
+    },
+    "BurgerMenuIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'burger-menu-icon')]//img"
+    },
+    "HomeNavLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'authNavMain')]//p[text()='Home']"
+    },
+    "BillsNavLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'authNavMain')]//p[text()='Bills']"
+    },
+    "OffersNavLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'authNavMain')]//p[text()='Offers']"
+    },
+    "ProfileButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'flex-profile')]//button"
+    },
+    "ProfileName_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'textnavLarge')]"
+    },
+    "NotificationIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'notification')]"
+    },
+    "SearchIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'searchNav')]"
+    },
+    "HelpIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'message-question')]"
+    },
+    "LatestUpdatesTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'updateTitle') and contains(text(),'Latest Updates')]"
+    },
+    "MarqueeText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'marquee-text')]"
+    },
+    "LastLoginText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Last login on')]"
+    },
+    "QuickServicesTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h3[contains(text(),'Quick Services')]"
+    },
+    "ViewChequeStatusService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'View cheque status')]/parent::li"
+    },
+    "RequestChequeBookService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Request cheque book')]/parent::li"
+    },
+    "StopChequeService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Stop cheque')]/parent::li"
+    },
+    "PositivePayService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Positive pay')]/parent::li"
+    },
+    "ApplyForLoanService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Apply for loan')]/parent::li"
+    },
+    "ApplyForLockerService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Apply for locker')]/parent::li"
+    },
+    "GenerateDebitCardPinService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Generate debit card green PIN')]/parent::li"
+    },
+    "FavouriteBeneficiaryTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h3[contains(text(),'Favourite Beneficiary')]"
+    },
+    "SeeAllBeneficiary_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'seeAll') and contains(text(),'See all')]"
+    },
+    "AddNewBeneficiary_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'addBeneficiary')]"
+    },
+    "AccountsTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h3[contains(text(),'Accounts')]"
+    },
+    "SavingsTab_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//a[contains(@class,'tabButton') and contains(text(),'SAVINGS')]"
+    },
+    "CurrentTab_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//a[contains(@class,'tabButton') and contains(text(),'CURRENT')]"
+    },
+    "DepositTab_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//a[contains(@class,'tabButton') and contains(text(),'DEPOSIT')]"
+    },
+    "LoanTab_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//a[contains(@class,'tabButton') and contains(text(),'LOAN')]"
+    },
+    "ODCCTab_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//a[contains(@class,'tabButton') and contains(text(),'OD/CC')]"
+    },
+    "AccountCard_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'accountCard')]"
+    },
+    "AccountNumber_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'maskedText')]"
+    },
+    "ShowDetailsIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'slashedEye') or @aria-label='Show details']"
+    },
+    "ServicesTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h2[contains(text(),'Services')]"
+    },
+    "FundTransferService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Fund transfer')]/parent::div[contains(@class,'serviceItem')]"
+    },
+    "OpenFDRDService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Open FD/RD')]/parent::div[contains(@class,'serviceItem')]"
+    },
+    "AccountStatementService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Account statement')]/parent::div[contains(@class,'serviceItem')]"
+    },
+    "ManageBeneficiaryService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Manage beneficiary')]/parent::div[contains(@class,'serviceItem')]"
+    },
+    "ApplyForLoanServiceCard_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Apply for loan')]/parent::div[contains(@class,'serviceItem')]"
+    },
+    "ApplyForLockerServiceCard_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Apply for locker')]/parent::div[contains(@class,'serviceItem')]"
+    },
+    "LeftScrollArrow_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'leftArrowBlankWhite')]"
+    },
+    "RightScrollArrow_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'rightArrowWhite')]"
+    },
+    "BBPSBanner_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'BBPS is Live Now')]"
+    },
+    "RecentTransactionsTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Recent Transactions')]"
+    },
+    "TransactionAccountDropdown_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'transactionHeading')]//div[@role='combobox']"
+    },
+    "TransactionList_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//ul[contains(@class,'transactionList')]"
+    },
+    "TransactionItem_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//li[contains(@class,'transactionItem')]"
+    },
+    "FastagTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h3[contains(text(),'Fastag')]"
+    },
+    "MyInvestmentsTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h3[contains(text(),'My Investments')]"
+    },
+    "OpenFDButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(@class,'rechargeButton') and contains(text(),'OPEN')]"
+    },
+    "UpcomingBillsTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h3[contains(text(),'Upcoming Bills')]"
+    },
+    "CustomerCarePhone_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//a[contains(@href,'tel:')]"
+    },
+    "CustomerCareEmail_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//a[contains(@href,'mailto:')]"
+    },
+    "PlayStoreIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@alt,'playstore')]"
+    },
+    "AppStoreIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@alt,'appstore')]"
+    }
+  }
+}
