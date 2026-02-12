@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell.exe -File:*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File:*)",
+      "Bash(powershell -ExecutionPolicy Bypass -Command \"$e=New-Object -ComObject Excel.Application;$e.Visible=$false;$e.DisplayAlerts=$false;$w=$e.Workbooks.Open\\(''C:\\\\Users\\\\DELL\\\\IdeaProjects\\\\AutomationProject\\\\Fundtransfer01.xlsx''\\);foreach\\($s in $w.Worksheets\\){Write-Host\\(''=== SHEET: ''+$s.Name+'' ===''\\);$u=$s.UsedRange;$rr=$u.Rows.Count;$cc=$u.Columns.Count;Write-Host\\(''Rows:''+$rr+'' Cols:''+$cc\\);for\\($r=1;$r -le [Math]::Min\\($rr,250\\);$r++\\){$l='''';for\\($c=1;$c -le $cc;$c++\\){$v=$s.Cells.Item\\($r,$c\\).Text;if\\($c -gt 1\\){$l+='' | ''};$l+=$v};Write-Host $l}};$w.Close\\($false\\);$e.Quit\\(\\);[System.Runtime.Interopservices.Marshal]::ReleaseComObject\\($e\\)|Out-Null\")",
+      "Bash(powershell -ExecutionPolicy Bypass -Command \"$e=New-Object -ComObject Excel.Application;$e.Visible=$false;$e.DisplayAlerts=$false;$w=$e.Workbooks.Open\\(''C:\\\\Users\\\\DELL\\\\IdeaProjects\\\\AutomationProject\\\\Fundtransfer01.xlsx''\\);foreach\\($s in $w.Worksheets\\){Write-Host\\(''=== SHEET: ''+$s.Name+'' ===''\\);$u=$s.UsedRange;$rr=$u.Rows.Count;$cc=$u.Columns.Count;Write-Host\\(''Rows:''+$rr+'' Cols:''+$cc\\);for\\($r=1;$r -le [Math]::Min\\($rr,250\\);$r++\\){[string]$l='''';for\\($c=1;$c -le $cc;$c++\\){$v=$s.Cells.Item\\($r,$c\\).Text;if\\($c -gt 1\\){$l+='' | ''};$l+=$v};Write-Host $l}};$w.Close\\($false\\);$e.Quit\\(\\);[System.Runtime.Interopservices.Marshal]::ReleaseComObject\\($e\\)|Out-Null\")",
+      "Bash(powershell -ExecutionPolicy Bypass -EncodedCommand JABlAD0ATgBlAHcALQBPAGIAagBlAGMAdAAgAC0AQwBPAE0ATwBiAGoAZQBjAHQAIABFAHgAYwBlAGwALgBBAHAAcABsAGkAYwBhAHQAaQBvAG4AOwAkAGUALgBWAGkAcwBpAGIAbABlAD0AJABmAGEAbABzAGUAOwAkAGUALgBEAGkAcwBwAGwAYQB5AEEAbABlAHIAdABzAD0AJABmAGEAbABzAGUAOwAkAHcAPQAkAGUALgBXAG8AcgBrAGIAbwBvAGsAcwAuAE8AcABlAG4AKAAnAEMAOgBcAFUAcwBlAHIAcwBcAEQARQBMAEwAXABJAGQAZQBhAFAAcgBvAGoAZQBjAHQAcwBcAEEAdQB0AG8AbQBhAHQAaQBvAG4AUAByAG8AagBlAGMAdABcAEYAdQBuAGQAdAByAGEAbgBzAGYAZQByADAAMQAuAHgAbABzAHgAJwApADsAZgBvAHIAZQBhAGMAaAAoACQAcwAgAGkAbgAgACQAdwAuAFcAbwByAGsAcwBoAGUAZQB0AHMAKQB7AFcAcgBpAHQAZQAtAEgAbwBzAHQAKAAnAD0APQA9ACAAUwBIAEUARQBUADoAIAAnACsAJABzAC4ATgBhAG0AZQArACcAIAA9AD0APQAnACkAOwAkAHUAPQAkAHMALgBVAHMAZQBkAFIAYQBuAGcAZQA7ACQAcgByAD0AJAB1AC4AUgBvAHcAcwAuAEMAbwB1AG4AdAA7ACQAYwBjAD0AJAB1AC4AQwBvAGwAdQBtAG4AcwAuAEMAbwB1AG4AdAA7AFcAcgBpAHQAZQAtAEgAbwBzAHQAKAAnAFIAbwB3AHMAOgAnACsAJAByAHIAKwAnACAAQwBvAGwAcwA6ACcAKwAkAGMAYwApADsAZgBvAHIAKAAkAHIAPQAxADsAJAByACAALQBsAGUAIABbAE0AYQB0AGgAXQA6ADoATQBpAG4AKAAkAHIAcgAsADIANQAwACkAOwAkAHIAKwArACkAewBbAHMAdAByAGkAbgBnAF0AJABsAD0AJwAnADsAZgBvAHIAKAAkAGMAPQAxADsAJABjACAALQBsAGUAIAAkAGMAYwA7ACQAYwArACsAKQB7ACQAdgA9ACQAcwAuAEMAZQBsAGwAcwAuAEkAdABlAG0AKAAkAHIALAAkAGMAKQAuAFQAZQB4AHQAOwBpAGYAKAAkAGMAIAAtAGcAdAAgADEAKQB7ACQAbAArAD0AJwAgAHwAIAAnAH0AOwAkAGwAKwA9ACQAdgB9ADsAVwByAGkAdABlAC0ASABvAHMAdAAgACQAbAB9AH0AOwAkAHcALgBDAGwAbwBzAGUAKAAkAGYAYQBsAHMAZQApADsAJABlAC4AUQB1AGkAdAAoACkAOwBbAFMAeQBzAHQAZQBtAC4AUgB1AG4AdABpAG0AZQAuAEkAbgB0AGUAcgBvAHAAcwBlAHIAdgBpAGMAZQBzAC4ATQBhAHIAcwBoAGEAbABdADoAOgBSAGUAbABlAGEAcwBlAEMAbwBtAE8AYgBqAGUAYwB0ACgAJABlACkAfABPAHUAdAAtAE4AdQBsAGwA)",
+      "Bash(powershell:*)",
+      "Bash(where:*)",
+      "Bash(ls:*)",
+      "Bash(cmd.exe //c \"set MAVEN_HOME\")",
+      "Bash(cmd.exe //c \"set M2_HOME\")",
+      "Bash(cmd.exe //c \"set JAVA_HOME\")",
+      "Bash(py:*)",
+      "Bash(python -c:*)",
+      "Bash(mvn test-compile:*)",
+      "Bash(java:*)"
+    ]
+  }
+}

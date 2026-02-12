@@ -1,11 +1,11 @@
 {
   "module": "FundTransferPage",
   "objects": {
-    "PageTitle_Object": {
+    "FT_PageTitle_Object": {
       "locatorType": "xpath",
       "locatorValue": "//p[contains(@class,'xlLargeHeading') and contains(text(),'Fund Transfer')]"
     },
-    "BackArrow_Object": {
+    "FT_BackArrow_Object": {
       "locatorType": "xpath",
       "locatorValue": "//img[@alt='Back arrow' and contains(@src,'leftArrow')]"
     },
@@ -45,19 +45,19 @@
       "locatorType": "xpath",
       "locatorValue": "//p[contains(text(),'Transfer money to your own shivalik accounts')]"
     },
-    "RecentTransactionsTitle_Object": {
+    "FT_RecentTransactionsTitle_Object": {
       "locatorType": "xpath",
       "locatorValue": "//p[contains(text(),'Recent Transactions')]"
     },
-    "TransactionAccountDropdown_Object": {
+    "FT_TransactionAccountDropdown_Object": {
       "locatorType": "xpath",
       "locatorValue": "//div[contains(@class,'transactionHeading')]//div[@role='combobox']"
     },
-    "TransactionList_Object": {
+    "FT_TransactionList_Object": {
       "locatorType": "xpath",
       "locatorValue": "//ul[contains(@class,'transactionList')]"
     },
-    "ServicesTitle_Object": {
+    "FT_ServicesTitle_Object": {
       "locatorType": "xpath",
       "locatorValue": "//h2[contains(text(),'Services')]"
     },
@@ -97,11 +97,11 @@
       "locatorType": "xpath",
       "locatorValue": "//p[contains(@class,'xlLargeHeading') and contains(text(),'Transfer to beneficiary')]"
     },
-    "CancelButton_Object": {
+    "FT_CancelButton_Object": {
       "locatorType": "xpath",
       "locatorValue": "//button[contains(text(),'CANCEL')]"
     },
-    "ContinueButton_Object": {
+    "FT_ContinueButton_Object": {
       "locatorType": "xpath",
       "locatorValue": "//button[.//p[contains(text(),'CONTINUE')]]"
     },
@@ -139,7 +139,7 @@
     },
     "EnterAmountInput_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//input[@placeholder='Enter amount to transfer']"
+      "locatorValue": "//input[@placeholder='Enter amount to transfer'] | //input[@placeholder='Enter Amount'] | //input[contains(@placeholder,'amount') and contains(@class,'MuiInputBase-input')]"
     },
     "TransferFromLabel_Object": {
       "locatorType": "xpath",
@@ -187,7 +187,7 @@
     },
     "ByMobileNumberDesc_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//p[contains(text(),\"Transfer using the recipient's mobile number\")]"
+      "locatorValue": "//p[contains(text(),'Transfer using') and contains(text(),'mobile number')]"
     },
     "ByMobileNumberIcon_Object": {
       "locatorType": "xpath",
@@ -240,6 +240,292 @@
     "ProfileButton_Object": {
       "locatorType": "xpath",
       "locatorValue": "//div[contains(@class,'flex-profile')]//button"
+    },
+
+    "QT_RecipientNameLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Recipient')] | //label[contains(text(),'Recipient')]"
+    },
+    "QT_RecipientNameInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='recipientName'] | //input[@placeholder='Enter Recipient name'] | //input[@placeholder='Enter recipient name']"
+    },
+    "QT_AccountNumberLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Bank account number')] | //label[contains(text(),'Bank account number')]"
+    },
+    "QT_AccountNumberInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='bankAccountNumber'] | //input[@placeholder='Enter Bank Account Number']"
+    },
+    "QT_AccountNumberEyeIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='bankAccountNumber']/ancestor::div[contains(@class,'MuiInputBase-root')]//button | //input[@placeholder='Enter Bank Account Number']/ancestor::div[contains(@class,'MuiInputBase-root')]//button"
+    },
+    "QT_ReEnterAccountLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Re-enter account number')] | //label[contains(text(),'Re-enter account number')] | //label[contains(text(),'Re-enter')]"
+    },
+    "QT_ReEnterAccountInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='reEnterAccountNumber'] | //input[@placeholder='Re-enter Bank Account Number']"
+    },
+    "QT_IFSCCodeLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'IFSC code')] | //label[contains(text(),'IFSC code')]"
+    },
+    "QT_IFSCCodeInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@maxlength='11'] | //input[@name='ifscCode']"
+    },
+    "QT_SearchIFSCLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//*[contains(text(),'Search IFSC')]"
+    },
+    "QT_ByAccountDetailsPageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'xlLargeHeading') and (contains(text(),'Quick Transfer') or contains(text(),'Quick transfer'))]"
+    },
+
+    "IMPSRadio_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@type='radio' and @value='IMPS']"
+    },
+    "IMPSLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'IMPS')]"
+    },
+    "NEFTRadio_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@type='radio' and @value='NEFT']"
+    },
+    "NEFTLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'NEFT')]"
+    },
+    "RTGSRadio_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@type='radio' and @value='RTGS']"
+    },
+    "RTGSLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'RTGS')]"
+    },
+
+    "ConfirmPageTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'xlLargeHeading') and contains(text(),'Confirm')]"
+    },
+    "ConfirmBeneficiaryName_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'border-borderColor')]//p[contains(@class,'font-bold')]"
+    },
+    "ConfirmAccountNumber_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Account number')]/following-sibling::p"
+    },
+    "ConfirmTransferFrom_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Transfer from')]/following-sibling::p | //p[contains(text(),'Transfer From')]/following-sibling::p"
+    },
+    "ConfirmTransferTo_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Transfer to')]/following-sibling::p | //p[contains(text(),'Transfer To')]/following-sibling::p"
+    },
+    "ConfirmTotalAmount_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Total amount')]/following-sibling::p | //p[contains(text(),'Amount')]/following-sibling::p"
+    },
+    "ConfirmTransferType_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Transfer type')]/following-sibling::p | //p[contains(text(),'Transfer Type')]/following-sibling::p"
+    },
+    "ConfirmIFSC_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'IFSC')]/following-sibling::p"
+    },
+    "ConfirmBankName_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Bank name')]/following-sibling::p | //p[contains(text(),'Bank Name')]/following-sibling::p"
+    },
+    "ConfirmBranchName_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Branch name')]/following-sibling::p | //p[contains(text(),'Branch Name')]/following-sibling::p"
+    },
+    "ConfirmRemarks_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Remarks')]/following-sibling::p"
+    },
+    "ConfirmButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[.//p[text()='CONFIRM']] | //button[contains(text(),'CONFIRM')]"
+    },
+
+    "OTPInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='otpCode'] | //input[@name='otp']"
+    },
+    "OTPTimerText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='Timer']/parent::div"
+    },
+    "ResendOTPLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Resend OTP')] | //span[contains(text(),'Resend OTP')]"
+    },
+    "OTPMessage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Please enter One Time Password')]"
+    },
+
+    "SuccessTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'successfully')] | //p[contains(text(),'Success')]"
+    },
+    "SuccessMessage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'transaction') and contains(text(),'success')] | //p[contains(text(),'Transaction successful')]"
+    },
+    "FT_DoneButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(text(),'DONE')] | //button[.//p[text()='DONE']] | //button[contains(text(),'Done')] | //button[.//p[text()='Done']]"
+    },
+
+    "FT_ErrorMessage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'error')] | //span[contains(@class,'error')] | //div[contains(@class,'Mui-error')]//p"
+    },
+    "FT_ToastMessage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'toaster')]//div | //div[contains(@class,'Toastify')]//div"
+    },
+
+    "SeeMoreLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'See More')] | //button[contains(text(),'See More')]"
+    },
+    "AccountDetailsService_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Account details')]/parent::div[contains(@class,'serviceItem')]"
+    },
+    "RupeeSymbol_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'MuiTypography') and text()='\u20b9']"
+    },
+    "BeneficiaryDropdownItem_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//li[contains(@class,'cursor-pointer') and .//div[contains(@class,'beneficiaryAvtar')]]"
+    },
+    "TransactionItem_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//ul[contains(@class,'transactionList')]//li"
+    },
+    "TransactionItemName_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//ul[contains(@class,'transactionList')]//li//p[contains(@class,'name')]"
+    },
+    "TransactionItemAmount_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//ul[contains(@class,'transactionList')]//li//div[contains(@class,'amount')]"
+    },
+    "TransactionItemDate_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//ul[contains(@class,'transactionList')]//li//p[contains(@class,'time')]"
+    },
+    "GoBackButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[@aria-label='Go back']"
+    },
+    "SelfAccountAmountLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Enter amount to transfer')]"
+    },
+    "AccountListOption_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//ul[@role='listbox']//li"
+    },
+    "CancelPopupContainer_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h3[text()='CAUTION']/ancestor::div[contains(@class,'rounded-2xl')] | //p[contains(text(),'cancel the transaction')]/ancestor::div[contains(@class,'shadow-lg')]"
+    },
+    "CancelPopupMessage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Are you sure you want to cancel')] | //p[contains(text(),'cancel the transaction')]"
+    },
+    "CancelPopupCancelBtn_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h3[text()='CAUTION']/ancestor::div[contains(@class,'rounded-2xl')]//button[contains(text(),'Cancel')] | //p[contains(text(),'cancel the transaction')]/following-sibling::div//button[contains(text(),'Cancel')]"
+    },
+    "CancelPopupConfirmBtn_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h3[text()='CAUTION']/ancestor::div[contains(@class,'rounded-2xl')]//button[contains(text(),'Confirm')] | //h3[text()='CAUTION']/ancestor::div[contains(@class,'rounded-2xl')]//button[.//p[text()='Confirm']] | //p[contains(text(),'cancel the transaction')]/following-sibling::div//button[contains(text(),'Confirm')] | //p[contains(text(),'cancel the transaction')]/following-sibling::div//button[.//p[text()='Confirm']]"
+    },
+
+    "FT_SubmitButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[.//p[text()='SUBMIT']] | //button[contains(text(),'SUBMIT')]"
+    },
+
+    "SA_SidebarTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'flex justify-end')]//p[contains(@class,'font-bold') and contains(text(),'Self account')]"
+    },
+    "SA_SidebarCloseButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'flex justify-end')]//img[@alt='close']/parent::button"
+    },
+    "SA_SidebarSearchInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'flex justify-end')]//input[@placeholder='Search']"
+    },
+    "SA_SidebarAccountItem_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'cursor-pointer')]//p[contains(@class,'cardHeadings')]/ancestor::div[contains(@class,'cursor-pointer')]"
+    },
+    "SA_TransferToHeader_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'TRANSFER TO')]"
+    },
+
+    "SuccessAmount_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'text-3xl') and contains(@class,'font-bold')]"
+    },
+    "PaymentSuccessfulText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Payment Successful')]"
+    },
+    "SuccessTransferTo_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'grid')]//p[text()='Transfer to']/following-sibling::p"
+    },
+    "SuccessTransferFrom_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'grid')]//p[text()='Transfer from']/following-sibling::p"
+    },
+    "SuccessBankName_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'grid')]//p[text()='Bank name']/following-sibling::p"
+    },
+    "SuccessBeneficiaryName_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'grid')]//p[contains(text(),'Beneficiary name')]/following-sibling::p"
+    },
+    "SuccessTransferType_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'grid')]//p[text()='Transfer type']/following-sibling::p"
+    },
+    "SuccessRemark_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'grid')]//p[text()='Remark']/following-sibling::p"
+    },
+    "SuccessReferenceId_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[text()='Reference ID']/following-sibling::div//p | //p[text()='Reference ID']/following-sibling::p"
+    },
+    "RepeatTransactionsButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[.//p[text()='REPEAT TRANSACTIONS']]"
     }
   }
 }

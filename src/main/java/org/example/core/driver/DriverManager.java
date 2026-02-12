@@ -82,6 +82,43 @@ public class DriverManager {
     }
 
     /**
+     * Check if WebDriver is alive and responsive (window not closed/crashed).
+     * @return true if driver is alive and can accept commands
+     */
+    public static boolean isDriverAlive() {
+        try {
+            WebDriver driver = driverThreadLocal.get();
+            if (driver == null) return false;
+            driver.getWindowHandle();
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /**
+     * Reinitialize WebDriver - quit old driver and create new one.
+     * Use when browser window has crashed or closed unexpectedly.
+     */
+    public static void reinitializeDriver(String browserName, boolean headless) {
+        logger.warn("Reinitializing WebDriver...");
+        try {
+            WebDriver oldDriver = driverThreadLocal.get();
+            if (oldDriver != null) {
+                try { oldDriver.quit(); } catch (Exception ignored) { }
+                driverThreadLocal.remove();
+                browserNameThreadLocal.remove();
+            }
+        } catch (Exception e) {
+            logger.debug("Error cleaning up old driver: {}", e.getMessage());
+            driverThreadLocal.remove();
+            browserNameThreadLocal.remove();
+        }
+        initDriver(browserName, headless);
+        logger.info("WebDriver reinitialized successfully");
+    }
+
+    /**
      * Get browser name for current thread
      * @return Browser name
      */

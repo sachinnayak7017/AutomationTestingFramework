@@ -118,6 +118,8 @@ public abstract class BasePage {
         WebElement element = findVisibleElement(elementKey);
         element.clear();
         element.sendKeys(text);
+        // Press TAB to blur field and trigger change event for React form dirty detection
+        element.sendKeys(org.openqa.selenium.Keys.TAB);
         logger.debug("Typed '{}' into element: {}", text, elementKey);
     }
 
@@ -212,39 +214,75 @@ public abstract class BasePage {
     // ==================== Verification Methods ====================
 
     /**
-     * Check if element is displayed
+     * Check if element is displayed (uses short 5s timeout to avoid slow checks)
      * @param elementKey OR element key
      * @return true if displayed
      */
     protected boolean isDisplayed(String elementKey) {
         try {
-            return findElement(elementKey).isDisplayed();
+            By locator = orManager.getLocator(elementKey);
+            WebElement element = new WebDriverWait(driver, Duration.ofSeconds(7))
+                    .until(ExpectedConditions.visibilityOfElementLocated(locator));
+            return element.isDisplayed();
+        } catch (Exception e) {
+            // Fallback: check presence in DOM (handles fixed-position elements that
+            // may not pass Selenium's strict visibility check)
+            try {
+                By loc = orManager.getLocator(elementKey);
+                WebElement el = new WebDriverWait(driver, Duration.ofSeconds(3))
+                        .until(ExpectedConditions.presenceOfElementLocated(loc));
+                return el != null && el.getSize().getHeight() > 0;
+            } catch (Exception ex) {
+                return false;
+            }
+        }
+    }
+
+    /**
+     * Quick check if element is displayed within a short timeout.
+     * Use this for navigation state checks to avoid 30s waits on missing elements.
+     * @param elementKey OR element key
+     * @param timeoutSeconds Short timeout (e.g., 3-5 seconds)
+     * @return true if displayed within timeout
+     */
+    protected boolean isDisplayedWithin(String elementKey, int timeoutSeconds) {
+        try {
+            By locator = orManager.getLocator(elementKey);
+            WebElement element = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds))
+                    .until(ExpectedConditions.visibilityOfElementLocated(locator));
+            return element.isDisplayed();
         } catch (Exception e) {
             return false;
         }
     }
 
     /**
-     * Check if element is enabled
+     * Check if element is enabled (uses short 5s timeout)
      * @param elementKey OR element key
      * @return true if enabled
      */
     protected boolean isEnabled(String elementKey) {
         try {
-            return findElement(elementKey).isEnabled();
+            By locator = orManager.getLocator(elementKey);
+            WebElement element = new WebDriverWait(driver, Duration.ofSeconds(7))
+                    .until(ExpectedConditions.presenceOfElementLocated(locator));
+            return element.isEnabled();
         } catch (Exception e) {
             return false;
         }
     }
 
     /**
-     * Check if element is selected
+     * Check if element is selected (uses short 5s timeout)
      * @param elementKey OR element key
      * @return true if selected
      */
     protected boolean isSelected(String elementKey) {
         try {
-            return findElement(elementKey).isSelected();
+            By locator = orManager.getLocator(elementKey);
+            WebElement element = new WebDriverWait(driver, Duration.ofSeconds(7))
+                    .until(ExpectedConditions.presenceOfElementLocated(locator));
+            return element.isSelected();
         } catch (Exception e) {
             return false;
         }
@@ -327,7 +365,7 @@ public abstract class BasePage {
      */
     protected void scrollToElement(String elementKey) {
         WebElement element = findElement(elementKey);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", element);
     }
 
     /**
@@ -458,5 +496,160 @@ public abstract class BasePage {
         WebElement element = findElement(elementKey);
         ((JavascriptExecutor) driver).executeScript(
                 "arguments[0].style.border='3px solid red'", element);
+    }
+
+    // ==================== Generic Public Methods (for CommonSteps) ====================
+
+    /**
+     * Get current page URL (public wrapper).
+     */
+    public String getCurrentPageUrl() {
+        return getCurrentUrl();
+    }
+
+    /**
+     * Click on element by object key. Tries normal click, falls back to JS click.
+     */
+    public void clickOnElement(String objectKey) {
+        try {
+            click(objectKey);
+        } catch (Exception e) {
+            jsClick(objectKey);
+        }
+        logger.info("Clicked on element: {}", objectKey);
+    }
+
+    /**
+     * Type text into a field by object key. Clears before typing.
+     */
+    public void typeInField(String objectKey, String text) {
+        try {
+            scrollToElement(objectKey);
+        } catch (Exception e) {
+            logger.debug("Could not scroll to field {}, proceeding", objectKey);
+        }
+        // Click element first to ensure it is focused and interactable
+        try {
+            WebElement el = findVisibleElement(objectKey);
+            el.click();
+            try { Thread.sleep(200); } catch (InterruptedException ie) { Thread.currentThread().interrupt(); }
+        } catch (Exception e) {
+            logger.debug("Could not click field {} to focus, trying JS click", objectKey);
+            try {
+                WebElement el = findElement(objectKey);
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click(); arguments[0].focus();", el);
+                try { Thread.sleep(200); } catch (InterruptedException ie) { Thread.currentThread().interrupt(); }
+            } catch (Exception ex) {
+                logger.debug("JS click/focus also failed for {}", objectKey);
+            }
+        }
+        try {
+            clear(objectKey);
+        } catch (Exception e) {
+            logger.debug("Could not clear field {}, proceeding with type", objectKey);
+        }
+        try {
+            type(objectKey, text);
+        } catch (Exception e) {
+            logger.warn("Normal type failed for {}, using JS to set value", objectKey);
+            try {
+                WebElement el = findElement(objectKey);
+                ((JavascriptExecutor) driver).executeScript(
+                    "arguments[0].value = ''; arguments[0].value = arguments[1]; arguments[0].dispatchEvent(new Event('input', {bubbles: true})); arguments[0].dispatchEvent(new Event('change', {bubbles: true}));",
+                    el, text);
+            } catch (Exception ex) {
+                throw new RuntimeException("Failed to type in field " + objectKey + ": " + e.getMessage(), e);
+            }
+        }
+        logger.info("Typed '{}' in field: {}", text, objectKey);
+    }
+
+    /**
+     * Clear a field by object key.
+     */
+    public void clearField(String objectKey) {
+        clear(objectKey);
+        logger.info("Cleared field: {}", objectKey);
+    }
+
+    /**
+     * Get value attribute of a field by object key.
+     */
+    public String getFieldValue(String objectKey) {
+        try {
+            return getAttribute(objectKey, "value");
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    /**
+     * Check if element is displayed on page by object key.
+     */
+    public boolean isElementDisplayedOnPage(String objectKey) {
+        return isDisplayed(objectKey);
+    }
+
+    /**
+     * Check if element is selected by object key.
+     */
+    public boolean isElementSelectedOnPage(String objectKey) {
+        return isSelected(objectKey);
+    }
+
+    /**
+     * Check if text is displayed anywhere on the page.
+     */
+    public boolean isTextDisplayedOnPage(String text) {
+        try {
+            By locator = By.xpath("//*[contains(text(),\"" + text + "\")]");
+            WebElement element = driver.findElement(locator);
+            return element.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    /**
+     * Check if field error is displayed for a given element (MUI form validation).
+     */
+    public boolean isFieldErrorDisplayed(String objectKey) {
+        try {
+            By fieldLocator = orManager.getLocator(objectKey);
+            WebElement field = driver.findElement(fieldLocator);
+            WebElement formControl = field.findElement(
+                    By.xpath("./ancestor::div[contains(@class,'MuiFormControl-root')]"));
+            List<WebElement> errors = formControl.findElements(
+                    By.xpath(".//p[contains(@class,'Mui-error')] | .//p[contains(@class,'error')]"));
+            return !errors.isEmpty();
+        } catch (Exception e) {
+            try {
+                By fieldLocator = orManager.getLocator(objectKey);
+                WebElement field = driver.findElement(fieldLocator);
+                WebElement inputBase = field.findElement(
+                        By.xpath("./ancestor::div[contains(@class,'MuiInputBase-root')]"));
+                String classes = inputBase.getAttribute("class");
+                return classes != null && classes.contains("Mui-error");
+            } catch (Exception ex) {
+                return false;
+            }
+        }
+    }
+
+    /**
+     * Select first option from a MUI dropdown/listbox.
+     */
+    public void selectFirstDropdownOption(String objectKey) {
+        click(objectKey);
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(3))
+                    .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//ul[@role='listbox']//li")));
+            List<WebElement> items = driver.findElements(By.xpath("//ul[@role='listbox']//li"));
+            if (!items.isEmpty()) {
+                items.get(0).click();
+            }
+        } catch (Exception e) {
+            logger.warn("Could not select first option from dropdown: {}", objectKey);
+        }
     }
 }

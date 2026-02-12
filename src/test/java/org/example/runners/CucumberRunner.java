@@ -23,8 +23,19 @@ import org.testng.annotations.Listeners;
                 "json:target/cucumber-reports/cucumber.json"
         },
         monochrome = true,
-      tags = "@prelogin and not @manual and not @skip"
-     //   tags = "@PL_053"
+        // Run ALL modules (Dashboard → FundTransfer → ManageBeneficiary):
+        //tags = "(@dashboard or @fundtransfer or @managebeneficiary) and not @manual and not @skip"
+        // Single module runs (uncomment one at a time):
+        // tags = "@dashboard and not @manual and not @skip"
+         tags = "@fundtransfer and not @manual and not @skip"
+        // tags = "@managebeneficiary and not @manual and not @skip"
+        // tags = "@prelogin and not @manual and not @skip"
+        // Sub-module tags:
+        // tags = "@fundtransfer_mainpage and not @manual and not @skip"
+        // tags = "@transfer_to_beneficiary and not @manual and not @skip"
+        // tags = "@quick_transfer and not @manual and not @skip"
+        // tags = "@self_account and not @manual and not @skip"
+        
 )
 public class CucumberRunner extends AbstractTestNGCucumberTests {
 

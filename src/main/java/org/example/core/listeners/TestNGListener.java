@@ -2,10 +2,8 @@ package org.example.core.listeners;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.config.ConfigLoader;
 import org.example.config.FrameworkConstants;
 import org.example.reporting.ReportManager;
-import org.example.utils.screenshot.ScreenshotManager;
 import org.testng.*;
 
 import java.util.Arrays;
@@ -85,11 +83,7 @@ public class TestNGListener implements ITestListener, ISuiteListener, IInvokedMe
 
         logger.info("Test PASSED: {} (Duration: {}ms)", testName, duration);
 
-        // Capture screenshot on pass if configured
-        if (ConfigLoader.getInstance().isScreenshotOnPass()) {
-            String screenshotPath = ScreenshotManager.captureScreenshot("TestResults", testName);
-            ReportManager.attachScreenshot(screenshotPath, "Pass Screenshot");
-        }
+        // Screenshots are captured per-step in Hooks.java @AfterStep — no duplicate here
 
         // End test in report
         ReportManager.endTest(FrameworkConstants.STATUS_PASS);
@@ -106,11 +100,7 @@ public class TestNGListener implements ITestListener, ISuiteListener, IInvokedMe
             logger.error("Failure Reason: {}", throwable.getMessage());
         }
 
-        // Capture screenshot on failure
-        if (ConfigLoader.getInstance().isScreenshotOnFail()) {
-            String screenshotPath = ScreenshotManager.captureScreenshot("TestResults", testName);
-            ReportManager.attachScreenshot(screenshotPath, "Failure Screenshot");
-        }
+        // Screenshots are captured per-step in Hooks.java @AfterStep — no duplicate here
 
         // Log failure in report
         if (throwable != null) {

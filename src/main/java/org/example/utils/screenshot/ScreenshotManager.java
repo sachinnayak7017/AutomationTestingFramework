@@ -221,6 +221,32 @@ public class ScreenshotManager {
     }
 
     /**
+     * Save pre-captured screenshot bytes to file with action naming.
+     * Avoids a second WebDriver capture when bytes are already available.
+     * @param screenshotBytes Pre-captured screenshot bytes
+     * @param module Module name
+     * @param testCaseId Test case ID
+     * @param action Action name
+     * @return Path to saved screenshot file
+     */
+    public static String saveScreenshotBytes(byte[] screenshotBytes, String module, String testCaseId, String action) {
+        try {
+            String modulePath = FrameworkConstants.SCREENSHOTS_PATH + File.separator +
+                               (module != null ? module : "General");
+            createDirectoryIfNotExists(modulePath);
+
+            String fileName = generateFileNameWithAction(module, testCaseId, action);
+            String fullPath = modulePath + File.separator + fileName;
+
+            FileUtils.writeByteArrayToFile(new File(fullPath), screenshotBytes);
+            return fullPath;
+        } catch (IOException e) {
+            logger.error("Failed to save screenshot bytes: {}", e.getMessage());
+            return null;
+        }
+    }
+
+    /**
      * Generate screenshot filename
      * Pattern: modulename_testcaseID_datetime.png
      * @param module Module name

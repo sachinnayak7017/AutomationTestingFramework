@@ -9,15 +9,15 @@
       "locatorType": "xpath",
       "locatorValue": "//div[contains(@class,'burger-menu-icon')]//img"
     },
-    "HomeNavLink_Object": {
+    "Db_HomeNavLink_Object": {
       "locatorType": "xpath",
       "locatorValue": "//div[contains(@class,'authNavMain')]//p[text()='Home']"
     },
-    "BillsNavLink_Object": {
+    "Db_BillsNavLink_Object": {
       "locatorType": "xpath",
       "locatorValue": "//div[contains(@class,'authNavMain')]//p[text()='Bills']"
     },
-    "OffersNavLink_Object": {
+    "Db_OffersNavLink_Object": {
       "locatorType": "xpath",
       "locatorValue": "//div[contains(@class,'authNavMain')]//p[text()='Offers']"
     },
@@ -53,7 +53,7 @@
       "locatorType": "xpath",
       "locatorValue": "//p[contains(text(),'Last login on')]"
     },
-    "QuickServicesTitle_Object": {
+    "Db_QuickServicesTitle_Object": {
       "locatorType": "xpath",
       "locatorValue": "//h3[contains(text(),'Quick Services')]"
     },
@@ -149,7 +149,7 @@
       "locatorType": "xpath",
       "locatorValue": "//p[contains(text(),'Account statement')]/parent::div[contains(@class,'serviceItem')]"
     },
-    "ManageBeneficiaryService_Object": {
+    "Db_ManageBeneficiaryService_Object": {
       "locatorType": "xpath",
       "locatorValue": "//p[contains(text(),'Manage beneficiary')]/parent::div[contains(@class,'serviceItem')]"
     },
@@ -197,7 +197,7 @@
       "locatorType": "xpath",
       "locatorValue": "//h3[contains(text(),'My Investments')]"
     },
-    "OpenFDButton_Object": {
+    "Db_OpenFDButton_Object": {
       "locatorType": "xpath",
       "locatorValue": "//button[contains(@class,'rechargeButton') and contains(text(),'OPEN')]"
     },
@@ -220,6 +220,74 @@
     "AppStoreIcon_Object": {
       "locatorType": "xpath",
       "locatorValue": "//img[contains(@alt,'appstore')]"
+    },
+    "BeneficiaryCard_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'favBeneficryContainer')]//div[contains(@class,'beneficiaryCard')]"
+    },
+    "NoBeneficiaryImage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'favBeneficryContainer')]//img"
+    },
+    "AddNewBeneficiaryText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'addBeneficiary')]//span[contains(text(),'Add new')]"
+    },
+    "FastagRegisterText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Register your vehicle')] | //div[contains(@class,'fastag')]//p"
+    },
+    "FDInvestmentText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Book your Fixed Deposits')] | //div[contains(@class,'investment')]//p"
+    },
+    "FDInterestRateText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'8.8%')] | //div[contains(@class,'investment')]//p[contains(@class,'rate')]"
+    },
+    "TransactionAmount_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//li[contains(@class,'transactionItem')]//div[contains(@class,'amount')] | //li[contains(@class,'transactionItem')]//p[contains(@class,'amount')]"
+    },
+    "TransactionDate_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//li[contains(@class,'transactionItem')]//p[contains(@class,'time')] | //li[contains(@class,'transactionItem')]//p[contains(@class,'date')]"
+    },
+    "TransactionName_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//li[contains(@class,'transactionItem')]//p[contains(@class,'name')] | //li[contains(@class,'transactionItem')]//p[1]"
+    },
+    "NoBillsImage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'bills')]//img | //h3[contains(text(),'Upcoming Bills')]/following-sibling::div//img"
+    },
+    "BillList_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h3[contains(text(),'Upcoming Bills')]/following-sibling::div"
+    },
+    "CustomerCareSection_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'bg-[#005287EB]')] | //p[contains(text(),'24X7 Customer Care')]/ancestor::div[1]"
+    },
+    "CustomerCarePhoneText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'24X7 Customer Care')] | //p[contains(text(),'Customer Care')]"
+    },
+    "DownloadAppSection_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h6[contains(text(),'Mobile Banking App')]/ancestor::div[1] | //div[contains(@class,'red-bg')]"
+    },
+    "DownloadAppText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//h6[contains(text(),'Mobile Banking App')] | //p[contains(text(),'Download')]"
+    },
+    "AccountBalance_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'consolidatedBalance')] | //div[contains(@class,'accountCard')]//p[contains(@class,'balance')]"
+    },
+    "AccountType_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'accountCard')]//p[contains(text(),'Savings') or contains(text(),'Current')]"
     }
   }
 }

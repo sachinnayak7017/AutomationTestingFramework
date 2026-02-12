@@ -18,7 +18,8 @@ import java.net.URI;
 /**
  * Hooks - Cucumber hooks for test lifecycle management.
  * Contains @Before, @After, @BeforeAll, @AfterAll hooks.
- * Auto-captures screenshot after EVERY step with naming: modulename_testcaseID_step_datetime.png
+ * Captures screenshot on EVERY step: modulename_testcaseID_Step01_datetime.png, Step02, etc.
+ * Also captures FINAL screenshot: modulename_testcaseID_FINAL_PASSED/FAILED_datetime.png
  */
 public class Hooks {
 
@@ -30,6 +31,13 @@ public class Hooks {
     // Current module and testcase info (extracted from scenario)
     private String currentModule = "General";
     private String currentTestCaseId = "TC";
+
+    // Static scenario name accessible by step definition classes for TestCaseID extraction
+    private static String currentScenarioName = "";
+
+    public static String getCurrentScenarioName() {
+        return currentScenarioName;
+    }
 
     /**
      * Before all scenarios - Suite level setup
@@ -66,6 +74,9 @@ public class Hooks {
         logger.info("Tags: {}", scenario.getSourceTagNames());
         logger.info("----------------------------------------");
 
+        // Store scenario name for step definition classes to access
+        currentScenarioName = scenario.getName();
+
         // Reset step counter for new scenario
         stepCounter = 0;
 
@@ -90,24 +101,13 @@ public class Hooks {
     }
 
     /**
-     * After each step - Auto capture screenshot after EVERY step
-     * Screenshot naming: modulename_testcaseID_Step01_datetime.png
-     * @param scenario Current scenario
+     * After each step - capture screenshot for every step.
+     * Screenshot naming: Module_TestCaseId_Step01_datetime.png, Step02, etc.
      */
     @AfterStep
     public void afterStep(Scenario scenario) {
-        // Increment step counter
         stepCounter++;
-
-        // Create step name with number
         String stepName = String.format("Step%02d", stepCounter);
-
-        // Add status suffix if failed
-        if (scenario.isFailed()) {
-            stepName = stepName + "_FAILED";
-        }
-
-        // Auto capture screenshot after every step
         captureStepScreenshot(scenario, currentModule, currentTestCaseId, stepName);
     }
 
@@ -153,10 +153,17 @@ public class Hooks {
         logger.info("Cucumber Test Suite Finished");
         logger.info("========================================");
 
+        // Reset session state before quitting driver
+        org.example.utils.SessionManager.resetLoginState();
+
         // Quit WebDriver after all scenarios are done
         if (DriverManager.isDriverInitialized()) {
-            DriverManager.quitDriver();
-            logger.info("Browser closed after all scenarios completed");
+            try {
+                DriverManager.quitDriver();
+                logger.info("Browser closed after all scenarios completed");
+            } catch (Exception e) {
+                logger.warn("Browser was already closed: {}", e.getMessage());
+            }
         }
 
         // Flush reports
@@ -165,7 +172,8 @@ public class Hooks {
     }
 
     /**
-     * Capture step screenshot with proper naming and attach to scenario + report
+     * Capture step screenshot with proper naming and attach to scenario + report.
+     * Optimized: single capture reused for file save + Cucumber attach + Extent attach.
      * @param scenario Current scenario
      * @param module Module name
      * @param testCaseId Test case ID
@@ -173,17 +181,21 @@ public class Hooks {
      */
     private void captureStepScreenshot(Scenario scenario, String module, String testCaseId, String stepName) {
         try {
-            if (DriverManager.isDriverInitialized() && DriverManager.getDriver() != null) {
-                // Capture and save screenshot with proper naming to file
-                String screenshotPath = ScreenshotManager.captureScreenshotWithAction(
-                        module, testCaseId, stepName);
+            if (DriverManager.isDriverInitialized() && DriverManager.isDriverAlive()) {
+                // Single capture as bytes - reuse for all attach targets
+                byte[] screenshot = ScreenshotManager.captureScreenshotAsBytes();
+                if (screenshot == null || screenshot.length == 0) {
+                    logger.warn("Screenshot capture returned empty for {}_{}_{}", module, testCaseId, stepName);
+                    return;
+                }
 
-                // Also attach to Cucumber scenario report
+                // Save to file from bytes (avoids second WebDriver capture)
+                String screenshotPath = ScreenshotManager.saveScreenshotBytes(
+                        screenshot, module, testCaseId, stepName);
+
+                // Attach to Cucumber scenario report (reuse same bytes)
                 try {
-                    byte[] screenshot = ScreenshotManager.captureScreenshotAsBytes();
-                    if (screenshot != null && screenshot.length > 0) {
-                        scenario.attach(screenshot, "image/png", module + "_" + testCaseId + "_" + stepName);
-                    }
+                    scenario.attach(screenshot, "image/png", module + "_" + testCaseId + "_" + stepName);
                 } catch (Exception attachError) {
                     logger.warn("Could not attach screenshot to Cucumber report: {}", attachError.getMessage());
                 }
@@ -197,13 +209,10 @@ public class Hooks {
                     logger.warn("Could not attach screenshot to Extent report: {}", reportError.getMessage());
                 }
 
-                logger.info("Screenshot captured: {}_{}_{}",  module, testCaseId, stepName);
-            } else {
-                logger.warn("Cannot capture screenshot - Driver not initialized");
+                logger.debug("Screenshot captured: {}_{}_{}",  module, testCaseId, stepName);
             }
         } catch (Exception e) {
             logger.error("Failed to capture screenshot [{}]: {}", stepName, e.getMessage());
-            e.printStackTrace();
         }
     }
 
@@ -234,16 +243,18 @@ public class Hooks {
 
     /**
      * Extract test case ID from scenario
-     * Priority: 1. Tag starting with @TC_ 2. Scenario ID 3. Scenario name (sanitized)
+     * Priority: 1. Tag starting with @PL_ or @DB_ or @MB_ 2. Scenario ID 3. Scenario name (sanitized)
      * @param scenario Current scenario
      * @return Test case ID
      */
     private String extractTestCaseId(Scenario scenario) {
         try {
-            // First, check for tag starting with @TC_ or @PL_ (PreLogin) or other module prefixes
+            // First, check for tag starting with module prefixes: @PL_ @DB_ @MB_ @FT_
             for (String tag : scenario.getSourceTagNames()) {
-                if (tag.toUpperCase().startsWith("@TC_") || tag.toUpperCase().startsWith("@TC-")
-                    || tag.toUpperCase().startsWith("@PL_") || tag.toUpperCase().startsWith("@PL-")) {
+                if (tag.toUpperCase().startsWith("@PL_") || tag.toUpperCase().startsWith("@PL-")
+                    || tag.toUpperCase().startsWith("@DB_") || tag.toUpperCase().startsWith("@DB-")
+                    || tag.toUpperCase().startsWith("@MB_") || tag.toUpperCase().startsWith("@MB-")
+                    || tag.toUpperCase().startsWith("@FT_") || tag.toUpperCase().startsWith("@FT-")) {
                     return tag.substring(1); // Remove @ prefix
                 }
             }

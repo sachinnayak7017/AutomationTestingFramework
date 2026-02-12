@@ -116,6 +116,206 @@
     "NotificationIcon_Object": {
       "locatorType": "xpath",
       "locatorValue": "//img[contains(@src,'notification')]"
+    },
+    "MB_AddTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'xlLargeHeading') and contains(text(),'Add beneficiaries details')]"
+    },
+    "MB_AddBackArrow_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[@aria-label='Go back']"
+    },
+    "MB_CancelButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(text(),'CANCEL')]"
+    },
+    "MB_ContinueButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[.//p[text()='CONTINUE']]"
+    },
+    "MB_ShivalikBankRadio_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'Shivalik Bank')]/ancestor::label//input[@type='radio']"
+    },
+    "MB_OtherBankRadio_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'Other Bank')]/ancestor::label//input[@type='radio']"
+    },
+    "MB_ShivalikBankLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'Shivalik Bank')]/ancestor::label"
+    },
+    "MB_OtherBankLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//span[contains(text(),'Other Bank')]/ancestor::label"
+    },
+    "MB_AccountNumberInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='bankAccountNumber']"
+    },
+    "MB_AccountNumberEyeIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='bankAccountNumber']/ancestor::div[contains(@class,'MuiInputBase-root')]//button"
+    },
+    "MB_ReEnterAccountInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='reEnterAccountNumber']"
+    },
+    "MB_IFSCCodeInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@maxlength='11']"
+    },
+    "MB_SearchIFSCLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Search IFSC')]"
+    },
+    "MB_BeneficiaryNameInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='beneficiaryName']"
+    },
+    "MB_VerifyBeneficiaryButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Verify Beneficiary')]/ancestor::button | //button[contains(text(),'Verify Beneficiary')]"
+    },
+    "MB_NicknameInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='nickName']"
+    },
+    "MB_ConfirmTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'xlLargeHeading') and contains(text(),'Confirm beneficiary details')]"
+    },
+    "MB_SubmitButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[.//p[text()='SUBMIT']]"
+    },
+    "MB_ConfirmBeneficiaryName_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'border-borderColor')]//p[contains(@class,'text-base') and contains(@class,'font-bold')]"
+    },
+    "MB_ConfirmAccountNumber_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Account number')]/following-sibling::p"
+    },
+    "MB_ConfirmBankName_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Bank name')]/following-sibling::p"
+    },
+    "MB_ConfirmIFSCCode_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'IFSC code')]/following-sibling::p"
+    },
+    "MB_ConfirmNickname_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Nickname')]/following-sibling::p"
+    },
+    "MB_OTPInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//input[@name='otpCode']"
+    },
+    "MB_OTPTimerText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[@alt='Timer']/parent::div"
+    },
+    "MB_ResendOTPLink_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Resend OTP')] | //span[contains(text(),'Resend OTP')]"
+    },
+    "MB_OTPMessage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Please enter One Time Password')]"
+    },
+    "MB_NeverShareOTPText_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Never share your OTP')]"
+    },
+    "MB_SuccessTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Beneficiary added successfully')]"
+    },
+    "MB_SuccessMessage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'It will take 1 Hour')]"
+    },
+    "MB_DoneButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[.//p[text()='Done']]"
+    },
+    "MB_ErrorMessage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'error')] | //span[contains(@class,'error')] | //div[contains(@class,'Mui-error')]//p"
+    },
+    "MB_ToastMessage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'toaster')]//div | //div[contains(@class,'Toastify')]//div"
+    },
+    "MB_BeneficiaryRow_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//ul[contains(@class,'transactionList')]//li[1]"
+    },
+    "MB_EditButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(text(),'Edit')] | //img[contains(@src,'edit')]/parent::button | //p[contains(text(),'Edit')]/parent::button"
+    },
+    "MB_DeleteButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[contains(text(),'Delete')] | //img[contains(@src,'delete')]/parent::button | //p[contains(text(),'Delete')]/parent::button"
+    },
+    "MB_EditTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'xlLargeHeading') and contains(text(),'Edit')] | //p[contains(text(),'Beneficiary Details')]"
+    },
+    "MB_SaveButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[.//p[text()='SAVE']] | //button[contains(text(),'SAVE')]"
+    },
+    "MB_DeleteConfirmTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Confirm Delete')] | //p[contains(text(),'Delete beneficiary')]"
+    },
+    "MB_DeleteConfirmButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[.//p[text()='DELETE']] | //button[contains(text(),'DELETE')]"
+    },
+    "MB_DeleteSuccessMessage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'deleted successfully')]"
+    },
+    "MB_EditSuccessMessage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'updated successfully')]"
+    },
+    "MB_BeneficiaryDetailName_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'border-borderColor')]//p[1]"
+    },
+    "MB_BeneficiaryDetailAccount_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Account number')]/following-sibling::p | //p[contains(@class,'text-customLightGrey') and contains(text(),'XX')]/parent::div//p[2]"
+    },
+    "MB_AccountNumberLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Bank account number')]"
+    },
+    "MB_ReEnterAccountLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Re-enter account number')]"
+    },
+    "MB_BeneficiaryNameLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Beneficiary name')]"
+    },
+    "MB_NicknameLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Nickname')]"
+    },
+    "MB_IFSCCodeLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'IFSC code')]"
+    },
+    "MB_BeneficiaryTypeLabel_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Beneficiary type')]"
     }
   }
 }
