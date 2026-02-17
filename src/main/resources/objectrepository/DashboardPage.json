@@ -15,7 +15,7 @@
     },
     "Db_BillsNavLink_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//div[contains(@class,'authNavMain')]//p[text()='Bills']"
+      "locatorValue": "//div[contains(@class,'authNavMain')]//p[text()='Bills'] | //div[contains(@class,'authNavMain')]//p[text()='Bill Pay']"
     },
     "Db_OffersNavLink_Object": {
       "locatorType": "xpath",

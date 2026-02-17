@@ -15,7 +15,7 @@ public class DashboardPage extends BasePage {
 
     public DashboardPage() {
         super();
-    }
+    }  
 
     // Get locator key
     private String key(String objectName) {
@@ -116,7 +116,17 @@ public class DashboardPage extends BasePage {
     }
 
     public void clickManageBeneficiary() {
-        click(key("Db_ManageBeneficiaryService_Object"));
+        // Wait for loading overlay to disappear
+        waitForLoadingOverlay();
+        // Scroll to center of viewport to avoid fixed header
+        scrollToElement(key("Db_ManageBeneficiaryService_Object"));
+        try {
+            click(key("Db_ManageBeneficiaryService_Object"));
+        } catch (Exception e) {
+            logger.warn("Normal click intercepted for ManageBeneficiary, using JS click");
+            jsClick(key("Db_ManageBeneficiaryService_Object"));
+        }
+        logger.info("Clicked on Manage Beneficiary service");
     }
 
     // ========== Account Tab Actions ==========

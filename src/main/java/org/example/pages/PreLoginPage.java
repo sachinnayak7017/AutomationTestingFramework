@@ -1,5 +1,13 @@
 package org.example.pages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
+
 /**
  * PreLoginPage - Page Object for Shivalik Bank Pre-Login Page
  * Handles all interactions on the pre-login/landing page
@@ -9,6 +17,19 @@ public class PreLoginPage extends BasePage {
 
     public PreLoginPage() {
         super();
+    }
+
+    /**
+     * Wait for any MUI backdrop overlay to disappear before interacting with page elements.
+     */
+    private void waitForBackdropToDisappear() {
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(5))
+                    .until(ExpectedConditions.invisibilityOfElementLocated(
+                            By.cssSelector("div.MuiBackdrop-root")));
+        } catch (Exception e) {
+            // No backdrop present or already gone - continue
+        }
     }
 
     // ========== Header Navigation Actions ==========
@@ -74,7 +95,8 @@ public class PreLoginPage extends BasePage {
     }
 
     public void selectDepositOption() {
-        click("DepositOption_Object");
+        waitForBackdropToDisappear();
+        jsClick("DepositOption_Object");
     }
 
     public void clickFixedDeposit() {
@@ -88,7 +110,21 @@ public class PreLoginPage extends BasePage {
     // ========== Login Form - User ID Actions ==========
 
     public void enterUserId(String userId) {
-        type("UserIdInput_Object", userId);
+        waitForBackdropToDisappear();
+        try { scrollToElement("UserIdInput_Object"); } catch (Exception e) { }
+        WebElement el = findVisibleElement("UserIdInput_Object");
+        el.click();
+        try { Thread.sleep(300); } catch (InterruptedException ie) { Thread.currentThread().interrupt(); }
+        el.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        el.sendKeys(userId);
+        // Verify value was set, if not use React-compatible JavaScript fallback
+        try { Thread.sleep(200); } catch (InterruptedException ie) { Thread.currentThread().interrupt(); }
+        String currentValue = el.getAttribute("value");
+        if (currentValue == null || currentValue.isEmpty()) {
+            logger.warn("sendKeys did not set User ID value, using JavaScript fallback");
+            setValueViaReactJS(el, userId);
+        }
+        logger.info("Entered User ID: {}", userId);
     }
 
     public void clearUserId() {
@@ -114,7 +150,21 @@ public class PreLoginPage extends BasePage {
     // ========== Login Form - Password Actions ==========
 
     public void enterPassword(String password) {
-        type("PasswordInput_Object", password);
+        waitForBackdropToDisappear();
+        try { scrollToElement("PasswordInput_Object"); } catch (Exception e) { }
+        WebElement el = findVisibleElement("PasswordInput_Object");
+        el.click();
+        try { Thread.sleep(300); } catch (InterruptedException ie) { Thread.currentThread().interrupt(); }
+        el.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        el.sendKeys(password);
+        // Verify value was set, if not use React-compatible JavaScript fallback
+        try { Thread.sleep(200); } catch (InterruptedException ie) { Thread.currentThread().interrupt(); }
+        String currentValue = el.getAttribute("value");
+        if (currentValue == null || currentValue.isEmpty()) {
+            logger.warn("sendKeys did not set Password value, using JavaScript fallback");
+            setValueViaReactJS(el, password);
+        }
+        logger.info("Entered Password");
     }
 
     public void clearPassword() {
@@ -577,5 +627,21 @@ public class PreLoginPage extends BasePage {
 
     public void waitForPasswordScreen() {
         waitForElementVisible("PasswordInput_Object", 30);
+    }
+
+    // ========== React-compatible JavaScript Value Setter ==========
+
+    /**
+     * Set input value using React-compatible JavaScript.
+     * Uses the native HTMLInputElement value setter to bypass React's override,
+     * then dispatches input and change events to trigger React state updates.
+     */
+    private void setValueViaReactJS(WebElement element, String value) {
+        ((JavascriptExecutor) driver).executeScript(
+            "var nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;" +
+            "nativeInputValueSetter.call(arguments[0], arguments[1]);" +
+            "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));" +
+            "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
+            element, value);
     }
 }

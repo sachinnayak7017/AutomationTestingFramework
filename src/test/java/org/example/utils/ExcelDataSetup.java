@@ -124,12 +124,18 @@ public class ExcelDataSetup {
     private static void createPreloginSheet(Workbook workbook, CellStyle headerStyle) {
         createKeyValueSheet(workbook, headerStyle, "prelogin", new String[][]{
             {"BASE_URL", "https://eohs-uat.shivalik.bank.in/RIB/"},
-            {"USER_ID_VALID", "REPLACE_WITH_VALID_USER_ID"},
+            {"USER_ID_VALID", "995050"},
+            {"USER_ID_SAMPLE", "995050"},
+            {"USER_ID_ALL_CHARS", "test_user123"},
             {"USER_ID_INVALID", "invalidUser123"},
-            {"PASSWORD_VALID", "REPLACE_WITH_VALID_PASSWORD"},
-            {"PASSWORD_INVALID", "wrongPassword"},
             {"USER_ID_EMPTY", ""},
-            {"PASSWORD_EMPTY", ""}
+            {"PASSWORD_VALID", "Shivalik@1"},
+            {"PASSWORD_SAMPLE", "Test@1234"},
+            {"PASSWORD_WRONG", "WrongPass@123"},
+            {"PASSWORD_INVALID", "wrongPassword"},
+            {"PASSWORD_EMPTY", ""},
+            {"CAPTCHA_VALID", "222222"},
+            {"CAPTCHA_INVALID", "000000"}
         });
     }
 
@@ -165,379 +171,78 @@ public class ExcelDataSetup {
             createCell(headerRow, i, headers[i], headerStyle);
         }
 
-        // ===== Real data from AccountInfo sheet =====
+        // ===== Real data from Application (DOM-verified) =====
         String SH = "Shivalik Bank";
         String OB = "Other Bank";
-        // Valid accounts from AccountInfo
-        String ACC1 = "100110513763";      // Account number1 (saving, more balance)
-        String ACC2 = "100010510088";      // Account number2 (saving, 100)
-        String ACC3 = "100012250035";      // Account number3 (current, 200)
-        String ACC4 = "100012250034";      // Account number4 (current, 500)
-        String ACC5 = "100012510000";      // Account number5 (saving, 0 balance)
-        String ACC6 = "100012250036";      // Account number6 (current, 0 balance)
+        // Shivalik beneficiary accounts
+        String ACC2 = "100110042018";      // MR. GAURAV MISHRA - Shivalik beneficiary for add
+        String ACC3 = "100112510009";      // HARSHIT GOYAL - existing Shivalik beneficiary
         // Invalid / negative test data
         String ACC_MM = "9999999999";       // Mismatch account
         String ACC_INV = "ABC123";          // Invalid format (non-numeric)
-        String ACC_SHORT = "12345";         // Too short account
-        String ACC_LONG = "12345678901234567890"; // Too long account
-        String IFSC = "PUNB0206500";        // Real IFSC from AccountInfo
+        String IFSC = "PUNB0206500";        // Punjab National Bank IFSC (Other Bank)
         String IFSC_INV = "INVALID1234";    // Invalid IFSC
-        String IFSC_SHORT = "PUN";          // Too short IFSC
-        // Names from AccountInfo
-        String NM_S = "Nitish singh";       // Real user name
-        String NK_S = "nitish";             // Real nickname
-        String NM_O = "Test Beneficiary Other";
-        String NK_O = "TestOther";
-        String NK_E = "EditedNickname";
-        String NK_SP = "Test@#$%";          // Special chars nickname
-        String NK_LONG = "ThisIsAVeryLongNicknameForTestingPurposesOnly"; // Long nickname
-        // OTP values
-        String OTP_V = "123456";            // Valid OTP (replace with actual)
-        String OTP_I = "000000";            // Invalid OTP
-        String OTP_W = "111111";            // Wrong OTP
-        String OTP_SHORT = "123";           // Too short OTP
+        // Names from actual application (DOM-verified)
+        String NM_S = "GAURAV MISHRA";      // Shivalik beneficiary name for add
+        String NK_S = "gaurav";             // Shivalik beneficiary nickname
+        String NM_O = "sachin nayak";       // Other Bank beneficiary name
+        String NK_O = "sachin";             // Other Bank nickname
+        String NK_E = "EditedNick";         // Edited nickname value
+        // OTP values (222222 = UAT environment fixed OTP)
+        String OTP_V = "222222";            // Valid OTP (UAT environment)
         // Search values
-        String SEARCH_VALID = "Nitish";     // Real beneficiary name for search
+        String SEARCH_VALID = "harshit";    // Real beneficiary name in app
         String SEARCH_INVALID = "ZZZZNONEXISTENT"; // Non-existent beneficiary
 
-        // ===== Expected messages (extracted from app screenshots) =====
+        // ===== Expected messages (DOM-verified from actual application) =====
         String ERR_EMPTY = "Bank account number is required;Please re-enter your bank account number;Beneficiary name is required";
-        String ERR_REENTER_NAME = "Please re-enter your bank account number;Beneficiary name is required";
-        String ERR_NAME_ONLY = "Beneficiary name is required";
         String ERR_MISMATCH = "Account numbers do not match";
         String ERR_FORMAT = "Bank Account number should be 12 digits";
         String ERR_IFSC = "Please enter valid IFSC code";
-        String ERR_OTP = "Invalid OTP. Please try again.";
-        String ERR_OTP_MAX = "Maximum OTP attempts exceeded.";
         String SUC_ADD = "Beneficiary added successfully!";
-        String SUC_COOL = "It will take 1 Hour for the beneficiary to get activated";
-        String SUC_EDIT = "Beneficiary updated successfully!";
+        String SUC_EDIT = "Beneficiary details updated successfully!";
         String SUC_DEL = "Beneficiary deleted successfully!";
-        String MSG_OTP = "Please enter One Time Password (OTP) to confirm the beneficiary";
-        String MSG_OTP_SHARE = "Never share your OTP to anyone, Bank employees will never ask for your OTP.";
         String MSG_COOL_NONE = "No beneficiaries under cooling period";
-        String CONFIRM_TITLE = "Confirm beneficiary details";
 
+        // =====================================================================
+        // ONLY rows referenced by ManageBeneficiary.feature (22 merged scenarios)
+        // =====================================================================
         // Columns: TestCaseID, Description, BankType, Account, ReEnter, IFSC, BenName, Nick, OTP, Search, Expected
         String[][] data = {
 
-            // =====================================================================
-            // SECTION 1: NO BENEFICIARY ADDED - UI Verification (MB_001 - MB_010)
-            // =====================================================================
-            {"MB_001", "Verify page title displayed", "", "", "", "", "", "", "", "", "Manage Beneficiaries"},
-            {"MB_002", "Verify Back Arrow displayed", "", "", "", "", "", "", "", "", ""},
-            {"MB_003", "Verify Search input displayed", "", "", "", "", "", "", "", "", ""},
-            {"MB_004", "Verify ADD button displayed", "", "", "", "", "", "", "", "", ""},
-            {"MB_005", "Verify All tab displayed", "", "", "", "", "", "", "", "", ""},
-            {"MB_006", "Verify Shivalik tab displayed", "", "", "", "", "", "", "", "", ""},
-            {"MB_007", "Verify Other Bank tab displayed", "", "", "", "", "", "", "", "", ""},
-            {"MB_008", "Verify Cooling Period section", "", "", "", "", "", "", "", "", ""},
-            {"MB_009", "Verify Favourite section", "", "", "", "", "", "", "", "", ""},
-            {"MB_010", "Verify No Beneficiaries or list shown", "", "", "", "", "", "", "", "", ""},
+            // === MODULE 1: MAIN PAGE (MB_001) ===
+            {"MB_001", "Verify Manage Beneficiaries main page elements", "", "", "", "", "", "", "", "", ""},
 
-            // =====================================================================
-            // SECTION 2: ADD SHIVALIK BANK (MB_011 - MB_057)
-            // =====================================================================
-            // --- Add form UI elements (MB_011 - MB_023) ---
-            {"MB_011", "Click ADD - form opens", SH, "", "", "", "", "", "", "", ""},
-            {"MB_012", "Verify Back Arrow on add form", SH, "", "", "", "", "", "", "", ""},
-            {"MB_013", "Verify CANCEL button on add form", SH, "", "", "", "", "", "", "", ""},
-            {"MB_014", "Verify CONTINUE button on add form", SH, "", "", "", "", "", "", "", ""},
-            {"MB_015", "Verify Shivalik Bank radio displayed", SH, "", "", "", "", "", "", "", ""},
-            {"MB_016", "Verify Other Bank radio displayed", SH, "", "", "", "", "", "", "", ""},
-            {"MB_017", "Verify Account Number input", SH, "", "", "", "", "", "", "", ""},
-            {"MB_018", "Verify Re-enter Account input", SH, "", "", "", "", "", "", "", ""},
-            {"MB_019", "Verify Beneficiary Name input", SH, "", "", "", "", "", "", "", ""},
-            {"MB_020", "Verify Nickname input", SH, "", "", "", "", "", "", "", ""},
-            {"MB_021", "Verify Account masked by default", SH, "", "", "", "", "", "", "", ""},
-            {"MB_022", "Eye icon toggles visibility", SH, "", "", "", "", "", "", "", ""},
-            {"MB_023", "Select Shivalik radio - selected", SH, "", "", "", "", "", "", "", ""},
+            // === MODULE 2: ADD SHIVALIK (MB_011 - MB_017) ===
+            {"MB_011", "Click ADD and verify add form with all elements", SH, "", "", "", "", "", "", "", ""},
+            {"MB_012", "Click CONTINUE with empty Shivalik form - validate errors", SH, "", "", "", "", "", "", "", ERR_EMPTY},
+            {"MB_013", "Enter mismatched re-enter account - validate error", SH, ACC2, ACC_MM, "", "", "", "", "", ERR_MISMATCH},
+            {"MB_014", "Enter invalid account format - validate error", SH, ACC_INV, ACC_INV, "", NM_S, "", "", "", ERR_FORMAT},
+            {"MB_015", "Complete Shivalik form - verify confirm page and OTP section", SH, ACC2, ACC2, "", NM_S, NK_S, "", "", ""},
+            {"MB_016", "E2E Add Shivalik: form -> confirm -> OTP -> success -> Done -> main", SH, ACC2, ACC2, "", NM_S, NK_S, OTP_V, "", SUC_ADD},
+            {"MB_017", "Back arrow on add form returns to main page", SH, "", "", "", "", "", "", "", ""},
 
-            // --- Positive: field entry (MB_024 - MB_028) ---
-            {"MB_024", "Enter valid Shivalik account", SH, ACC2, "", "", "", "", "", "", ""},
-            {"MB_025", "Enter matching re-enter", SH, ACC2, ACC2, "", "", "", "", "", ""},
-            {"MB_026", "Mismatched re-enter account (negative)", SH, ACC2, ACC_MM, "", "", "", "", "", ERR_MISMATCH},
-            {"MB_027", "Enter valid beneficiary name", SH, "", "", "", NM_S, "", "", "", ""},
-            {"MB_028", "Enter valid nickname", SH, "", "", "", "", NK_S, "", "", ""},
+            // === MODULE 3: MANAGE BENEFICIARY LIST (MB_030 - MB_031) ===
+            {"MB_030", "Search beneficiary, verify tabs and filter with A-Z sort", "", "", "", "", "", "", "", SEARCH_VALID, ""},
+            {"MB_031", "Search non-existent beneficiary - no results", "", "", "", "", "", "", "", SEARCH_INVALID, MSG_COOL_NONE},
 
-            // --- Negative: validation errors (MB_029 - MB_032) ---
-            {"MB_029", "Empty form - all fields empty (negative)", SH, "", "", "", "", "", "", "", ERR_EMPTY},
-            {"MB_030", "Only account filled - no reenter/name (negative)", SH, ACC2, "", "", "", "", "", "", ERR_REENTER_NAME},
-            {"MB_031", "Account+reenter but no name (negative)", SH, ACC2, ACC2, "", "", "", "", "", ERR_NAME_ONLY},
-            {"MB_032", "Invalid account format ABC123 (negative)", SH, ACC_INV, ACC_INV, "", NM_S, "", "", "", ERR_FORMAT},
+            // === MODULE 4: ADD OTHER BANK (MB_040 - MB_045) ===
+            {"MB_040", "Click ADD, select Other Bank and verify form elements", OB, "", "", "", "", "", "", "", ""},
+            {"MB_041", "Click CONTINUE with empty Other Bank form - validate errors", OB, "", "", "", "", "", "", "", ERR_EMPTY},
+            {"MB_042", "Enter invalid IFSC code - validate error", OB, ACC3, ACC3, IFSC_INV, NM_O, "", "", "", ERR_IFSC},
+            {"MB_043", "Complete Other Bank form - verify confirm page and OTP section", OB, ACC3, ACC3, IFSC, NM_O, NK_O, "", "", ""},
+            {"MB_044", "E2E Add Other Bank: form -> confirm -> OTP -> success -> Done -> main", OB, ACC3, ACC3, IFSC, NM_O, NK_O, OTP_V, "", SUC_ADD},
+            {"MB_045", "Open Search IFSC sidebar, verify elements and close", OB, "", "", "", "", "", "", "", ""},
 
-            // --- Positive: complete form -> confirm page (MB_033 - MB_038) ---
-            {"MB_033", "Complete Shivalik form -> confirm page", SH, ACC2, ACC2, "", NM_S, NK_S, "", "", CONFIRM_TITLE},
-            {"MB_034", "Confirm page - beneficiary name shown", SH, ACC2, ACC2, "", NM_S, NK_S, "", "", NM_S},
-            {"MB_035", "Confirm page - account number shown", SH, ACC2, ACC2, "", NM_S, NK_S, "", "", ACC2},
-            {"MB_036", "Confirm page - bank name shown", SH, ACC2, ACC2, "", NM_S, NK_S, "", "", "Shivalik"},
-            {"MB_037", "Confirm page - IFSC code shown", SH, ACC2, ACC2, "", NM_S, NK_S, "", "", ""},
-            {"MB_038", "Confirm page - nickname shown", SH, ACC2, ACC2, "", NM_S, NK_S, "", "", NK_S},
+            // === MODULE 5: EDIT BENEFICIARY (MB_060 - MB_062) ===
+            {"MB_060", "Click beneficiary, verify details page, 3-dot menu and Edit form", "", ACC3, "", "", "Harshit", "harshit", "", "", ""},
+            {"MB_061", "E2E Edit: beneficiary -> 3-dot -> Edit -> nickname -> SAVE -> OTP -> success -> Done", "", "", "", "", "", NK_E, OTP_V, "", SUC_EDIT},
+            {"MB_062", "Edit nickname with empty value", "", "", "", "", "", "", "", "", ""},
 
-            // --- OTP page elements (MB_039 - MB_044) ---
-            {"MB_039", "OTP input field displayed", SH, ACC2, ACC2, "", NM_S, NK_S, "", "", ""},
-            {"MB_040", "OTP timer displayed", SH, ACC2, ACC2, "", NM_S, NK_S, "", "", ""},
-            {"MB_041", "Resend OTP link displayed", SH, ACC2, ACC2, "", NM_S, NK_S, "", "", ""},
-            {"MB_042", "OTP message text displayed", SH, ACC2, ACC2, "", NM_S, NK_S, "", "", MSG_OTP},
-            {"MB_043", "Never share OTP text displayed", SH, ACC2, ACC2, "", NM_S, NK_S, "", "", MSG_OTP_SHARE},
-            {"MB_044", "SUBMIT button disabled before OTP", SH, ACC2, ACC2, "", NM_S, NK_S, "", "", ""},
-
-            // --- Negative: OTP errors (MB_045 - MB_046) ---
-            {"MB_045", "Invalid OTP 000000 (negative)", SH, ACC2, ACC2, "", NM_S, NK_S, OTP_I, "", ERR_OTP},
-            {"MB_046", "Wrong OTP 3 times - locked (negative)", SH, ACC2, ACC2, "", NM_S, NK_S, OTP_W, "", ERR_OTP_MAX},
-
-            // --- Navigation: cancel/back (MB_047 - MB_048) ---
-            {"MB_047", "Cancel on confirm page -> return", SH, ACC2, ACC2, "", NM_S, NK_S, "", "", ""},
-            {"MB_048", "Back arrow on confirm page", SH, ACC2, ACC2, "", NM_S, NK_S, "", "", ""},
-
-            // --- Positive: successful add (MB_049 - MB_052) ---
-            {"MB_049", "Valid OTP - beneficiary added success", SH, ACC2, ACC2, "", NM_S, NK_S, OTP_V, "", SUC_ADD},
-            {"MB_050", "Success page - cooling period message", SH, ACC2, ACC2, "", NM_S, NK_S, OTP_V, "", SUC_COOL},
-            {"MB_051", "Done button on success page", SH, ACC2, ACC2, "", NM_S, NK_S, OTP_V, "", ""},
-            {"MB_052", "Done button - return to list", SH, ACC2, ACC2, "", NM_S, NK_S, OTP_V, "", ""},
-
-            // --- Navigation: cancel/back from add form (MB_053 - MB_054) ---
-            {"MB_053", "CANCEL returns from add form", SH, "", "", "", "", "", "", "", ""},
-            {"MB_054", "Back Arrow returns from add form", SH, "", "", "", "", "", "", "", ""},
-
-            // --- Labels verification (MB_055 - MB_057) ---
-            {"MB_055", "Beneficiary type label displayed", SH, "", "", "", "", "", "", "", ""},
-            {"MB_056", "Account number label displayed", SH, "", "", "", "", "", "", "", ""},
-            {"MB_057", "Beneficiary name label displayed", SH, "", "", "", "", "", "", "", ""},
-
-            // =====================================================================
-            // SECTION 3: MANAGE BENEFICIARY (MB_058 - MB_067)
-            // =====================================================================
-            {"MB_058", "Beneficiary list displayed", "", "", "", "", "", "", "", "", ""},
-            {"MB_059", "All tab - shows all beneficiaries", "", "", "", "", "", "", "", "", ""},
-            {"MB_060", "Shivalik tab - filter Shivalik", "", "", "", "", "", "", "", "", ""},
-            {"MB_061", "Other Bank tab - filter Other Bank", "", "", "", "", "", "", "", "", ""},
-            {"MB_062", "Search valid beneficiary name (positive)", "", "", "", "", "", "", "", SEARCH_VALID, ""},
-            {"MB_063", "Search invalid name - no results (negative)", "", "", "", "", "", "", "", SEARCH_INVALID, ""},
-            {"MB_064", "Filter icon displayed", "", "", "", "", "", "", "", "", ""},
-            {"MB_065", "A-Z sort option displayed", "", "", "", "", "", "", "", "", ""},
-            {"MB_066", "Cooling Period section message", "", "", "", "", "", "", "", "", MSG_COOL_NONE},
-            {"MB_067", "No cooling period beneficiaries", "", "", "", "", "", "", "", "", MSG_COOL_NONE},
-
-            // =====================================================================
-            // SECTION 4: ADD OTHER BANK (MB_068 - MB_105)
-            // =====================================================================
-            // --- Other Bank form UI elements (MB_068 - MB_071) ---
-            {"MB_068", "Select Other Bank radio", OB, "", "", "", "", "", "", "", ""},
-            {"MB_069", "IFSC code input displayed", OB, "", "", "", "", "", "", "", ""},
-            {"MB_070", "Search IFSC link displayed", OB, "", "", "", "", "", "", "", ""},
-            {"MB_071", "Verify Beneficiary button displayed", OB, "", "", "", "", "", "", "", ""},
-
-            // --- Positive: field entry (MB_072 - MB_078) ---
-            {"MB_072", "Enter valid Other Bank account", OB, ACC3, "", "", "", "", "", "", ""},
-            {"MB_073", "Enter matching Other Bank re-enter", OB, ACC3, ACC3, "", "", "", "", "", ""},
-            {"MB_074", "Enter valid IFSC code PUNB0206500", OB, "", "", IFSC, "", "", "", "", ""},
-            {"MB_075", "Invalid IFSC code INVALID1234 (negative)", OB, ACC3, ACC3, IFSC_INV, NM_O, "", "", "", ERR_IFSC},
-            {"MB_076", "Enter valid Other Bank name", OB, "", "", "", NM_O, "", "", "", ""},
-            {"MB_077", "Enter Other Bank nickname", OB, "", "", "", "", NK_O, "", "", ""},
-            {"MB_078", "Click Verify Beneficiary button", OB, ACC3, "", IFSC, NM_O, "", "", "", ""},
-
-            // --- Negative: validation errors (MB_079 - MB_083) ---
-            {"MB_079", "Empty Other Bank form (negative)", OB, "", "", "", "", "", "", "", ERR_EMPTY},
-            {"MB_080", "Only account filled Other Bank (negative)", OB, ACC3, "", "", "", "", "", "", ERR_REENTER_NAME},
-            {"MB_081", "No IFSC code Other Bank (negative)", OB, ACC3, ACC3, "", NM_O, "", "", "", ERR_IFSC},
-            {"MB_082", "Mismatched re-enter Other Bank (negative)", OB, ACC3, ACC_MM, "", "", "", "", "", ERR_MISMATCH},
-            {"MB_083", "Invalid account format Other Bank (negative)", OB, ACC_INV, ACC_INV, IFSC, NM_O, "", "", "", ERR_FORMAT},
-
-            // --- Positive: complete form -> confirm page (MB_084 - MB_089) ---
-            {"MB_084", "Complete Other Bank form -> confirm page", OB, ACC3, ACC3, IFSC, NM_O, NK_O, "", "", CONFIRM_TITLE},
-            {"MB_085", "Confirm OB - beneficiary name shown", OB, ACC3, ACC3, IFSC, NM_O, NK_O, "", "", NM_O},
-            {"MB_086", "Confirm OB - account number shown", OB, ACC3, ACC3, IFSC, NM_O, NK_O, "", "", ACC3},
-            {"MB_087", "Confirm OB - bank name shown", OB, ACC3, ACC3, IFSC, NM_O, NK_O, "", "", ""},
-            {"MB_088", "Confirm OB - IFSC code shown", OB, ACC3, ACC3, IFSC, NM_O, NK_O, "", "", IFSC},
-            {"MB_089", "Confirm OB - nickname shown", OB, ACC3, ACC3, IFSC, NM_O, NK_O, "", "", NK_O},
-
-            // --- OTP page elements OB (MB_090 - MB_093) ---
-            {"MB_090", "OTP input field OB", OB, ACC3, ACC3, IFSC, NM_O, NK_O, "", "", ""},
-            {"MB_091", "OTP timer OB", OB, ACC3, ACC3, IFSC, NM_O, NK_O, "", "", ""},
-            {"MB_092", "Resend OTP link OB", OB, ACC3, ACC3, IFSC, NM_O, NK_O, "", "", ""},
-            {"MB_093", "SUBMIT disabled before OTP OB", OB, ACC3, ACC3, IFSC, NM_O, NK_O, "", "", ""},
-
-            // --- Negative: OTP errors OB (MB_094 - MB_095) ---
-            {"MB_094", "Invalid OTP OB 000000 (negative)", OB, ACC3, ACC3, IFSC, NM_O, NK_O, OTP_I, "", ERR_OTP},
-            {"MB_095", "Wrong OTP 3x OB - locked (negative)", OB, ACC3, ACC3, IFSC, NM_O, NK_O, OTP_W, "", ERR_OTP_MAX},
-
-            // --- Navigation OB (MB_096 - MB_097) ---
-            {"MB_096", "Cancel confirm page OB", OB, ACC3, ACC3, IFSC, NM_O, NK_O, "", "", ""},
-            {"MB_097", "Back arrow confirm page OB", OB, ACC3, ACC3, IFSC, NM_O, NK_O, "", "", ""},
-
-            // --- Positive: successful add OB (MB_098 - MB_101) ---
-            {"MB_098", "Valid OTP OB - added success", OB, ACC3, ACC3, IFSC, NM_O, NK_O, OTP_V, "", SUC_ADD},
-            {"MB_099", "Success OB - cooling message", OB, ACC3, ACC3, IFSC, NM_O, NK_O, OTP_V, "", SUC_COOL},
-            {"MB_100", "Done button OB success page", OB, ACC3, ACC3, IFSC, NM_O, NK_O, OTP_V, "", ""},
-            {"MB_101", "Done button OB - return to list", OB, ACC3, ACC3, IFSC, NM_O, NK_O, OTP_V, "", ""},
-
-            // --- Navigation OB add form (MB_102 - MB_103) ---
-            {"MB_102", "CANCEL returns from OB add form", OB, "", "", "", "", "", "", "", ""},
-            {"MB_103", "Back Arrow returns from OB add form", OB, "", "", "", "", "", "", "", ""},
-
-            // --- Labels OB (MB_104 - MB_105) ---
-            {"MB_104", "IFSC code label displayed OB", OB, "", "", "", "", "", "", "", ""},
-            {"MB_105", "Search IFSC link click opens search", OB, "", "", "", "", "", "", "", ""},
-
-            // =====================================================================
-            // SECTION 5: BENEFICIARY EDIT (MB_106 - MB_125)
-            // =====================================================================
-            // --- Detail view UI (MB_106 - MB_112) ---
-            {"MB_106", "Click first beneficiary - detail view", "", "", "", "", "", "", "", "", ""},
-            {"MB_107", "Detail - beneficiary name displayed", "", "", "", "", "", "", "", "", ""},
-            {"MB_108", "Detail - account number displayed", "", "", "", "", "", "", "", "", ""},
-            {"MB_109", "Detail - Edit button displayed", "", "", "", "", "", "", "", "", ""},
-            {"MB_110", "Detail - Delete button displayed", "", "", "", "", "", "", "", "", ""},
-            {"MB_111", "Click Edit - edit form opens", "", "", "", "", "", "", "", "", ""},
-            {"MB_112", "Edit form - nickname input displayed", "", "", "", "", "", "", "", "", ""},
-
-            // --- Positive: edit nickname (MB_113 - MB_115) ---
-            {"MB_113", "Edit nickname with valid value", "", "", "", "", "", NK_E, "", "", ""},
-            {"MB_114", "Save after edit - OTP input shown", "", "", "", "", "", NK_E, "", "", ""},
-            {"MB_115", "Valid OTP edit - success message", "", "", "", "", "", NK_E, OTP_V, "", SUC_EDIT},
-
-            // --- Negative: edit OTP error (MB_116) ---
-            {"MB_116", "Invalid OTP edit 000000 (negative)", "", "", "", "", "", NK_E, OTP_I, "", ERR_OTP},
-
-            // --- Navigation: cancel/back from edit (MB_117 - MB_118) ---
-            {"MB_117", "CANCEL on edit form - return detail", "", "", "", "", "", "", "", "", ""},
-            {"MB_118", "Back Arrow on edit form - return detail", "", "", "", "", "", "", "", "", ""},
-
-            // --- Negative: empty/special nickname (MB_119 - MB_120) ---
-            {"MB_119", "Empty nickname save (negative)", "", "", "", "", "", "", "", "", ""},
-            {"MB_120", "Special chars nickname Test@#$% (negative)", "", "", "", "", "", NK_SP, "", "", ""},
-
-            // --- Edit form UI (MB_121 - MB_122) ---
-            {"MB_121", "SAVE button displayed in edit form", "", "", "", "", "", "", "", "", ""},
-            {"MB_122", "CANCEL button displayed in edit form", "", "", "", "", "", "", "", "", ""},
-
-            // --- Edit OTP page elements (MB_123 - MB_124) ---
-            {"MB_123", "Edit OTP timer displayed", "", "", "", "", "", NK_E, "", "", ""},
-            {"MB_124", "Edit Resend OTP link displayed", "", "", "", "", "", NK_E, "", "", ""},
-
-            // --- Positive: edit done return (MB_125) ---
-            {"MB_125", "Edit Done - return to list success", "", "", "", "", "", NK_E, OTP_V, "", SUC_EDIT},
-
-            // =====================================================================
-            // SECTION 6: BENEFICIARY DELETE (MB_126 - MB_141)
-            // =====================================================================
-            // --- Delete dialog UI (MB_126 - MB_130) ---
-            {"MB_126", "Click Delete - confirmation dialog", "", "", "", "", "", "", "", "", ""},
-            {"MB_127", "Delete confirmation title displayed", "", "", "", "", "", "", "", "", ""},
-            {"MB_128", "DELETE confirm button displayed", "", "", "", "", "", "", "", "", ""},
-            {"MB_129", "CANCEL button on delete dialog", "", "", "", "", "", "", "", "", ""},
-            {"MB_130", "CANCEL delete - return to detail view", "", "", "", "", "", "", "", "", ""},
-
-            // --- Positive: delete with OTP (MB_131 - MB_132) ---
-            {"MB_131", "DELETE confirm - OTP input shown", "", "", "", "", "", "", "", "", ""},
-            {"MB_132", "Valid OTP delete - success message", "", "", "", "", "", "", OTP_V, "", SUC_DEL},
-
-            // --- Negative: delete OTP errors (MB_133 - MB_134) ---
-            {"MB_133", "Invalid OTP delete 000000 (negative)", "", "", "", "", "", "", OTP_I, "", ERR_OTP},
-            {"MB_134", "Wrong OTP 3x delete - locked (negative)", "", "", "", "", "", "", OTP_W, "", ERR_OTP_MAX},
-
-            // --- Delete OTP page elements (MB_135 - MB_136) ---
-            {"MB_135", "Delete OTP timer displayed", "", "", "", "", "", "", "", "", ""},
-            {"MB_136", "Delete Resend OTP link displayed", "", "", "", "", "", "", "", "", ""},
-
-            // --- Positive: delete done/verify (MB_137 - MB_138) ---
-            {"MB_137", "Delete Done - return to list", "", "", "", "", "", "", OTP_V, "", SUC_DEL},
-            {"MB_138", "Deleted beneficiary removed from list", "", "", "", "", "", "", OTP_V, "", ""},
-
-            // --- Navigation & final (MB_139 - MB_141) ---
-            {"MB_139", "Back Arrow on delete OTP page", "", "", "", "", "", "", "", "", ""},
-            {"MB_140", "Verify page after all operations", "", "", "", "", "", "", "", "", ""},
-            {"MB_141", "Back Arrow navigates back from page", "", "", "", "", "", "", "", "", ""},
-
-            // =====================================================================
-            // EXTRA SCENARIOS: ADDITIONAL NEGATIVE & POSITIVE TESTS (MB_142 - MB_200)
-            // =====================================================================
-
-            // --- Shivalik: Different valid accounts from AccountInfo ---
-            {"MB_142", "Add Shivalik with Account1 (saving, high balance)", SH, ACC1, ACC1, "", NM_S, NK_S, OTP_V, "", SUC_ADD},
-            {"MB_143", "Add Shivalik with Account3 (current, 200)", SH, ACC3, ACC3, "", NM_S, "nick_cur200", OTP_V, "", SUC_ADD},
-            {"MB_144", "Add Shivalik with Account4 (current, 500)", SH, ACC4, ACC4, "", NM_S, "nick_cur500", OTP_V, "", SUC_ADD},
-            {"MB_145", "Add Shivalik with Account5 (saving, 0 balance)", SH, ACC5, ACC5, "", NM_S, "nick_zero", OTP_V, "", SUC_ADD},
-            {"MB_146", "Add Shivalik with Account6 (current, 0 balance)", SH, ACC6, ACC6, "", NM_S, "nick_cur0", OTP_V, "", SUC_ADD},
-
-            // --- Shivalik: Account number edge cases (negative) ---
-            {"MB_147", "Short account number 12345 (negative)", SH, ACC_SHORT, ACC_SHORT, "", NM_S, NK_S, "", "", ERR_FORMAT},
-            {"MB_148", "Long account number 20 digits (negative)", SH, ACC_LONG, ACC_LONG, "", NM_S, NK_S, "", "", ERR_FORMAT},
-            {"MB_149", "Account with spaces (negative)", SH, "1000 1051 0088", "1000 1051 0088", "", NM_S, NK_S, "", "", ERR_FORMAT},
-            {"MB_150", "Account with special chars (negative)", SH, "10001051@088", "10001051@088", "", NM_S, NK_S, "", "", ERR_FORMAT},
-            {"MB_151", "Account all zeros (negative)", SH, "000000000000", "000000000000", "", NM_S, NK_S, "", "", ""},
-            {"MB_152", "Re-enter empty but account filled (negative)", SH, ACC2, "", "", NM_S, NK_S, "", "", ERR_REENTER_NAME},
-
-            // --- Shivalik: Beneficiary name edge cases ---
-            {"MB_153", "Name with numbers (negative)", SH, ACC2, ACC2, "", "Test123", NK_S, "", "", ""},
-            {"MB_154", "Name with special chars (negative)", SH, ACC2, ACC2, "", "Test@#$!", NK_S, "", "", ""},
-            {"MB_155", "Very long name 50+ chars", SH, ACC2, ACC2, "", "This Is A Very Long Beneficiary Name For Testing Only", NK_S, "", "", ""},
-            {"MB_156", "Single character name", SH, ACC2, ACC2, "", "A", NK_S, "", "", ""},
-            {"MB_157", "Name with only spaces (negative)", SH, ACC2, ACC2, "", "   ", NK_S, "", "", ""},
-
-            // --- Shivalik: Nickname edge cases ---
-            {"MB_158", "Very long nickname 45 chars (negative)", SH, ACC2, ACC2, "", NM_S, NK_LONG, "", "", ""},
-            {"MB_159", "Nickname with spaces", SH, ACC2, ACC2, "", NM_S, "nick name", "", "", ""},
-            {"MB_160", "Nickname only numbers", SH, ACC2, ACC2, "", NM_S, "12345", "", "", ""},
-            {"MB_161", "Nickname single character", SH, ACC2, ACC2, "", NM_S, "N", "", "", ""},
-            {"MB_162", "Nickname empty (beneficiary added without nick)", SH, ACC2, ACC2, "", NM_S, "", OTP_V, "", ""},
-
-            // --- Shivalik: OTP edge cases ---
-            {"MB_163", "OTP with letters (negative)", SH, ACC2, ACC2, "", NM_S, NK_S, "ABCDEF", "", ERR_OTP},
-            {"MB_164", "OTP too short 3 digits (negative)", SH, ACC2, ACC2, "", NM_S, NK_S, OTP_SHORT, "", ERR_OTP},
-            {"MB_165", "OTP with spaces (negative)", SH, ACC2, ACC2, "", NM_S, NK_S, "12 34 56", "", ERR_OTP},
-            {"MB_166", "OTP all same digits (negative)", SH, ACC2, ACC2, "", NM_S, NK_S, "999999", "", ERR_OTP},
-
-            // --- Other Bank: Different valid accounts from AccountInfo ---
-            {"MB_167", "Add OB with Account1 (saving, high balance)", OB, ACC1, ACC1, IFSC, NM_O, NK_O, OTP_V, "", SUC_ADD},
-            {"MB_168", "Add OB with Account4 (current, 500)", OB, ACC4, ACC4, IFSC, NM_O, "ob_cur500", OTP_V, "", SUC_ADD},
-            {"MB_169", "Add OB with Account5 (saving, 0 balance)", OB, ACC5, ACC5, IFSC, NM_O, "ob_zero", OTP_V, "", SUC_ADD},
-            {"MB_170", "Add OB with Account6 (current, 0 balance)", OB, ACC6, ACC6, IFSC, NM_O, "ob_cur0", OTP_V, "", SUC_ADD},
-
-            // --- Other Bank: IFSC code edge cases (negative) ---
-            {"MB_171", "IFSC too short PUN (negative)", OB, ACC3, ACC3, IFSC_SHORT, NM_O, NK_O, "", "", ERR_IFSC},
-            {"MB_172", "IFSC with special chars (negative)", OB, ACC3, ACC3, "PUNB@20650", NM_O, NK_O, "", "", ERR_IFSC},
-            {"MB_173", "IFSC all numbers (negative)", OB, ACC3, ACC3, "12345678901", NM_O, NK_O, "", "", ERR_IFSC},
-            {"MB_174", "IFSC empty (negative)", OB, ACC3, ACC3, "", NM_O, NK_O, "", "", ERR_IFSC},
-            {"MB_175", "IFSC with spaces (negative)", OB, ACC3, ACC3, "PUNB 020650", NM_O, NK_O, "", "", ERR_IFSC},
-            {"MB_176", "IFSC lowercase (negative)", OB, ACC3, ACC3, "punb0206500", NM_O, NK_O, "", "", ERR_IFSC},
-
-            // --- Other Bank: Account edge cases (negative) ---
-            {"MB_177", "OB short account (negative)", OB, ACC_SHORT, ACC_SHORT, IFSC, NM_O, NK_O, "", "", ERR_FORMAT},
-            {"MB_178", "OB long account (negative)", OB, ACC_LONG, ACC_LONG, IFSC, NM_O, NK_O, "", "", ERR_FORMAT},
-            {"MB_179", "OB account with letters (negative)", OB, "ABCDEFGHIJKL", "ABCDEFGHIJKL", IFSC, NM_O, NK_O, "", "", ERR_FORMAT},
-            {"MB_180", "OB mismatched by 1 digit (negative)", OB, ACC3, "100012250036", "", NM_O, NK_O, "", "", ERR_MISMATCH},
-
-            // --- Other Bank: Name edge cases ---
-            {"MB_181", "OB name with special chars (negative)", OB, ACC3, ACC3, IFSC, "Test@Bank#", NK_O, "", "", ""},
-            {"MB_182", "OB very long name", OB, ACC3, ACC3, IFSC, "Very Long Other Bank Beneficiary Name For Testing", NK_O, "", "", ""},
-            {"MB_183", "OB name with numbers", OB, ACC3, ACC3, IFSC, "Beneficiary123", NK_O, "", "", ""},
-
-            // --- Other Bank: OTP edge cases (negative) ---
-            {"MB_184", "OB OTP with letters (negative)", OB, ACC3, ACC3, IFSC, NM_O, NK_O, "ABCDEF", "", ERR_OTP},
-            {"MB_185", "OB OTP too short (negative)", OB, ACC3, ACC3, IFSC, NM_O, NK_O, OTP_SHORT, "", ERR_OTP},
-            {"MB_186", "OB OTP expired after timer (negative)", OB, ACC3, ACC3, IFSC, NM_O, NK_O, "222222", "", ERR_OTP},
-
-            // --- Search edge cases ---
-            {"MB_187", "Search with special chars (negative)", "", "", "", "", "", "", "", "@#$%^", ""},
-            {"MB_188", "Search with single char", "", "", "", "", "", "", "", "N", ""},
-            {"MB_189", "Search with partial name", "", "", "", "", "", "", "", "Nit", ""},
-            {"MB_190", "Search with full account number", "", "", "", "", "", "", "", ACC2, ""},
-            {"MB_191", "Search with empty string", "", "", "", "", "", "", "", "", ""},
-            {"MB_192", "Search with very long string (negative)", "", "", "", "", "", "", "", "ThisIsAVeryLongSearchStringThatShouldNotMatchAnything", ""},
-
-            // --- Edit: Different nickname variations ---
-            {"MB_193", "Edit nickname to numbers only", "", "", "", "", "", "99999", OTP_V, "", SUC_EDIT},
-            {"MB_194", "Edit nickname with unicode chars", "", "", "", "", "", "TestUnicode", OTP_V, "", SUC_EDIT},
-            {"MB_195", "Edit nickname very long (negative)", "", "", "", "", "", NK_LONG, "", "", ""},
-            {"MB_196", "Edit nickname same as old (no change)", "", "", "", "", "", NK_S, OTP_V, "", SUC_EDIT},
-
-            // --- Delete: Multiple beneficiary operations ---
-            {"MB_197", "Delete after fresh add (positive flow)", "", "", "", "", "", "", OTP_V, "", SUC_DEL},
-            {"MB_198", "Delete with expired OTP (negative)", "", "", "", "", "", "", "333333", "", ERR_OTP},
-            {"MB_199", "Delete cancel then re-delete", "", "", "", "", "", "", OTP_V, "", SUC_DEL},
-            {"MB_200", "Final page state after delete all", "", "", "", "", "", "", "", "", ""},
+            // === MODULE 6: DELETE BENEFICIARY (MB_080 - MB_082) ===
+            {"MB_080", "Click beneficiary, 3-dot, Delete and verify delete page elements", "", "", "", "", "", "", "", "", ""},
+            {"MB_081", "E2E Delete: beneficiary -> 3-dot -> Delete -> DELETE -> OTP -> success -> Done", "", "", "", "", "", "", OTP_V, "", SUC_DEL},
+            {"MB_082", "Verify page after all operations", "", "", "", "", "", "", "", "", ""},
         };
 
         for (int i = 0; i < data.length; i++) {

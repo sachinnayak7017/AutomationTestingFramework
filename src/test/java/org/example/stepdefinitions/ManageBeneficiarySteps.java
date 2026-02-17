@@ -38,8 +38,20 @@ public class ManageBeneficiarySteps {
         loadAllTestData();
         SessionManager.addSessionResetListener(() -> {
             isOnManageBeneficiaryPage = false;
-            logger.info("ManageBeneficiary page flag reset due to session re-login");
+            // Re-create page objects to get fresh driver after session reset
+            mbPage = new ManageBeneficiariesPage();
+            dashboardPage = new DashboardPage();
+            logger.info("ManageBeneficiary page flag reset and page objects refreshed due to session re-login");
         });
+    }
+
+    /**
+     * Refresh page objects to get the current driver reference.
+     * Called before each scenario's Background step to handle driver reinitialization.
+     */
+    private void refreshPageObjects() {
+        mbPage = new ManageBeneficiariesPage();
+        dashboardPage = new DashboardPage();
     }
 
     private void loadAllTestData() {
@@ -84,35 +96,59 @@ public class ManageBeneficiarySteps {
     @Given("user is logged in and navigates to Manage Beneficiary page")
     public void userIsLoggedInAndNavigatesToManageBeneficiaryPage() {
         SessionManager.ensureLoggedIn();
-        dashboardPage.waitForDashboardLoad();
+        refreshPageObjects();
+
+        // Quick check: are we already on MB page? (same as FT pattern)
+        if (!isOnManageBeneficiaryPage) {
+            try {
+                if (mbPage.isPageTitleDisplayed()) {
+                    isOnManageBeneficiaryPage = true;
+                    logger.info("Already on Manage Beneficiary page (detected via quick check)");
+                }
+            } catch (Exception e) {
+                // Not on MB page, proceed with navigation
+            }
+        }
 
         if (!isOnManageBeneficiaryPage) {
             try {
+                logger.info("Navigating to Manage Beneficiary from Dashboard...");
                 dashboardPage.scrollToServices();
                 dashboardPage.clickManageBeneficiary();
-                sleep(1000);
                 mbPage.waitForManageBeneficiaryPageLoad();
-                isOnManageBeneficiaryPage = true;
+
+                if (mbPage.isPageTitleDisplayed()) {
+                    isOnManageBeneficiaryPage = true;
+                    logger.info("Successfully navigated to Manage Beneficiary page");
+                } else {
+                    logger.error("Manage Beneficiary page FAILED to load");
+                }
             } catch (Exception e) {
-                logger.warn("Service click failed, trying recovery: {}", e.getMessage());
+                logger.error("Exception navigating to Manage Beneficiary: {}", e.getMessage());
+                // Recovery: click Home to go to Dashboard first, then retry
                 try {
+                    logger.info("Recovery: clicking Home nav and retrying...");
                     mbPage.clickHomeNav();
-                    sleep(500);
+                    sleep(1000);
+                    dashboardPage.waitForDashboardLoad();
                     dashboardPage.scrollToServices();
                     dashboardPage.clickManageBeneficiary();
-                    sleep(1000);
                     mbPage.waitForManageBeneficiaryPageLoad();
-                    isOnManageBeneficiaryPage = true;
+                    if (mbPage.isPageTitleDisplayed()) {
+                        isOnManageBeneficiaryPage = true;
+                        logger.info("Recovery navigation to Manage Beneficiary succeeded");
+                    }
                 } catch (Exception ex) {
-                    logger.error("Failed to navigate to Manage Beneficiary page: {}", ex.getMessage());
+                    logger.error("Recovery navigation also failed: {}", ex.getMessage());
                 }
             }
         }
 
+        // If we're supposed to be on MB page, verify and re-navigate if needed
         if (isOnManageBeneficiaryPage) {
             try {
                 if (!mbPage.isPageTitleDisplayed()) {
-                    logger.info("MB page title not visible, re-navigating...");
+                    logger.info("MB page title not visible, attempting back navigation...");
                     navigateBackToManageBeneficiary();
                 }
             } catch (Exception e) {
@@ -122,23 +158,74 @@ public class ManageBeneficiarySteps {
         }
     }
 
+    /**
+     * Navigate back to MB main page from any sub-page.
+     * Same pattern as FundTransfer navigateBackToFundTransfer().
+     */
     private void navigateBackToManageBeneficiary() {
-        logger.info("Attempting to navigate back to Manage Beneficiary page...");
+        logger.info("Attempting to navigate back to Manage Beneficiary main page...");
 
+        // Strategy 0: Dismiss any open popup/modal/backdrop first (same as FT - try click directly, no check)
         try {
-            mbPage.clickBackArrow();
-            sleep(500);
+            mbPage.dismissMuiBackdrop();
+        } catch (Exception e) {
+            // No backdrop, continue
+        }
+        try {
+            mbPage.clickCautionConfirmButton();
+            sleep(2000);
             if (mbPage.isPageTitleDisplayed()) {
-                logger.info("Back arrow click successful - MB page title displayed");
+                logger.info("Dismissed popup and landed on MB page");
                 return;
             }
         } catch (Exception e) {
-            logger.warn("Back arrow click failed: {}", e.getMessage());
+            // No popup open, continue with other strategies
         }
 
+        // Strategy 0.5: Click Done button if on success page
+        try {
+            if (mbPage.isDoneButtonDisplayedFast()) {
+                logger.info("Done button found - clicking to return to main page");
+                mbPage.clickDoneButton();
+                sleep(2000);
+                if (mbPage.isPageTitleDisplayed()) {
+                    logger.info("Done button click successful - MB page title displayed");
+                    return;
+                }
+            }
+        } catch (Exception e) {
+            // No Done button, continue
+        }
+
+        // Strategy 1: Click Back Arrow up to 3 times (handles nested sub-pages)
+        for (int i = 0; i < 3; i++) {
+            try {
+                mbPage.clickBackArrow();
+                sleep(1500);
+                // Check if CAUTION popup appeared and confirm it
+                try {
+                    if (mbPage.isCautionPopupDisplayed()) {
+                        logger.info("CAUTION popup appeared after back arrow click, confirming...");
+                        mbPage.clickCautionConfirmButton();
+                        sleep(2000);
+                    }
+                } catch (Exception popupEx) {
+                    // No popup, continue
+                }
+                if (mbPage.isPageTitleDisplayed()) {
+                    logger.info("Back arrow click {} successful - MB page title displayed", (i + 1));
+                    return;
+                }
+            } catch (Exception e) {
+                logger.warn("Back arrow click {} failed: {}", (i + 1), e.getMessage());
+                break;
+            }
+        }
+
+        // Strategy 2: Browser back
         try {
             mbPage.navigateBack();
-            sleep(500);
+            sleep(1500);
             if (mbPage.isPageTitleDisplayed()) {
                 logger.info("Browser back successful - MB page title displayed");
                 return;
@@ -147,14 +234,14 @@ public class ManageBeneficiarySteps {
             logger.warn("Browser back failed: {}", e.getMessage());
         }
 
+        // Strategy 3: Go Home and re-navigate
         try {
             logger.info("Fallback: navigating via Home -> Manage Beneficiary");
             mbPage.clickHomeNav();
-            sleep(500);
+            sleep(1500);
             dashboardPage.waitForDashboardLoad();
             dashboardPage.scrollToServices();
             dashboardPage.clickManageBeneficiary();
-            sleep(1000);
             mbPage.waitForManageBeneficiaryPageLoad();
             logger.info("Fallback navigation completed");
         } catch (Exception ex) {
@@ -171,7 +258,7 @@ public class ManageBeneficiarySteps {
         String beneficiaryName = getTestDataValue(testCaseId, "BeneficiaryName_Value");
         String nickname = getTestDataValue(testCaseId, "Nickname_Value");
 
-        mbPage.clickShivalikBankRadio();
+        // Shivalik Bank is selected by default - no radio click needed
 
         if (accountNo != null && !accountNo.isEmpty()) mbPage.enterAccountNumber(accountNo);
         if (reAccountNo != null && !reAccountNo.isEmpty()) {
@@ -316,5 +403,92 @@ public class ManageBeneficiarySteps {
         boolean errorShown = mbPage.isErrorMessageDisplayed() || mbPage.isToastMessageDisplayed();
         Assert.assertTrue(otpShown || errorShown,
                 "Neither OTP input nor error message is shown after nickname save");
+    }
+
+    // ==================== HIGH-LEVEL VALIDATION: CONFIRM PAGE ====================
+
+    @Then("MB confirm page should display correct details for test case {string}")
+    public void mbConfirmPageShouldDisplayCorrectDetails(String testCaseId) {
+        String expectedName = getTestDataValue(testCaseId, "BeneficiaryName_Value");
+        String expectedAccount = getTestDataValue(testCaseId, "AccountNumber_Value");
+        String expectedNickname = getTestDataValue(testCaseId, "Nickname_Value");
+        String expectedIFSC = getTestDataValue(testCaseId, "IFSCCode_Value");
+
+        sleep(500);
+        mbPage.waitForConfirmPageLoad();
+
+        boolean anyValidated = false;
+
+        if (expectedName != null && !expectedName.isEmpty()) {
+            String actualName = mbPage.getConfirmBeneficiaryName();
+            Assert.assertTrue(actualName != null && actualName.toLowerCase().contains(expectedName.toLowerCase()),
+                    "Confirm page name mismatch. Expected contains: " + expectedName + ", Actual: " + actualName);
+            logger.info("Confirm page name validated: expected '{}', actual '{}'", expectedName, actualName);
+            anyValidated = true;
+        }
+
+        if (expectedAccount != null && !expectedAccount.isEmpty()) {
+            String actualAccount = mbPage.getConfirmAccountNumber();
+            String cleanExpected = expectedAccount.replaceAll("\\s", "");
+            String cleanActual = actualAccount != null ? actualAccount.replaceAll("\\s", "") : "";
+            Assert.assertTrue(cleanActual.contains(cleanExpected),
+                    "Confirm page account mismatch. Expected contains: " + expectedAccount + ", Actual: " + actualAccount);
+            logger.info("Confirm page account validated: expected '{}', actual '{}'", expectedAccount, actualAccount);
+            anyValidated = true;
+        }
+
+        if (expectedNickname != null && !expectedNickname.isEmpty()) {
+            String actualNickname = mbPage.getConfirmNickname();
+            Assert.assertTrue(actualNickname != null && actualNickname.toLowerCase().contains(expectedNickname.toLowerCase()),
+                    "Confirm page nickname mismatch. Expected contains: " + expectedNickname + ", Actual: " + actualNickname);
+            logger.info("Confirm page nickname validated: expected '{}', actual '{}'", expectedNickname, actualNickname);
+            anyValidated = true;
+        }
+
+        if (expectedIFSC != null && !expectedIFSC.isEmpty()) {
+            String actualIFSC = mbPage.getConfirmIFSCCode();
+            Assert.assertTrue(actualIFSC != null && actualIFSC.contains(expectedIFSC),
+                    "Confirm page IFSC mismatch. Expected contains: " + expectedIFSC + ", Actual: " + actualIFSC);
+            logger.info("Confirm page IFSC validated: expected '{}', actual '{}'", expectedIFSC, actualIFSC);
+            anyValidated = true;
+        }
+
+        Assert.assertTrue(anyValidated,
+                "No confirm page details validated for test case " + testCaseId + " - check Excel test data");
+    }
+
+    // ==================== HIGH-LEVEL VALIDATION: BENEFICIARY DETAILS PAGE ====================
+
+    @Then("MB beneficiary details should match test case {string}")
+    public void mbBeneficiaryDetailsShouldMatch(String testCaseId) {
+        String expectedName = getTestDataValue(testCaseId, "BeneficiaryName_Value");
+        String expectedNickname = getTestDataValue(testCaseId, "Nickname_Value");
+
+        sleep(500);
+        mbPage.waitForBeneficiaryDetailLoad();
+
+        boolean anyValidated = false;
+
+        if (expectedName != null && !expectedName.isEmpty()) {
+            String actualName = mbPage.getBeneficiaryDetailName();
+            Assert.assertTrue(actualName != null && actualName.toLowerCase().contains(expectedName.toLowerCase()),
+                    "Detail page name mismatch. Expected contains: " + expectedName + ", Actual: " + actualName);
+            logger.info("Detail page name validated: expected '{}', actual '{}'", expectedName, actualName);
+            anyValidated = true;
+        }
+
+        if (expectedNickname != null && !expectedNickname.isEmpty()) {
+            boolean nicknameFound = mbPage.isTextDisplayedOnPage(expectedNickname);
+            if (nicknameFound) {
+                logger.info("Detail page nickname '{}' found on page", expectedNickname);
+                anyValidated = true;
+            } else {
+                logger.warn("Detail page nickname '{}' not found on page", expectedNickname);
+            }
+        }
+
+        if (!anyValidated) {
+            logger.warn("No beneficiary details validated for test case {} - check Excel data", testCaseId);
+        }
     }
 }

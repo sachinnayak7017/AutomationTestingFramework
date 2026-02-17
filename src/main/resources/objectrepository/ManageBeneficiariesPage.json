@@ -3,11 +3,11 @@
   "objects": {
     "PageTitle_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//span[contains(@class,'textContent') and contains(text(),'Manage beneficiaries')]"
+      "locatorValue": "//span[contains(.,'Manage beneficiaries')]"
     },
     "BackArrow_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//img[@alt='arrow' and contains(@src,'leftArrow')]"
+      "locatorValue": "//img[contains(@src,'leftArrow')]"
     },
     "SearchBeneficiaryInput_Object": {
       "locatorType": "xpath",
@@ -103,7 +103,7 @@
     },
     "BillsNavLink_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//p[@class='textnav' and text()='Bills']"
+      "locatorValue": "//p[@class='textnav' and (text()='Bill Pay' or text()='Bills')]"
     },
     "OffersNavLink_Object": {
       "locatorType": "xpath",
@@ -253,6 +253,22 @@
       "locatorType": "xpath",
       "locatorValue": "//ul[contains(@class,'transactionList')]//li[1]"
     },
+    "MB_MoreSquareIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//img[contains(@src,'more-square')]"
+    },
+    "MB_BeneficiaryDetailTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'text-2xl') and contains(text(),'Beneficiary details')]"
+    },
+    "MB_VerifyBeneficiaryDetailButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[.//p[text()='VERIFY BENEFICIARY']]"
+    },
+    "MB_SendMoneyButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//button[.//p[text()='SEND MONEY']]"
+    },
     "MB_EditButton_Object": {
       "locatorType": "xpath",
       "locatorValue": "//button[contains(text(),'Edit')] | //img[contains(@src,'edit')]/parent::button | //p[contains(text(),'Edit')]/parent::button"
@@ -263,15 +279,27 @@
     },
     "MB_EditTitle_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//p[contains(@class,'xlLargeHeading') and contains(text(),'Edit')] | //p[contains(text(),'Beneficiary Details')]"
+      "locatorValue": "//p[contains(@class,'xlLargeHeading') and contains(text(),'Edit beneficiary details')]"
+    },
+    "MB_EditNicknameInput_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Update nick name')]/following::input[1]"
     },
     "MB_SaveButton_Object": {
       "locatorType": "xpath",
       "locatorValue": "//button[.//p[text()='SAVE']] | //button[contains(text(),'SAVE')]"
     },
+    "MB_DeleteDetailTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Delete beneficiary details')]"
+    },
+    "MB_ConfirmDeleteTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'xlLargeHeading') and contains(text(),'Confirm delete beneficiary details')]"
+    },
     "MB_DeleteConfirmTitle_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//p[contains(text(),'Confirm Delete')] | //p[contains(text(),'Delete beneficiary')]"
+      "locatorValue": "//p[contains(text(),'Delete beneficiary')] | //p[contains(text(),'Confirm delete')]"
     },
     "MB_DeleteConfirmButton_Object": {
       "locatorType": "xpath",
@@ -316,6 +344,59 @@
     "MB_BeneficiaryTypeLabel_Object": {
       "locatorType": "xpath",
       "locatorValue": "//p[contains(text(),'Beneficiary type')]"
+    },
+    "MB_SearchIFSCSidebarTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(@class,'largeHeadings') and contains(text(),'Search IFSC')]"
+    },
+    "MB_SearchIFSCCloseIcon_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'MuiModal-root')]//img[contains(@src,'close-circle')]"
+    },
+    "MB_SearchIFSCSelectBank_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Select Bank')]/parent::div//div[@role='combobox']"
+    },
+    "MB_SearchIFSCSelectState_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Select State')]/parent::div//div[@role='combobox']"
+    },
+    "MB_SearchIFSCSelectCity_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Select City')]/parent::div//div[@role='combobox']"
+    },
+    "MB_SearchIFSCSelectBranch_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//p[contains(text(),'Select Branch')]/parent::div//div[@role='combobox']"
+    },
+    "MB_SearchIFSCResultCode_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'MuiModal-root')]//p[contains(text(),'IFSC code')]/following-sibling::p"
+    },
+    "MB_SearchIFSCContinueButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'MuiModal-root')]//button[.//p[contains(text(),'CONTINUE')]]"
+    },
+
+    "MB_CautionPopupTitle_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'MuiModal-root')]//h3[contains(text(),'CAUTION')]"
+    },
+    "MB_CautionPopupMessage_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'MuiModal-root')]//p[contains(text(),'Do you want to cancel')]"
+    },
+    "MB_CautionPopupCancelButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'MuiModal-root')]//button[contains(text(),'Cancel')]"
+    },
+    "MB_CautionPopupConfirmButton_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'MuiModal-root')]//button[.//p[contains(text(),'Confirm')]]"
+    },
+    "MB_MuiBackdrop_Object": {
+      "locatorType": "xpath",
+      "locatorValue": "//div[contains(@class,'MuiBackdrop-root')]"
     }
   }
 }

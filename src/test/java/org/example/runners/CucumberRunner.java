@@ -15,7 +15,12 @@ import org.testng.annotations.Listeners;
  */
 @Listeners(TestNGListener.class)
 @CucumberOptions(
-        features = "src/test/resources/features",
+        features = {
+                "src/test/resources/features/PreLogin.feature",
+                "src/test/resources/features/Dashboard.feature",
+                "src/test/resources/features/FundTransfer.feature",
+                "src/test/resources/features/ManageBeneficiary.feature"
+        },
         glue = {"org.example.stepdefinitions"},
         plugin = {
                 "pretty",
@@ -23,18 +28,27 @@ import org.testng.annotations.Listeners;
                 "json:target/cucumber-reports/cucumber.json"
         },
         monochrome = true,
-        // Run ALL modules (Dashboard → FundTransfer → ManageBeneficiary):
-        //tags = "(@dashboard or @fundtransfer or @managebeneficiary) and not @manual and not @skip"
+        // Run only previously failed scenarios for re-validation
+        // Run modules in order: PreLogin → Dashboard → FundTransfer → ManageBeneficiary
+        // tags = "(@prelogin or @dashboard or @fundtransfer or @managebeneficiary) and not @manual and not @skip"
         // Single module runs (uncomment one at a time):
-        // tags = "@dashboard and not @manual and not @skip"
-         tags = "@fundtransfer and not @manual and not @skip"
+         tags = "@prelogin and not @manual and not @skip"
+       // tags = "@dashboard and not @manual and not @skip"
+        //tags = "@managebeneficiary and not @manual and not @skip"
+        // tags = "@fundtransfer and not @manual and not @skip"
         // tags = "@managebeneficiary and not @manual and not @skip"
-        // tags = "@prelogin and not @manual and not @skip"
-        // Sub-module tags:
+        // Sub-module tags (FundTransfer):
         // tags = "@fundtransfer_mainpage and not @manual and not @skip"
         // tags = "@transfer_to_beneficiary and not @manual and not @skip"
         // tags = "@quick_transfer and not @manual and not @skip"
         // tags = "@self_account and not @manual and not @skip"
+        // Sub-module tags (ManageBeneficiary):
+        // tags = "@managebeneficiary_mainpage and not @manual and not @skip"
+        // tags = "@add_shivalik and not @manual and not @skip"
+        // tags = "@add_otherbank and not @manual and not @skip"
+        // tags = "@manage_beneficiary and not @manual and not @skip"
+        // tags = "@edit_beneficiary and not @manual and not @skip"
+        // tags = "@delete_beneficiary and not @manual and not @skip"
         
 )
 public class CucumberRunner extends AbstractTestNGCucumberTests {

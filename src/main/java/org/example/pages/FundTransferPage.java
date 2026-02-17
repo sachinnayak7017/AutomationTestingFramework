@@ -1,6 +1,7 @@
 package org.example.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -86,9 +87,14 @@ public class FundTransferPage extends BasePage {
 
     public void waitForSuccessPageLoad() {
         try {
-            waitForElementVisible(key("PaymentSuccessfulText_Object"), 15);
+            waitForElementVisible(key("PaymentSuccessfulText_Object"), 30);
         } catch (Exception e) {
-            logger.warn("Success page load wait timed out");
+            logger.warn("Success page load wait timed out, retrying with SuccessTitle");
+            try {
+                waitForElementVisible(key("SuccessTitle_Object"), 10);
+            } catch (Exception ex) {
+                logger.warn("Success page not found with fallback either");
+            }
         }
     }
 
@@ -257,7 +263,7 @@ public class FundTransferPage extends BasePage {
     }
 
     public void enterAmount(String amount) {
-        type(key("EnterAmountInput_Object"), amount);
+        typeInField(key("EnterAmountInput_Object"), amount);
     }
 
     public void clearAmount() {
@@ -323,7 +329,7 @@ public class FundTransferPage extends BasePage {
     }
 
     public void enterRecipientName(String name) {
-        type(key("QT_RecipientNameInput_Object"), name);
+        typeInField(key("QT_RecipientNameInput_Object"), name);
     }
 
     public void clearRecipientName() {
@@ -331,7 +337,7 @@ public class FundTransferPage extends BasePage {
     }
 
     public void enterAccountNumber(String accountNumber) {
-        type(key("QT_AccountNumberInput_Object"), accountNumber);
+        typeInField(key("QT_AccountNumberInput_Object"), accountNumber);
     }
 
     public void clearAccountNumber() {
@@ -343,7 +349,7 @@ public class FundTransferPage extends BasePage {
     }
 
     public void enterReEnterAccountNumber(String accountNumber) {
-        type(key("QT_ReEnterAccountInput_Object"), accountNumber);
+        typeInField(key("QT_ReEnterAccountInput_Object"), accountNumber);
     }
 
     public void clearReEnterAccountNumber() {
@@ -351,7 +357,7 @@ public class FundTransferPage extends BasePage {
     }
 
     public void enterIFSCCode(String ifscCode) {
-        type(key("QT_IFSCCodeInput_Object"), ifscCode);
+        typeInField(key("QT_IFSCCodeInput_Object"), ifscCode);
     }
 
     public void clearIFSCCode() {
@@ -599,11 +605,19 @@ public class FundTransferPage extends BasePage {
     }
 
     public String getSuccessRemark() {
-        return getText(key("SuccessRemark_Object"));
+        try {
+            return getText(key("SuccessRemark_Object"));
+        } catch (Exception e) {
+            return "";
+        }
     }
 
     public String getSuccessReferenceId() {
-        return getText(key("SuccessReferenceId_Object"));
+        try {
+            return getText(key("SuccessReferenceId_Object"));
+        } catch (Exception e) {
+            return "";
+        }
     }
 
     // ========== Error Get Text ==========
@@ -816,7 +830,13 @@ public class FundTransferPage extends BasePage {
     public boolean isAccountNumberMasked() {
         try {
             String type = getAttribute(key("QT_AccountNumberInput_Object"), "type");
-            return "password".equalsIgnoreCase(type);
+            if ("password".equalsIgnoreCase(type)) return true;
+            // Also check CSS text-security masking
+            By locator = orManager.getLocator(key("QT_AccountNumberInput_Object"));
+            WebElement el = driver.findElement(locator);
+            String cssMask = (String) ((JavascriptExecutor) driver).executeScript(
+                    "return window.getComputedStyle(arguments[0]).getPropertyValue('-webkit-text-security') || window.getComputedStyle(arguments[0]).getPropertyValue('text-security') || '';", el);
+            return "disc".equals(cssMask) || "circle".equals(cssMask) || "square".equals(cssMask);
         } catch (Exception e) {
             return false;
         }
@@ -1057,7 +1077,7 @@ public class FundTransferPage extends BasePage {
     // ========== Cancel Popup Methods ==========
 
     public boolean isCancelPopupDisplayed() {
-        return isDisplayedWithin(key("CancelPopupContainer_Object"), 3);
+        return isDisplayedWithin(key("CancelPopupContainer_Object"), 10);
     }
 
     public String getCancelPopupMessage() {

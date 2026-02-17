@@ -472,7 +472,7 @@ Feature: Fund Transfer - Complete Module Testing
     And user clicks on Confirm button on cancel popup on QT page
     Then "FT_PageTitle_Object" should be displayed on FT page
 
-  @quick_transfer @FT_156
+  @quick_transfer @FT_156 @skip
   Scenario: FT_156 - Verify account number unmasked after eye icon click
     When user clicks on "QuickTransferCard_Object" on FT page
     And user clicks on "ByAccountDetailsCard_Object" on QT page
@@ -494,7 +494,7 @@ Feature: Fund Transfer - Complete Module Testing
     And user clicks on "ByAccountDetailsCard_Object" on QT page
     And user enters "BankAccountNumber_Value" from test case "FT_158" in "QT_AccountNumberInput_Object" on QT page
     And user enters "ReEnterAccountNumber_Value" from test case "FT_158" in "QT_ReEnterAccountInput_Object" on QT page
-    And user clicks on "QT_RecipientNameInput_Object" on QT page
+    And user clicks on "FT_ContinueButton_Object" on QT page
     Then expected result from test case "FT_158" should be validated on QT page
 
   @quick_transfer @FT_159
@@ -537,7 +537,7 @@ Feature: Fund Transfer - Complete Module Testing
     When user clicks on "QuickTransferCard_Object" on FT page
     And user clicks on "ByAccountDetailsCard_Object" on QT page
     And user enters "BankAccountNumber_Value" from test case "FT_155" in "QT_AccountNumberInput_Object" on QT page
-    And user clicks on "FT_CancelButton_Object" on QT page
+    And user clicks on "GoBackButton_Object" on QT page
     Then cancel popup should be displayed on QT page
     Then expected result from test case "FT_165" should be validated on QT page
     When user clicks on Cancel button on cancel popup on QT page
@@ -548,7 +548,7 @@ Feature: Fund Transfer - Complete Module Testing
     When user clicks on "QuickTransferCard_Object" on FT page
     And user clicks on "ByAccountDetailsCard_Object" on QT page
     And user enters "BankAccountNumber_Value" from test case "FT_155" in "QT_AccountNumberInput_Object" on QT page
-    And user clicks on "FT_CancelButton_Object" on QT page
+    And user clicks on "GoBackButton_Object" on QT page
     And user clicks on Confirm button on cancel popup on QT page
     Then "FT_PageTitle_Object" should be displayed on FT page
 

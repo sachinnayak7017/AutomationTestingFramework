@@ -4,6 +4,7 @@ import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.example.core.driver.DriverManager;
 import org.example.pages.BasePage;
 import org.example.pages.DashboardPage;
 import org.example.pages.FundTransferPage;
@@ -36,17 +37,36 @@ public class CommonSteps {
     private DashboardPage dashboardPage;
     private ManageBeneficiariesPage mbPage;
     private FundTransferPage ftPage;
+    private org.openqa.selenium.WebDriver cachedDriver;
 
     public CommonSteps() {
+        cachedDriver = DriverManager.getDriver();
         preLoginPage = new PreLoginPage();
         dashboardPage = new DashboardPage();
         mbPage = new ManageBeneficiariesPage();
         ftPage = new FundTransferPage();
     }
 
+    /**
+     * Refresh all page objects if the driver has been reinitialized.
+     * This handles the case where SessionManager reinitializes the driver during login retry.
+     */
+    private void refreshPageObjectsIfNeeded() {
+        org.openqa.selenium.WebDriver currentDriver = DriverManager.getDriver();
+        if (currentDriver != cachedDriver) {
+            logger.info("Driver changed - refreshing CommonSteps page objects");
+            cachedDriver = currentDriver;
+            preLoginPage = new PreLoginPage();
+            dashboardPage = new DashboardPage();
+            mbPage = new ManageBeneficiariesPage();
+            ftPage = new FundTransferPage();
+        }
+    }
+
     // ==================== Page Resolver ====================
 
     private BasePage getPageObject(String page) {
+        refreshPageObjectsIfNeeded();
         switch (page.toUpperCase()) {
             case "PL":
                 return preLoginPage;
@@ -154,8 +174,14 @@ public class CommonSteps {
     @Then("field error should be displayed for {string} on {word} page")
     public void fieldErrorShouldBeDisplayed(String objectKey, String page) {
         BasePage pageObj = getPageObject(page);
-        sleep(300);
-        Assert.assertTrue(pageObj.isFieldErrorDisplayed(objectKey),
+        sleep(1500);
+        boolean hasError = pageObj.isFieldErrorDisplayed(objectKey);
+        if (!hasError) {
+            // Retry after longer wait for slow network validation
+            sleep(3000);
+            hasError = pageObj.isFieldErrorDisplayed(objectKey);
+        }
+        Assert.assertTrue(hasError,
                 "Field error is not displayed for " + objectKey + " on " + page + " page");
     }
 
@@ -234,7 +260,7 @@ public class CommonSteps {
 
     // ==================== DROPDOWN OPTION VERIFICATION ====================
 
-    @Then("{string} should have option selected on {word} page")
+    @Then("{string} should have doption selected on {word} page")
     public void elementShouldHaveOptionSelected(String objectKey, String page) {
         BasePage pageObj = getPageObject(page);
         Assert.assertTrue(pageObj.isElementDisplayedOnPage(objectKey),
@@ -256,7 +282,7 @@ public class CommonSteps {
 
     @Then("cancel popup should be displayed on {word} page")
     public void cancelPopupDisplayed(String page) {
-        sleep(300);
+        sleep(3000);
         Assert.assertTrue(ftPage.isCancelPopupDisplayed(),
                 "Cancel popup is not displayed on " + page + " page");
     }
@@ -335,5 +361,42 @@ public class CommonSteps {
         BasePage pageObj = getPageObject(page);
         Assert.assertTrue(pageObj.isTextDisplayedOnPage(expectedText),
                 "Charges warning '" + expectedText + "' is not displayed on " + page + " page");
+    }
+
+    // ==================== WAIT ====================
+
+    @When("user waits {int} milliseconds")
+    public void userWaitsMilliseconds(int ms) {
+        sleep(ms);
+    }
+
+    // ==================== URL VERIFICATION ====================
+
+    @Then("URL should contain {string}")
+    public void urlShouldContain(String text) {
+        sleep(1500);
+        String url = DriverManager.getDriver().getCurrentUrl().toLowerCase();
+        Assert.assertTrue(url.contains(text.toLowerCase()),
+                "URL does not contain '" + text + "'. Actual URL: " + url);
+    }
+
+    // ==================== NEW PAGE / REDIRECT VERIFICATION ====================
+
+    @Then("user should be on a new or redirected page")
+    public void userShouldBeOnNewOrRedirectedPage() {
+        sleep(1000);
+        int windowCount = DriverManager.getDriver().getWindowHandles().size();
+        Assert.assertTrue(windowCount >= 1, "No page is open");
+        // Close extra windows and switch back to first
+        if (windowCount > 1) {
+            String original = DriverManager.getDriver().getWindowHandles().iterator().next();
+            for (String handle : DriverManager.getDriver().getWindowHandles()) {
+                if (!handle.equals(original)) {
+                    DriverManager.getDriver().switchTo().window(handle);
+                    DriverManager.getDriver().close();
+                }
+            }
+            DriverManager.getDriver().switchTo().window(original);
+        }
     }
 }

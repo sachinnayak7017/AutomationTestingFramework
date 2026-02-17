@@ -23,7 +23,10 @@ public class ManageBeneficiariesPage extends BasePage {
 
     public void waitForManageBeneficiaryPageLoad() {
         try {
-            waitForElementVisible(key("PageTitle_Object"), 15);
+            By locator = orManager.getLocator(key("PageTitle_Object"));
+            new org.openqa.selenium.support.ui.WebDriverWait(driver, java.time.Duration.ofSeconds(15))
+                    .until(org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated(locator));
+            logger.info("Manage Beneficiary page loaded successfully");
         } catch (Exception e) {
             logger.warn("Manage Beneficiary page load wait timed out");
         }
@@ -61,10 +64,38 @@ public class ManageBeneficiariesPage extends BasePage {
         }
     }
 
+    public void waitForEditPageLoad() {
+        try {
+            waitForElementVisible(key("MB_EditTitle_Object"), 15);
+        } catch (Exception e) {
+            logger.warn("Edit page load wait timed out");
+        }
+    }
+
+    public void waitForDeletePageLoad() {
+        try {
+            waitForElementVisible(key("MB_DeleteConfirmTitle_Object"), 15);
+        } catch (Exception e) {
+            logger.warn("Delete page load wait timed out");
+        }
+    }
+
+    public void waitForBeneficiaryDetailLoad() {
+        try {
+            waitForElementVisible(key("MB_BeneficiaryDetailTitle_Object"), 15);
+        } catch (Exception e) {
+            logger.warn("Beneficiary detail page load wait timed out");
+        }
+    }
+
     // ========== Navigation Actions ==========
 
     public void clickBackArrow() {
-        click(key("BackArrow_Object"));
+        try {
+            click(key("MB_AddBackArrow_Object"));
+        } catch (Exception e) {
+            jsClick(key("BackArrow_Object"));
+        }
     }
 
     public void clickAddBackArrow() {
@@ -233,6 +264,10 @@ public class ManageBeneficiariesPage extends BasePage {
 
     // ========== Edit/Delete Actions ==========
 
+    public void clickMoreSquareIcon() {
+        click(key("MB_MoreSquareIcon_Object"));
+    }
+
     public void clickEditButton() {
         click(key("MB_EditButton_Object"));
     }
@@ -247,6 +282,26 @@ public class ManageBeneficiariesPage extends BasePage {
 
     public void clickDeleteConfirmButton() {
         click(key("MB_DeleteConfirmButton_Object"));
+    }
+
+    public void enterEditNickname(String nickname) {
+        type(key("MB_EditNicknameInput_Object"), nickname);
+    }
+
+    public void clearEditNickname() {
+        clear(key("MB_EditNicknameInput_Object"));
+    }
+
+    public String getEditNicknameValue() {
+        return getAttribute(key("MB_EditNicknameInput_Object"), "value");
+    }
+
+    public void clickVerifyBeneficiaryDetailButton() {
+        click(key("MB_VerifyBeneficiaryDetailButton_Object"));
+    }
+
+    public void clickSendMoneyButton() {
+        click(key("MB_SendMoneyButton_Object"));
     }
 
     // ========== Get Text Methods ==========
@@ -378,7 +433,14 @@ public class ManageBeneficiariesPage extends BasePage {
     }
 
     public boolean isPageTitleDisplayed() {
-        return isDisplayed(key("PageTitle_Object"));
+        try {
+            By locator = orManager.getLocator(key("PageTitle_Object"));
+            org.openqa.selenium.WebElement el = new org.openqa.selenium.support.ui.WebDriverWait(driver, java.time.Duration.ofSeconds(5))
+                    .until(org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated(locator));
+            return el != null;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     public boolean isSearchInputDisplayed() {
@@ -704,6 +766,26 @@ public class ManageBeneficiariesPage extends BasePage {
         return isDisplayed(key("MB_BeneficiaryDetailAccount_Object"));
     }
 
+    public boolean isMoreSquareIconDisplayed() {
+        return isDisplayed(key("MB_MoreSquareIcon_Object"));
+    }
+
+    public boolean isBeneficiaryDetailTitleDisplayed() {
+        return isDisplayed(key("MB_BeneficiaryDetailTitle_Object"));
+    }
+
+    public boolean isEditNicknameInputDisplayed() {
+        return isDisplayed(key("MB_EditNicknameInput_Object"));
+    }
+
+    public boolean isVerifyBeneficiaryDetailButtonDisplayed() {
+        return isDisplayed(key("MB_VerifyBeneficiaryDetailButton_Object"));
+    }
+
+    public boolean isSendMoneyButtonDisplayed() {
+        return isDisplayed(key("MB_SendMoneyButton_Object"));
+    }
+
     // ========== Scroll Methods ==========
 
     public void scrollToAddForm() {
@@ -721,7 +803,7 @@ public class ManageBeneficiariesPage extends BasePage {
     // ========== Composite / Helper Methods ==========
 
     public void fillShivalikBeneficiaryForm(String accountNo, String reAccountNo, String beneficiaryName, String nickname) {
-        clickShivalikBankRadio();
+        // Shivalik Bank is selected by default - no radio click needed
         enterAccountNumber(accountNo);
         enterReEnterAccountNumber(reAccountNo);
         enterBeneficiaryName(beneficiaryName);
@@ -769,5 +851,67 @@ public class ManageBeneficiariesPage extends BasePage {
         } catch (Exception e) {
             return 0;
         }
+    }
+
+    // ========== Fast Navigation State Checks (short timeout) ==========
+
+    public boolean isPageTitleDisplayedFast() {
+        return isDisplayedWithin(key("PageTitle_Object"), 3);
+    }
+
+    public boolean isDoneButtonDisplayedFast() {
+        return isDisplayedWithin(key("MB_DoneButton_Object"), 2);
+    }
+
+    public boolean isAddBackArrowDisplayedFast() {
+        return isDisplayedWithin(key("MB_AddBackArrow_Object"), 2);
+    }
+
+    public boolean isCancelButtonDisplayedFast() {
+        return isDisplayedWithin(key("MB_CancelButton_Object"), 2);
+    }
+
+    public boolean isBackArrowDisplayedFast() {
+        return isDisplayedWithin(key("BackArrow_Object"), 2);
+    }
+
+    // ========== CAUTION Popup Methods ==========
+
+    public boolean isCautionPopupDisplayed() {
+        return isDisplayedWithin(key("MB_CautionPopupTitle_Object"), 10);
+    }
+
+    public void clickCautionConfirmButton() {
+        jsClick(key("MB_CautionPopupConfirmButton_Object"));
+    }
+
+    public void clickCautionCancelButton() {
+        click(key("MB_CautionPopupCancelButton_Object"));
+    }
+
+    public void dismissMuiBackdrop() {
+        try {
+            WebElement backdrop = driver.findElement(By.xpath("//div[contains(@class,'MuiBackdrop-root')]"));
+            backdrop.click();
+        } catch (Exception e) {
+            logger.debug("No MUI backdrop to dismiss");
+        }
+    }
+
+    /**
+     * Handle CAUTION popup if displayed - click Confirm to leave the form.
+     * @return true if popup was handled
+     */
+    public boolean handleCautionPopupIfPresent() {
+        try {
+            if (isCautionPopupDisplayed()) {
+                logger.info("CAUTION popup detected - clicking Confirm to leave form");
+                clickCautionConfirmButton();
+                return true;
+            }
+        } catch (Exception e) {
+            logger.debug("No CAUTION popup present");
+        }
+        return false;
     }
 }

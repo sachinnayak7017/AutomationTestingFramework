@@ -574,10 +574,33 @@ public abstract class BasePage {
 
     /**
      * Get value attribute of a field by object key.
+     * Uses multiple approaches: Selenium getAttribute, JavaScript property, and retry.
      */
     public String getFieldValue(String objectKey) {
+        // Approach 1: Standard Selenium getAttribute
         try {
-            return getAttribute(objectKey, "value");
+            String value = getAttribute(objectKey, "value");
+            if (value != null && !value.isEmpty()) return value;
+        } catch (Exception e) {
+            // Fall through to JS approach
+        }
+        // Approach 2: JavaScript - read DOM value property directly
+        try {
+            WebElement el = findElement(objectKey);
+            String value = (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].value", el);
+            if (value != null && !value.isEmpty()) return value;
+        } catch (Exception e) {
+            // Fall through to retry
+        }
+        // Approach 3: Retry after short wait (for React re-renders)
+        try {
+            Thread.sleep(500);
+            String value = getAttribute(objectKey, "value");
+            if (value != null && !value.isEmpty()) return value;
+            // Final JS retry
+            WebElement el = findElement(objectKey);
+            String jsValue = (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].value", el);
+            return jsValue != null ? jsValue : "";
         } catch (Exception e) {
             return "";
         }
@@ -611,28 +634,96 @@ public abstract class BasePage {
     }
 
     /**
-     * Check if field error is displayed for a given element (MUI form validation).
+     * Check if field error is displayed for a given element (MUI + Tailwind form validation).
      */
     public boolean isFieldErrorDisplayed(String objectKey) {
         try {
             By fieldLocator = orManager.getLocator(objectKey);
             WebElement field = driver.findElement(fieldLocator);
-            WebElement formControl = field.findElement(
-                    By.xpath("./ancestor::div[contains(@class,'MuiFormControl-root')]"));
-            List<WebElement> errors = formControl.findElements(
-                    By.xpath(".//p[contains(@class,'Mui-error')] | .//p[contains(@class,'error')]"));
-            return !errors.isEmpty();
-        } catch (Exception e) {
+
+            // Approach 1: MUI FormControl error
             try {
-                By fieldLocator = orManager.getLocator(objectKey);
-                WebElement field = driver.findElement(fieldLocator);
+                WebElement formControl = field.findElement(
+                        By.xpath("./ancestor::div[contains(@class,'MuiFormControl-root')]"));
+                List<WebElement> errors = formControl.findElements(
+                        By.xpath(".//p[contains(@class,'Mui-error')] | .//p[contains(@class,'error')]"));
+                if (!errors.isEmpty()) return true;
+            } catch (Exception ignored) {}
+
+            // Approach 2: MUI InputBase error class
+            try {
                 WebElement inputBase = field.findElement(
                         By.xpath("./ancestor::div[contains(@class,'MuiInputBase-root')]"));
                 String classes = inputBase.getAttribute("class");
-                return classes != null && classes.contains("Mui-error");
-            } catch (Exception ex) {
-                return false;
-            }
+                if (classes != null && classes.contains("Mui-error")) return true;
+            } catch (Exception ignored) {}
+
+            // Approach 3: aria-invalid attribute on input
+            String ariaInvalid = field.getAttribute("aria-invalid");
+            if ("true".equals(ariaInvalid)) return true;
+
+            // Approach 4: Tailwind/custom - find error text near the input (sibling or parent's sibling)
+            try {
+                WebElement parent = field.findElement(By.xpath("./ancestor::div[1]"));
+                List<WebElement> errorTexts = parent.findElements(
+                        By.xpath(".//p[contains(@class,'text-red') or contains(@class,'text-customRed') or contains(@class,'error') or contains(@class,'Mui-error')] | ./following-sibling::p[contains(@class,'text-red') or contains(@class,'text-customRed') or contains(@class,'error')]"));
+                if (!errorTexts.isEmpty()) return true;
+            } catch (Exception ignored) {}
+
+            // Approach 5: Check parent wrapper (2 levels up) for error text
+            try {
+                WebElement wrapper = field.findElement(By.xpath("./ancestor::div[2]"));
+                List<WebElement> errorTexts = wrapper.findElements(
+                        By.xpath(".//p[contains(@class,'text-red') or contains(@class,'text-customRed') or contains(@class,'Mui-error')] | .//span[contains(@class,'text-red') or contains(@class,'text-customRed') or contains(@class,'error')]"));
+                if (!errorTexts.isEmpty()) return true;
+            } catch (Exception ignored) {}
+
+            // Approach 6: Check input border color change (red border = error)
+            try {
+                WebElement inputWrapper = field.findElement(By.xpath("./ancestor::div[contains(@class,'MuiInputBase-root') or contains(@class,'border')]"));
+                String wrapperClasses = inputWrapper.getAttribute("class");
+                if (wrapperClasses != null && (wrapperClasses.contains("border-red") || wrapperClasses.contains("border-customRed") || wrapperClasses.contains("Mui-error")))
+                    return true;
+            } catch (Exception ignored) {}
+
+            // Approach 7: MUI FormHelperText error (e.g. validation messages below input)
+            try {
+                WebElement formControl = field.findElement(By.xpath("./ancestor::div[contains(@class,'MuiFormControl-root') or contains(@class,'MuiTextField-root')]"));
+                List<WebElement> helperTexts = formControl.findElements(
+                        By.xpath(".//p[contains(@class,'MuiFormHelperText') and contains(@class,'Mui-error')] | .//p[contains(@class,'MuiFormHelperText-root')]"));
+                if (!helperTexts.isEmpty()) return true;
+            } catch (Exception ignored) {}
+
+            // Approach 8: Sibling or nearby error text (3 levels up)
+            try {
+                WebElement wrapper = field.findElement(By.xpath("./ancestor::div[3]"));
+                List<WebElement> errorTexts = wrapper.findElements(
+                        By.xpath(".//p[contains(@class,'text-red') or contains(@class,'text-customRed') or contains(@class,'Mui-error') or contains(@class,'error')]"));
+                if (!errorTexts.isEmpty()) return true;
+            } catch (Exception ignored) {}
+
+            // Approach 9: JavaScript - check computed color of text elements near the field
+            // Detects custom red error text that doesn't use standard CSS classes
+            try {
+                Boolean hasRedText = (Boolean) ((JavascriptExecutor) driver).executeScript(
+                    "var field = arguments[0];" +
+                    "var parent = field;" +
+                    "for(var i=0; i<5 && parent.parentElement; i++) parent = parent.parentElement;" +
+                    "var elems = parent.querySelectorAll('p,span');" +
+                    "for(var e of elems) {" +
+                    "  var t = e.textContent.trim();" +
+                    "  if(!t || t.length<3 || !e.offsetParent) continue;" +
+                    "  var c = getComputedStyle(e).color;" +
+                    "  var m = c.match(/rgb\\((\\d+),\\s*(\\d+),\\s*(\\d+)/);" +
+                    "  if(m && parseInt(m[1])>180 && parseInt(m[2])<100 && parseInt(m[3])<100) return true;" +
+                    "}" +
+                    "return false;", field);
+                if (Boolean.TRUE.equals(hasRedText)) return true;
+            } catch (Exception ignored) {}
+
+            return false;
+        } catch (Exception e) {
+            return false;
         }
     }
 

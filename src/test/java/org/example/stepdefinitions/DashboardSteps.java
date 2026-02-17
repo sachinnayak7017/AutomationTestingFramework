@@ -20,7 +20,7 @@ public class DashboardSteps {
     private static final Logger logger = LogManager.getLogger(DashboardSteps.class);
 
     private DashboardPage dashboardPage;
-    private String originalWindow;
+    private String originalWindow;  
 
     public DashboardSteps() {
         dashboardPage = new DashboardPage();

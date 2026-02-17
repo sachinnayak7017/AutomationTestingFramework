@@ -54,12 +54,12 @@
     },
     "RechargeAndBillsService_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//div[@class='serviceItem']//p[contains(text(),'Recharge')]/ancestor::div[@class='serviceItem']",
+      "locatorValue": "//div[contains(@class,'serviceItem')]//p[contains(text(),'Recharge')]/ancestor::div[contains(@class,'serviceItem')]",
       "description": "Recharge & Bills quick service"
     },
     "RechargeAndBillsIcon_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//p[contains(text(),'Recharge')]/preceding-sibling::div[@class='svgContainer ']",
+      "locatorValue": "//p[contains(text(),'Recharge')]/preceding-sibling::div[contains(@class,'svgContainer')]",
       "description": "Recharge & Bills icon"
     },
     "RechargeAndBillsText_Object": {
@@ -69,12 +69,12 @@
     },
     "OpenDepositAccountService_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//div[@class='serviceItem']//p[contains(text(),'Open Deposit Account')]/ancestor::div[@class='serviceItem']",
+      "locatorValue": "//div[contains(@class,'serviceItem')]//p[contains(text(),'Open Deposit Account')]/ancestor::div[contains(@class,'serviceItem')]",
       "description": "Open Deposit Account quick service"
     },
     "OpenFixedDepositIcon_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//p[contains(text(),'Open Deposit Account')]/preceding-sibling::div[@class='svgContainer ']",
+      "locatorValue": "//p[contains(text(),'Open Deposit Account')]/preceding-sibling::div[contains(@class,'svgContainer')]",
       "description": "Open Deposit Account icon"
     },
     "OpenFixedDepositText_Object": {
@@ -84,12 +84,12 @@
     },
     "FinancialCalculatorService_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//div[@class='serviceItem']//p[contains(text(),'Financial Calculator')]/ancestor::div[@class='serviceItem']",
+      "locatorValue": "//div[contains(@class,'serviceItem')]//p[contains(text(),'Financial Calculator')]/ancestor::div[contains(@class,'serviceItem')]",
       "description": "Financial Calculator quick service"
     },
     "FinancialCalculatorIcon_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//p[contains(text(),'Financial Calculator')]/preceding-sibling::div[@class='svgContainer ']",
+      "locatorValue": "//p[contains(text(),'Financial Calculator')]/preceding-sibling::div[contains(@class,'svgContainer')]",
       "description": "Financial Calculator icon"
     },
     "FinancialCalculatorText_Object": {
@@ -99,12 +99,12 @@
     },
     "DepositsRateService_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//div[@class='serviceItem']//p[contains(text(),'Deposits Rate')]/ancestor::div[@class='serviceItem']",
+      "locatorValue": "//div[contains(@class,'serviceItem')]//p[contains(text(),'Deposits Rate')]/ancestor::div[contains(@class,'serviceItem')]",
       "description": "Deposits Rate quick service"
     },
     "DepositsRateIcon_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//p[contains(text(),'Deposits Rate')]/preceding-sibling::div[@class='svgContainer ']",
+      "locatorValue": "//p[contains(text(),'Deposits Rate')]/preceding-sibling::div[contains(@class,'svgContainer')]",
       "description": "Deposits Rate icon"
     },
     "DepositsRateText_Object": {
@@ -114,12 +114,12 @@
     },
     "OffersService_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//div[@class='serviceItem']//p[contains(text(),'Offers')]/ancestor::div[@class='serviceItem']",
+      "locatorValue": "//div[contains(@class,'serviceItem')]//p[contains(text(),'Offers')]/ancestor::div[contains(@class,'serviceItem')]",
       "description": "Offers quick service"
     },
     "OffersIcon_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//p[text()='Offers']/preceding-sibling::div[@class='svgContainer ']",
+      "locatorValue": "//p[text()='Offers']/preceding-sibling::div[contains(@class,'svgContainer')]",
       "description": "Offers icon"
     },
     "OffersText_Object": {
@@ -129,12 +129,12 @@
     },
     "FAQService_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//div[@class='serviceItem']//p[contains(text(),'FAQ')]/ancestor::div[@class='serviceItem']",
+      "locatorValue": "//div[contains(@class,'serviceItem')]//p[contains(text(),'FAQ')]/ancestor::div[contains(@class,'serviceItem')]",
       "description": "FAQ quick service"
     },
     "FAQIcon_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//p[text()='FAQ']/preceding-sibling::div[@class='svgContainer ']",
+      "locatorValue": "//p[text()='FAQ']/preceding-sibling::div[contains(@class,'svgContainer')]",
       "description": "FAQ icon"
     },
     "FAQText_Object": {
@@ -204,7 +204,7 @@
     },
     "PasswordInput_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//input[@type='password' or @placeholder='Enter your password' or @placeholder='Enter Password']",
+      "locatorValue": "//input[@type='password' or @placeholder='Enter your password' or @placeholder='Enter Password' or @placeholder='Password']",
       "description": "Password input field"
     },
     "PasswordEyeButton_Object": {
@@ -269,7 +269,7 @@
     },
     "TCCheckbox_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//span[contains(text(),'Terms') or contains(text(),'T&C') or contains(text(),'terms')]/preceding-sibling::div[contains(@class,'border') or contains(@class,'rounded')] | //span[contains(text(),'Terms')]/parent::div//div[contains(@class,'w-4') or contains(@class,'h-4')]",
+      "locatorValue": "//span[contains(text(),'erms') or contains(text(),'T&C') or contains(text(),'agree')]/preceding-sibling::div[contains(@class,'border') or contains(@class,'rounded')] | //span[contains(text(),'erms') or contains(text(),'agree')]/parent::div//div[contains(@class,'w-4') or contains(@class,'h-4') or contains(@class,'border') or contains(@class,'rounded')] | //span[contains(text(),'erms') or contains(text(),'T&C') or contains(text(),'agree')]/parent::div | //div[contains(@class,'checkBoxWrap')][last()]//div[contains(@class,'border')] | //span[contains(text(),'erms') or contains(text(),'T&C') or contains(text(),'I agree')]",
       "description": "Terms and Conditions checkbox"
     },
     "TCCheckboxChecked_Object": {

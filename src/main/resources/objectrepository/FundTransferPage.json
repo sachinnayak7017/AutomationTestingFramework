@@ -509,7 +509,7 @@
     },
     "SuccessBeneficiaryName_Object": {
       "locatorType": "xpath",
-      "locatorValue": "//div[contains(@class,'grid')]//p[contains(text(),'Beneficiary name')]/following-sibling::p"
+      "locatorValue": "//div[contains(@class,'grid')]//p[contains(text(),'Beneficiary name')]/following-sibling::p | //div[contains(@class,'grid')]//p[contains(text(),'Recipients name')]/following-sibling::p | //div[contains(@class,'grid')]//p[contains(text(),'Recipient')]/following-sibling::p"
     },
     "SuccessTransferType_Object": {
       "locatorType": "xpath",
